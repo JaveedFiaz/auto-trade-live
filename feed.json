@@ -1,16 +1,16 @@
 {
-  "updatedPkt": "2026-11-10 02:03 PKT",
+  "updatedPkt": "2026-11-10 02:13 PKT",
   "wallet": "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9",
   "status": "Active",
-  "nextCheckPkt": "2026-11-10 02:04 PKT (every 5 min)",
+  "nextCheckPkt": "2026-11-10 02:15 PKT (every 5 min)",
   "startUsd": 50.0,
   "startSol": 0.5745,
   "peakUsd": 50.0,
   "haltUsd": 20.0,
   "wins": 0,
-  "losses": 1,
-  "tradesCount": 7,
-  "signalsScanned": 534,
+  "losses": 2,
+  "tradesCount": 11,
+  "signalsScanned": 872,
   "modeLabel": "aggressive memecoin mode",
   "holdings": [
     {
@@ -30,6 +30,18 @@
       "mint": "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump",
       "amount": 1684.28715,
       "decimals": 6
+    },
+    {
+      "symbol": "ZCAT",
+      "mint": "HcRLc9VDgjLeK154xDawfb1dmVJ98DoSqcwTHGqiDeJR",
+      "amount": 238.138478667,
+      "decimals": 6
+    },
+    {
+      "symbol": "PIRATE",
+      "mint": "2StNe98imN7M6K341a7a4xvc8eNTvLCde5EugAKfLoat",
+      "amount": 23962.67002,
+      "decimals": 6
     }
   ],
   "positions": [
@@ -46,7 +58,7 @@
       "takeProfit": 0.006219,
       "takeText": "Half at $0.006219 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:04 PKT",
       "status": "Open (peak price so far $0.004465)",
-      "pnlPctText": "-5.9%"
+      "pnlPctText": "-4.1%"
     },
     {
       "id": "P2",
@@ -61,7 +73,7 @@
       "takeProfit": 0.0006713,
       "takeText": "Half at $0.0006713 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:30 PKT",
       "status": "Open",
-      "pnlPctText": "-6.1%"
+      "pnlPctText": "-16.3%"
     },
     {
       "id": "P3",
@@ -76,10 +88,96 @@
       "takeProfit": 0.004134,
       "takeText": "Half at $0.004134 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:30 PKT",
       "status": "Open",
-      "pnlPctText": "-6.4%"
+      "pnlPctText": "-9.8%"
+    },
+    {
+      "id": "P4",
+      "openedPkt": "2026-11-10 02:10",
+      "asset": "ZCAT",
+      "mint": "HcRLc9VDgjLeK154xDawfb1dmVJ98DoSqcwTHGqiDeJR",
+      "side": "Long spot",
+      "sizeText": "238.138478667 tokens (0.0578 SOL, ~$5.00)",
+      "amount": 238.138478667,
+      "entry": 0.021,
+      "stop": 0.0168,
+      "takeProfit": 0.0294,
+      "takeText": "Half at $0.02940 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:40 PKT",
+      "status": "Open",
+      "pnlPctText": "-2.0%"
+    },
+    {
+      "id": "P5",
+      "openedPkt": "2026-11-10 02:10",
+      "asset": "PIRATE",
+      "mint": "2StNe98imN7M6K341a7a4xvc8eNTvLCde5EugAKfLoat",
+      "side": "Long spot",
+      "sizeText": "23,962.670020 tokens (0.0578 SOL, ~$5.00)",
+      "amount": 23962.67002,
+      "entry": 0.0002087,
+      "stop": 0.000167,
+      "takeProfit": 0.0002922,
+      "takeText": "Half at $0.0002922 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:40 PKT",
+      "status": "Open",
+      "pnlPctText": "-1.8%"
     }
   ],
   "trades": [
+    {
+      "id": "T11",
+      "timePkt": "2026-11-10 02:11",
+      "action": "SELL (close)",
+      "side": "SELL",
+      "ticker": "HWAN",
+      "size": "28,122.30 → ~0.05475 SOL in two halves (~$4.74)",
+      "price": "~$0.0001685",
+      "href": "https://solscan.io/tx/2AQiCAKz3u5pQTtXv5fS3G8LDYWcNayxD2MjTREg2un6M6j2W66Kjfq18jRUzTzBiwDhRpguddrZhuqyvf332V3V",
+      "notes": "LOSS ~-$0.40: Phantom flagged HWAN POSSIBLE_SPAM after the fill; full-size exit quoted 7.8% impact so sold in two halves at 1.9–2.1% (first half https://solscan.io/tx/5AtXhX2NBuYJfB8o1ETk2Pv4NPYQ9MjRaTVkLAXtH2qvJ6JBnu5j9PhQEeDKaUwKTVkHxi4RZCr5KCiqF3yGeS2K)",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
+    {
+      "id": "T10",
+      "timePkt": "2026-11-10 02:10",
+      "action": "BUY",
+      "side": "BUY",
+      "ticker": "PIRATE",
+      "size": "0.0578 SOL → 23,962.67",
+      "price": "$0.0002087",
+      "href": "https://solscan.io/tx/54bbz7fxo4uLMaJSwTdA3ebSaYJokqE5FZRM6uqo5epsBCRTAZ42pnpwmCPALF3NjnHixhgTo1K3RqWqPCY7Awix",
+      "notes": "+28% 1h, buys 157 > sells 144, $87k liq, $16k 1h vol, 116h old; 1.3% impact",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
+    {
+      "id": "T9",
+      "timePkt": "2026-11-10 02:10",
+      "action": "BUY",
+      "side": "BUY",
+      "ticker": "ZCAT",
+      "size": "0.0578 SOL → 238.14",
+      "price": "$0.02100",
+      "href": "https://solscan.io/tx/3j96X64M4iryxNLpWvRzS2A223fq17vWk5pZ5ZxPXk1Nb9ehBMR6zUTw7pQLfs57YmfEUsmxXrwsa1uJT3LTSBk1",
+      "notes": "+16.5% 6h, +5.4% 1h, buys 88 > sells 56, $696k liq, $64k 1h vol; 1.2% impact; Phantom VERIFIED",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
+    {
+      "id": "T8",
+      "timePkt": "2026-11-10 02:10",
+      "action": "BUY",
+      "side": "BUY",
+      "ticker": "HWAN",
+      "size": "0.0578 SOL → 28,122.30",
+      "price": "$0.0001778",
+      "href": "https://solscan.io/tx/2pp3SL3ek3ikXeuxT7G6AjpCqnpJWWd5T5EYy1HKWkzVVDDQ5a1YNDHmun96DrACa8DJA4uteQjxnyZychFL6Dzy",
+      "notes": "+672% 1h, buys 4,443 > sells 3,307, $528k 1h vol, $53k liq, 1.0h old; 2.2% impact; mint/freeze off",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
     {
       "id": "T7",
       "timePkt": "2026-11-10 02:01",
@@ -180,6 +278,15 @@
     }
   ],
   "activity": [
+    {
+      "timePkt": "2026-11-10 02:12 PKT",
+      "title": "BUY ZCAT + PIRATE, HWAN in and out",
+      "kind": "trade",
+      "detail": "Phantom session OK; started at 0.388303 SOL + CBUCKS + AMD + HELL (~$46.92). Broad scan pulled 338 Solana tokens (GeckoTerminal trending 5m/1h/6h, new pools, top volume and tx-count pools, DexScreener boosts/profiles/search), 333 priced, 8 passed the entry rules. Held all three open positions: CBUCKS −4%, HELL −10%, AMD −16% (stop $0.0003836 not hit). Bought HWAN, ZCAT and PIRATE for 0.0578 SOL (~$5.00) each; simulations clean, impact 1.2–2.2%, mint and freeze authority revoked. Phantom then tagged HWAN as possible spam, so it was sold in two halves (a full-size exit quoted 7.8% impact) for ~0.05475 SOL (−$0.40). After: 0.264820 SOL + CBUCKS + AMD + HELL + ZCAT + PIRATE = ~$46.18, 5 open positions.",
+      "coins": "HWAN, ZCAT, PIRATE, AMD, TAOLF, jeff, CBUCKS, BTC (pump), MAYA, KYTRO, Pokemon, Grok Bot",
+      "why": "ZCAT +16.5% 6h on $696k liquidity with buys > sells and Phantom-verified; PIRATE +28% 1h with buys > sells on $87k liquidity; HWAN +672% 1h but flagged possible spam after the fill, so exited. Skipped TAOLF (weaker, slot kept for next run), jeff and the pump.fun BTC token (falling on the hour), MAYA, KYTRO, Pokemon, Grok Bot and other +100–1900% launches (under 1 hour old or below $50k liquidity).",
+      "tx": "https://solscan.io/tx/3j96X64M4iryxNLpWvRzS2A223fq17vWk5pZ5ZxPXk1Nb9ehBMR6zUTw7pQLfs57YmfEUsmxXrwsa1uJT3LTSBk1"
+    },
     {
       "timePkt": "2026-11-10 02:02 PKT",
       "title": "BUY AMD + HELL, trim CBUCKS, ORBIT in and out",
@@ -361,7 +468,7 @@
       "color": "#a855f7",
       "tone": "purple",
       "tag": "active",
-      "action": "2026-11-10 02:02 PKT: BUY AMD + HELL, trim CBUCKS, ORBIT in and out"
+      "action": "2026-11-10 02:12 PKT: BUY ZCAT + PIRATE, HWAN in and out"
     },
     {
       "id": "RISK",
@@ -382,6 +489,6 @@
     "Quote first; never execute if simulation blocks/flags risk or price impact > 5%.",
     "Halt new trades if wallet drops −60% from peak ($20.00); ask Malik how to continue."
   ],
-  "solBalanceHint": 0.388303445,
-  "walletUsdHint": 47.62
+  "solBalanceHint": 0.26482049,
+  "walletUsdHint": 46.18
 }
