@@ -1,24 +1,18 @@
 {
-  "updatedPkt": "2026-11-10 03:00 PKT",
+  "updatedPkt": "2026-11-10 03:09 PKT",
   "wallet": "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9",
   "status": "Active",
-  "nextCheckPkt": "2026-11-10 03:04 PKT (every 5 min)",
+  "nextCheckPkt": "2026-11-10 03:10 PKT (every 5 min)",
   "startUsd": 50.0,
   "startSol": 0.5745,
   "peakUsd": 50.0,
   "haltUsd": 20.0,
   "wins": 0,
-  "losses": 4,
-  "tradesCount": 16,
-  "signalsScanned": 321,
+  "losses": 5,
+  "tradesCount": 18,
+  "signalsScanned": 595,
   "modeLabel": "aggressive memecoin mode",
   "holdings": [
-    {
-      "symbol": "CBUCKS",
-      "mint": "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump",
-      "amount": 1126.441936,
-      "decimals": 6
-    },
     {
       "symbol": "HELL",
       "mint": "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump",
@@ -48,24 +42,15 @@
       "mint": "Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump",
       "amount": 1185.947365,
       "decimals": 6
+    },
+    {
+      "symbol": "YOURSELF",
+      "mint": "Etd4QU7PGuzh4ozkzzBBjMmySNkU21BZamB7qPR1xBLV",
+      "amount": 14344.478082,
+      "decimals": 6
     }
   ],
   "positions": [
-    {
-      "id": "P1",
-      "openedPkt": "2026-11-10 01:34",
-      "asset": "CBUCKS",
-      "mint": "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump",
-      "side": "Long spot",
-      "sizeText": "1,126.441936 tokens left (~$5.00 at cost; trimmed 1,100 at 01:38 and 1,086 at 02:00)",
-      "amount": 1126.441936,
-      "entry": 0.004442,
-      "stop": 0.003554,
-      "takeProfit": 0.006219,
-      "takeText": "Half at $0.006219 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:04 PKT",
-      "status": "Open (peak price so far $0.004465)",
-      "pnlPctText": "-2.2%"
-    },
     {
       "id": "P3",
       "openedPkt": "2026-11-10 02:00",
@@ -79,7 +64,7 @@
       "takeProfit": 0.004134,
       "takeText": "Half at $0.004134 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:30 PKT",
       "status": "Open",
-      "pnlPctText": "-14.7%"
+      "pnlPctText": "-13.4%"
     },
     {
       "id": "P4",
@@ -94,7 +79,7 @@
       "takeProfit": 0.0294,
       "takeText": "Half at $0.02940 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:40 PKT",
       "status": "Open",
-      "pnlPctText": "+3.5%"
+      "pnlPctText": "+1.4%"
     },
     {
       "id": "P5",
@@ -109,7 +94,7 @@
       "takeProfit": 0.0002922,
       "takeText": "Half at $0.0002922 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:40 PKT",
       "status": "Open",
-      "pnlPctText": "-11.1%"
+      "pnlPctText": "-11.9%"
     },
     {
       "id": "P6",
@@ -124,7 +109,7 @@
       "takeProfit": 0.001152,
       "takeText": "Half at $0.001152 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:59 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-1.4%"
+      "pnlPctText": "-5.0%"
     },
     {
       "id": "P7",
@@ -139,10 +124,53 @@
       "takeProfit": 0.006188,
       "takeText": "Half at $0.006188 (+40%), then 20% trail from peak; flat-exit if within ±5% at 04:11 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-4.8%"
+      "pnlPctText": "-4.7%"
+    },
+    {
+      "id": "P8",
+      "openedPkt": "2026-11-10 03:07",
+      "asset": "YOURSELF",
+      "mint": "Etd4QU7PGuzh4ozkzzBBjMmySNkU21BZamB7qPR1xBLV",
+      "side": "Long spot",
+      "sizeText": "14,344.478082 tokens (0.059378 SOL incl. fees, ~$5.12)",
+      "amount": 14344.478082,
+      "entry": 0.000357,
+      "stop": 0.0002856,
+      "takeProfit": 0.0004998,
+      "takeText": "Half at $0.0004998 (+40%), then 20% trail from peak; flat-exit if within ±5% at 04:37 PKT",
+      "status": "Open (Phantom VERIFIED)",
+      "pnlPctText": "-5.3%"
     }
   ],
   "trades": [
+    {
+      "id": "T18",
+      "timePkt": "2026-11-10 03:07",
+      "action": "BUY",
+      "side": "BUY",
+      "ticker": "YOURSELF",
+      "size": "0.059378 SOL (~$5.12 incl. fees) → 14,344.478082 YOURSELF",
+      "price": "~$0.0003570",
+      "href": "https://solscan.io/tx/kpEWBFEY3iJrZXMxJnvk4oK2kpL63owubF3Wkm4W58ipW63shStGswVcrCvPQFCyxg36h343mMdnd9Skdke77aM",
+      "notes": "Open: +40% 1h, 733 buys vs 434 sells, $87k liquidity, over a year old; clean Phantom preview with name and logo, Phantom VERIFIED after fill; 4.0% impact; OKX route; finalized",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
+    {
+      "id": "T17",
+      "timePkt": "2026-11-10 03:05",
+      "action": "SELL (close)",
+      "side": "SELL",
+      "ticker": "CBUCKS",
+      "size": "1,126.441936 → 0.054741 SOL net (~$4.72)",
+      "price": "~$0.004470",
+      "href": "https://solscan.io/tx/KnjDTLWe3fYDzbokqXHMibQ4optNYeesXRv9X5w8t1i8LwMojDWkCwnAdzhxkY9kd9j4nTUe6JvG3fTGT2LCG2d",
+      "notes": "LOSS ~-$0.28 on the remaining ~$5.00 basis: 90-minute flat exit (price +0.6% vs entry at 03:05); 1.4% impact; DFlow route; finalized",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
     {
       "id": "T16",
       "timePkt": "2026-11-10 02:40",
@@ -369,6 +397,15 @@
     }
   ],
   "activity": [
+    {
+      "timePkt": "2026-11-10 03:08 PKT",
+      "title": "SELL CBUCKS (flat exit), BUY YOURSELF",
+      "kind": "system",
+      "detail": "",
+      "coins": "",
+      "why": "",
+      "tx": ""
+    },
     {
       "timePkt": "2026-11-10 03:00 PKT",
       "title": "Check: holding 6, no trades",
@@ -647,7 +684,7 @@
       "color": "#ef4444",
       "tone": "red",
       "tag": "watching",
-      "action": "CBUCKS stop $0.003554 · take $0.006219 · Open (peak price so far $0.004465)"
+      "action": "HELL stop $0.002362 · take $0.004134 · Open"
     }
   ],
   "riskRules": [
@@ -661,6 +698,6 @@
     "Quote first; never execute if simulation blocks/flags risk or price impact > 5%.",
     "Halt new trades if wallet drops −60% from peak ($20.00); ask Malik how to continue."
   ],
-  "solBalanceHint": 0.182612408,
-  "walletUsdHint": 44.38
+  "solBalanceHint": 0.177975555,
+  "walletUsdHint": 43.73
 }
