@@ -1,16 +1,16 @@
 {
-  "updatedPkt": "2026-11-10 02:22 PKT",
+  "updatedPkt": "2026-11-10 02:31 PKT",
   "wallet": "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9",
   "status": "Active",
-  "nextCheckPkt": "2026-11-10 02:25 PKT (every 5 min)",
+  "nextCheckPkt": "2026-11-10 02:35 PKT (every 5 min)",
   "startUsd": 50.0,
   "startSol": 0.5745,
   "peakUsd": 50.0,
   "haltUsd": 20.0,
   "wins": 0,
-  "losses": 3,
-  "tradesCount": 12,
-  "signalsScanned": 159,
+  "losses": 4,
+  "tradesCount": 15,
+  "signalsScanned": 462,
   "modeLabel": "aggressive memecoin mode",
   "holdings": [
     {
@@ -36,6 +36,12 @@
       "mint": "2StNe98imN7M6K341a7a4xvc8eNTvLCde5EugAKfLoat",
       "amount": 23962.67002,
       "decimals": 6
+    },
+    {
+      "symbol": "DOPE",
+      "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
+      "amount": 6077.890373,
+      "decimals": 6
     }
   ],
   "positions": [
@@ -52,7 +58,7 @@
       "takeProfit": 0.006219,
       "takeText": "Half at $0.006219 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:04 PKT",
       "status": "Open (peak price so far $0.004465)",
-      "pnlPctText": "-1.7%"
+      "pnlPctText": "-4.9%"
     },
     {
       "id": "P3",
@@ -82,7 +88,7 @@
       "takeProfit": 0.0294,
       "takeText": "Half at $0.02940 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:40 PKT",
       "status": "Open",
-      "pnlPctText": "+3.5%"
+      "pnlPctText": "+9.2%"
     },
     {
       "id": "P5",
@@ -97,10 +103,67 @@
       "takeProfit": 0.0002922,
       "takeText": "Half at $0.0002922 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:40 PKT",
       "status": "Open",
-      "pnlPctText": "-4.2%"
+      "pnlPctText": "-3.8%"
+    },
+    {
+      "id": "P6",
+      "openedPkt": "2026-11-10 02:29",
+      "asset": "DOPE",
+      "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
+      "side": "Long spot",
+      "sizeText": "6,077.890373 tokens (0.0579 SOL swap, ~$5.00)",
+      "amount": 6077.890373,
+      "entry": 0.000823,
+      "stop": 0.000658,
+      "takeProfit": 0.001152,
+      "takeText": "Half at $0.001152 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:59 PKT",
+      "status": "Open (Phantom NOT_VERIFIED, not spam)",
+      "pnlPctText": "-1.6%"
     }
   ],
   "trades": [
+    {
+      "id": "T15",
+      "timePkt": "2026-11-10 02:31",
+      "action": "SELL (close)",
+      "side": "SELL",
+      "ticker": "BUTTHOLE",
+      "size": "49,958.85 → 0.053414 SOL net (~$4.61)",
+      "price": "~$0.0000923",
+      "href": "https://solscan.io/tx/22fERXnABfDcN5p8srrqFHqT15T5nxhC21vNnKi4NbCBsVExHRQtpQ2ZUkb99stc1L5UyxbvyJb4zEdp5GPGKigi",
+      "notes": "LOSS ~-$0.66 (incl. ~0.003 SOL account rent): Phantom wallet balances tagged BUTTHOLE POSSIBLE_SPAM right after the fill, so exited at once; 3.2% impact; OKX route",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
+    {
+      "id": "T14",
+      "timePkt": "2026-11-10 02:30",
+      "action": "BUY",
+      "side": "BUY",
+      "ticker": "BUTTHOLE",
+      "size": "0.0579 SOL → 49,958.85",
+      "price": "$0.000100",
+      "href": "https://solscan.io/tx/2jVcaX9pzb1r4Fa5F7rjgSRKdYtiPYdk3KCnNz5JEhsihPfm9RU79U286ao3HcnAtQKy79MitqYbVCULM3k7iusx",
+      "notes": "+131% 1h, +164% 6h, buys 667 > sells 635, $65k liq, 47h old; 3.6% impact; pre-buy simulation showed no warnings but no token logo; Jupiter route",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
+    {
+      "id": "T13",
+      "timePkt": "2026-11-10 02:29",
+      "action": "BUY",
+      "side": "BUY",
+      "ticker": "DOPE",
+      "size": "0.0579 SOL → 6,077.89",
+      "price": "$0.000823",
+      "href": "https://solscan.io/tx/3fC3NUUx5oP6D5Q9R3Zo9ahP1sHUrhjoRXRPJhvK5XBtJDGnKGBMdi48ikHdiy4ckrDhyzPy2Ja3WUV3f3mfqeDz",
+      "notes": "+12.8% 1h, +26% 6h, buys 348 > sells 206, $113k liq, 29 days old; 0.7% impact; Phantom pre-buy simulation named the token (Doge Pepe, with logo) and showed no warnings; Jupiter route",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
     {
       "id": "T12",
       "timePkt": "2026-11-10 02:20",
@@ -271,6 +334,15 @@
     }
   ],
   "activity": [
+    {
+      "timePkt": "2026-11-10 02:32 PKT",
+      "title": "BUY DOPE, BUTTHOLE in and out",
+      "kind": "trade",
+      "detail": "Phantom session OK; started at 0.310755 SOL + CBUCKS + HELL + ZCAT + PIRATE (~$46.21). Broad scan pulled 303 Solana tokens (GeckoTerminal trending 5m/1h/6h, new pools, top volume and tx-count pools, DexScreener boosts/profiles/search), 299 priced, 12 passed the entry rules. No stops or targets hit: CBUCKS −5%, HELL −10%, ZCAT +9%, PIRATE −4%. Pre-buy spam check ran on a live Phantom swap preview for each buy (Phantom's price lookup returns nothing for tokens the wallet doesn't hold). Bought DOPE and BUTTHOLE for 0.0579 SOL (~$5.00) each; previews had no warnings, impact 0.7% and 3.6%. Phantom then tagged BUTTHOLE as possible spam, so all of it was sold for 0.053414 SOL (−$0.66 including account rent). After: 0.243434 SOL + CBUCKS + HELL + ZCAT + PIRATE + DOPE = ~$45.45, 5 open positions.",
+      "coins": "MAYA, ORBIT, BUTTHOLE, ANT, AMD, ZCAT, DOPE, BTC (pump), HODLER, jeff, WEALTH, neet, KYTRO, HWAN",
+      "why": "DOPE +12.8% 1h / +26% 6h with buys 348 > sells 206 on $113k liquidity and Phantom knows the token. BUTTHOLE +131% 1h on $65k liquidity, 47h old, but flagged possible spam after the fill, so exited (its preview had no logo, now treated as a skip signal). Skipped MAYA (1.1h old launch, −16% in 5m), ORBIT (flagged spam earlier), ANT (no Phantom data last run), AMD (stopped out 10 minutes ago), BTC pump, HODLER, jeff, WEALTH (down on the hour), and neet, KYTRO, HWAN and other launches under 1 hour old or below $50k liquidity.",
+      "tx": "https://solscan.io/tx/3fC3NUUx5oP6D5Q9R3Zo9ahP1sHUrhjoRXRPJhvK5XBtJDGnKGBMdi48ikHdiy4ckrDhyzPy2Ja3WUV3f3mfqeDz"
+    },
     {
       "timePkt": "2026-11-10 02:22 PKT",
       "title": "SELL AMD (stop-loss), no new buys",
@@ -470,7 +542,7 @@
       "color": "#a855f7",
       "tone": "purple",
       "tag": "active",
-      "action": "2026-11-10 02:22 PKT: SELL AMD (stop-loss), no new buys"
+      "action": "2026-11-10 02:32 PKT: BUY DOPE, BUTTHOLE in and out"
     },
     {
       "id": "RISK",
@@ -491,6 +563,6 @@
     "Quote first; never execute if simulation blocks/flags risk or price impact > 5%.",
     "Halt new trades if wallet drops −60% from peak ($20.00); ask Malik how to continue."
   ],
-  "solBalanceHint": 0.310754534,
-  "walletUsdHint": 46.17
+  "solBalanceHint": 0.24343429,
+  "walletUsdHint": 45.45
 }
