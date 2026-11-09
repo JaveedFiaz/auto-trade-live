@@ -1,22 +1,34 @@
 {
-  "updatedPkt": "2026-11-10 01:53 PKT",
+  "updatedPkt": "2026-11-10 02:03 PKT",
   "wallet": "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9",
   "status": "Active",
-  "nextCheckPkt": "2026-11-10 01:57 PKT (every 5 min)",
+  "nextCheckPkt": "2026-11-10 02:04 PKT (every 5 min)",
   "startUsd": 50.0,
   "startSol": 0.5745,
   "peakUsd": 50.0,
   "haltUsd": 20.0,
   "wins": 0,
-  "losses": 0,
-  "tradesCount": 2,
-  "signalsScanned": 255,
+  "losses": 1,
+  "tradesCount": 7,
+  "signalsScanned": 534,
   "modeLabel": "aggressive memecoin mode",
   "holdings": [
     {
       "symbol": "CBUCKS",
       "mint": "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump",
-      "amount": 2212.441936,
+      "amount": 1126.441936,
+      "decimals": 6
+    },
+    {
+      "symbol": "AMD",
+      "mint": "DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump",
+      "amount": 10372.803558,
+      "decimals": 6
+    },
+    {
+      "symbol": "HELL",
+      "mint": "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump",
+      "amount": 1684.28715,
       "decimals": 6
     }
   ],
@@ -27,17 +39,117 @@
       "asset": "CBUCKS",
       "mint": "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump",
       "side": "Long spot",
-      "sizeText": "2,212.441936 tokens left (~$9.88; 1,100 trimmed 01:38)",
-      "amount": 2212.441936,
+      "sizeText": "1,126.441936 tokens left (~$5.00 at cost; trimmed 1,100 at 01:38 and 1,086 at 02:00)",
+      "amount": 1126.441936,
       "entry": 0.004442,
       "stop": 0.003554,
       "takeProfit": 0.006219,
-      "takeText": "Half at $0.006219 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:34 PKT",
+      "takeText": "Half at $0.006219 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:04 PKT",
       "status": "Open (peak price so far $0.004465)",
-      "pnlPctText": "-4.4%"
+      "pnlPctText": "-5.9%"
+    },
+    {
+      "id": "P2",
+      "openedPkt": "2026-11-10 02:00",
+      "asset": "AMD",
+      "mint": "DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump",
+      "side": "Long spot",
+      "sizeText": "10,372.803558 tokens (0.0575 SOL, ~$4.97)",
+      "amount": 10372.803558,
+      "entry": 0.0004795,
+      "stop": 0.0003836,
+      "takeProfit": 0.0006713,
+      "takeText": "Half at $0.0006713 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:30 PKT",
+      "status": "Open",
+      "pnlPctText": "-6.1%"
+    },
+    {
+      "id": "P3",
+      "openedPkt": "2026-11-10 02:00",
+      "asset": "HELL",
+      "mint": "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump",
+      "side": "Long spot",
+      "sizeText": "1,684.287150 tokens (0.0575 SOL, ~$4.97)",
+      "amount": 1684.28715,
+      "entry": 0.002953,
+      "stop": 0.002362,
+      "takeProfit": 0.004134,
+      "takeText": "Half at $0.004134 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:30 PKT",
+      "status": "Open",
+      "pnlPctText": "-6.4%"
     }
   ],
   "trades": [
+    {
+      "id": "T7",
+      "timePkt": "2026-11-10 02:01",
+      "action": "SELL (close)",
+      "side": "SELL",
+      "ticker": "ORBIT",
+      "size": "9,598.47 → ~0.0563 SOL net (~$4.87)",
+      "price": "~$0.000507",
+      "href": "https://solscan.io/tx/BJo8dQ4CzbYnANADfmGPPCauJswVzmTKLofFP5mB4eKoFFbWCFsjvovA7t2C4kcCjhQMLT9Z5VATYxx1v2U6TTa",
+      "notes": "LOSS ~-$0.11: Phantom flagged ORBIT POSSIBLE_SPAM after the fill, which breaks the no-spam rule, so exited at once",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
+    {
+      "id": "T6",
+      "timePkt": "2026-11-10 02:00",
+      "action": "BUY",
+      "side": "BUY",
+      "ticker": "HELL",
+      "size": "0.0575 SOL → 1,684.29",
+      "price": "$0.002953",
+      "href": "https://solscan.io/tx/sFh3khqw1PWT8Cjvu1P9GSSs5m1niUNzQTo74VTdE1F5Qq2p6YNuivd7XbsLcA7uiF8jTbH7vfbmPKKhsdsUsfF",
+      "notes": "+10.4% 1h, +14.1% 6h, +13.5% 5m, buys>sells, $150k liq; 1.5% impact",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
+    {
+      "id": "T5",
+      "timePkt": "2026-11-10 02:00",
+      "action": "BUY",
+      "side": "BUY",
+      "ticker": "AMD",
+      "size": "0.0575 SOL → 10,372.80",
+      "price": "$0.0004795",
+      "href": "https://solscan.io/tx/NpHYJNYrd5KfzRTi2CwTsPnJtbizyyosf61HTuvsMzbLcDwabHw95TLz4YPv7PUybgHkWDEKqVGDa5UxudCqi1G",
+      "notes": "+50% 1h, +123% 6h, +15.6% 5m, buys>sells, $81k liq, $87k 1h vol; 1.3% impact; mint/freeze authority off",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
+    {
+      "id": "T4",
+      "timePkt": "2026-11-10 02:00",
+      "action": "BUY",
+      "side": "BUY",
+      "ticker": "ORBIT",
+      "size": "0.0575 SOL → 9,598.47",
+      "price": "$0.000519",
+      "href": "https://solscan.io/tx/3ZmHNq2xGMks6XFB5u1PmjKk3iNtAxH4WmU3kmrA7DeWNEu2fEu4h6Q8YXFG2BXTHYSsJesE1g7Z1UHJEXkTyLcu",
+      "notes": "+51% 1h, +803% 6h, buys>sells, $56k liq, 1.5h old; 1.0% impact",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
+    {
+      "id": "T3",
+      "timePkt": "2026-11-10 02:00",
+      "action": "SELL (partial)",
+      "side": "SELL",
+      "ticker": "CBUCKS",
+      "size": "1,086 → ~0.0511 SOL (~$4.42)",
+      "price": "~$0.004070 net",
+      "href": "https://solscan.io/tx/3WC7iUMKDYj2Zdxbw2FwbanHCYerzAqMRoSZmknDmhea4K4dBDygd3DQMPVrRTNAox6x5FCugPzZik4g1aGA77cb",
+      "notes": "One-time trim to the $5 cap at cost; ~-$0.40 vs cost; 0.6% impact; OKX route",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
     {
       "id": "T2",
       "timePkt": "2026-11-10 01:38",
@@ -68,6 +180,15 @@
     }
   ],
   "activity": [
+    {
+      "timePkt": "2026-11-10 02:02 PKT",
+      "title": "BUY AMD + HELL, trim CBUCKS, ORBIT in and out",
+      "kind": "trade",
+      "detail": "Phantom session OK; started at 0.458296 SOL + 2,212.44 CBUCKS (~$48.80). New broad scan pulled 279 Solana tokens (GeckoTerminal trending 5m/1h/6h, new pools, top volume and tx-count pools, DexScreener boosts/profiles/search), 9 passed the entry rules. Trimmed CBUCKS once to the $5 cap at cost (sold 1,086 for ~0.0511 SOL). Bought ORBIT, AMD and HELL for 0.0575 SOL (~$4.97) each; all simulations clean, impact 1.0–1.5%, mint and freeze authority revoked. Phantom then tagged ORBIT as possible spam, so it was sold right away for ~0.0563 SOL (−$0.11). After: 0.388303 SOL + CBUCKS 1,126.44 + AMD 10,372.80 + HELL 1,684.29 = ~$47.62.",
+      "coins": "ORBIT, AMD, HELL, jeff, PIRATE, ANT, TAOLF, ZCAT, WEALTH, MAYA, HWAN, Grok Bot",
+      "why": "AMD +50% 1h / +123% 6h with $87k hourly volume and buys > sells; HELL +10% 1h / +14% 6h on $150k liquidity; ORBIT +51% 1h but flagged possible spam after the fill, so exited. Skipped MAYA, HWAN, CLIP, GTA6 and other +300–2000% launches because they are under 1 hour old or below $50k liquidity; jeff, ANT, ZCAT, WEALTH are down on the hour.",
+      "tx": "https://solscan.io/tx/NpHYJNYrd5KfzRTi2CwTsPnJtbizyyosf61HTuvsMzbLcDwabHw95TLz4YPv7PUybgHkWDEKqVGDa5UxudCqi1G"
+    },
     {
       "timePkt": "2026-11-10 01:52 PKT",
       "title": "5-min scan: holding CBUCKS, no new buy",
@@ -232,15 +353,15 @@
       "id": "ROUTER",
       "color": "#f59e0b",
       "tone": "orange",
-      "tag": "dflow",
-      "action": "Last route: Phantom DFlow · sim clean"
+      "tag": "standby",
+      "action": "Phantom routes ready · waiting next quote"
     },
     {
       "id": "TRADER",
       "color": "#a855f7",
       "tone": "purple",
       "tag": "active",
-      "action": "2026-11-10 01:38 PKT: SELL 1,100 CBUCKS (trim to 20% cap)"
+      "action": "2026-11-10 02:02 PKT: BUY AMD + HELL, trim CBUCKS, ORBIT in and out"
     },
     {
       "id": "RISK",
@@ -252,14 +373,15 @@
   ],
   "riskRules": [
     "Keep ≥ 0.03 SOL for fees at all times.",
-    "Memecoins: max 80% of wallet total; max 20% per coin; max 4 open positions; only tokens with ≥$100k liquidity, ≥2h old, not spam.",
+    "Memecoins: max 80% of wallet total; about $5 per new position (never above ~$5.50); max 6 open positions; up to 3 new buys per check; only tokens with ≥$50k liquidity, ≥1h old, not flagged spam by Phantom.",
+    "Entry: +8% 1h or +12% 6h, more buys than sells in the last hour, ≥$2k 1h volume, not a +100% 5m blow-off.",
     "Perps: max 3x isolated leverage (when Hyperliquid access works).",
     "Stop-loss: −20% memecoins; −10% majors and gold.",
     "Take half profit at +40% memecoins (+15% majors/gold), then 20% trailing stop on the rest.",
-    "Exit any position flat (±5%) for 2 hours.",
+    "Exit any position flat (±5%) for 90 minutes.",
     "Quote first; never execute if simulation blocks/flags risk or price impact > 5%.",
     "Halt new trades if wallet drops −60% from peak ($20.00); ask Malik how to continue."
   ],
-  "solBalanceHint": 0.458295828,
-  "walletUsdHint": 49.14
+  "solBalanceHint": 0.388303445,
+  "walletUsdHint": 47.62
 }
