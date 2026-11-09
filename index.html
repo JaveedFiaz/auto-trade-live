@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="manifest" href="manifest.json"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="theme-color" content="#000000">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="dark" />
+<meta name="theme-color" content="#000000" />
+<title>Auto Trade Bot — Live</title>
+<style>
+  :root {
+    --bg: #000;
+    --card: #0a0a0a;
+    --border: #1f1f1f;
+    --border2: #2a2a2a;
+    --text: #f5f5f5;
+    --muted: #8a8a8a;
+    --dim: #5a5a5a;
+    --green: #22c55e;
+    --red: #ef4444;
+    --blue: #3b82f6;
+    --orange: #f59e0b;
+    --purple: #a855f7;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0; background: var(--bg); color: var(--text);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body { padding: 12px 12px 36px; max-width: 480px; margin: 0 auto; }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+    padding: 14px; margin-bottom: 12px;
+  }
+  .pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 4px 10px; border-radius: 999px; font-size: 11px; font-weight: 600;
+    letter-spacing: .2px; border: 1px solid var(--border2); background: #141414; color: var(--muted);
+    white-space: nowrap;
+  }
+  .pill.green { background: rgba(34,197,94,.15); color: var(--green); border-color: rgba(34,197,94,.35); }
+  .pill.red { background: rgba(239,68,68,.15); color: var(--red); border-color: rgba(239,68,68,.35); }
+  .pill.blue { background: rgba(59,130,246,.15); color: var(--blue); border-color: rgba(59,130,246,.35); }
+  .pill.orange { background: rgba(245,158,11,.15); color: var(--orange); border-color: rgba(245,158,11,.35); }
+  .pill.purple { background: rgba(168,85,247,.15); color: var(--purple); border-color: rgba(168,85,247,.35); }
+  .live-dot {
+    width: 8px; height: 8px; border-radius: 999px; background: var(--green);
+    box-shadow: 0 0 0 0 rgba(34,197,94,.55);
+    animation: pulseLive 1.6s ease-out infinite;
+  }
+  @keyframes pulseLive {
+    0%,100% { opacity: 1; box-shadow: 0 0 0 0 rgba(34,197,94,.55); }
+    50% { opacity: .85; box-shadow: 0 0 0 6px rgba(34,197,94,0); }
+  }
+  .header { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+  .title { font-size: 20px; font-weight: 800; letter-spacing: -.3px; line-height: 1.1; }
+  .sub { display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: 12px; margin-top: 4px; }
+  .pills { display: flex; flex-wrap: wrap; gap: 6px; }
+  .ticker-wrap { overflow: hidden; padding: 10px 0; }
+  .ticker-track { display: flex; gap: 18px; width: max-content; animation: marquee 28s linear infinite; }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .bal { font-size: 44px; font-weight: 800; letter-spacing: -1.2px; line-height: 1.05; margin-top: 4px; }
+  .muted { color: var(--muted); font-size: 12px; }
+  .dim { color: var(--dim); font-size: 11px; }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .chart-box { position: relative; width: 100%; }
+  .chart-box svg { display: block; width: 100%; height: auto; }
+  .agent {
+    display: flex; gap: 10px; align-items: flex-start; padding: 10px;
+    border-radius: 12px; border: 1px solid var(--border); background: #070707; margin-bottom: 8px;
+  }
+  .agent-dot { width: 10px; height: 10px; border-radius: 999px; margin-top: 4px; flex-shrink: 0; }
+  .agent-main { flex: 1; min-width: 0; }
+  .agent-top { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 4px; }
+  .agent-name { font-weight: 800; font-size: 13px; }
+  .agent-action { color: var(--muted); font-size: 12px; line-height: 1.4; }
+  .agent-tag { margin-left: auto; }
+  .trade-empty {
+    padding: 18px 12px; border-radius: 12px; border: 1px dashed var(--border2);
+    color: var(--muted); font-size: 13px; text-align: center;
+  }
+  .trade-row {
+    display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+    padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 12px;
+  }
+  .trade-row:last-child { border-bottom: none; }
+  a.sol { color: var(--green); text-decoration: none; font-weight: 600; font-size: 11px; }
+  a.sol:hover { text-decoration: underline; }
+  details.block { margin-bottom: 10px; }
+  details.block > summary {
+    list-style: none; background: #111; border: 1px solid var(--border2); border-radius: 12px;
+    padding: 10px 12px; font-size: 13px; font-weight: 600; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  details.block > summary::-webkit-details-marker { display: none; }
+  details.block[open] > summary { margin-bottom: 8px; }
+  .toast {
+    position: fixed; top: 10px; left: 50%; transform: translateX(-50%) translateY(-120%);
+    background: #0d0d0d; border: 1px solid rgba(34,197,94,.4); color: var(--text);
+    border-radius: 12px; padding: 10px 14px; font-size: 12px; z-index: 50;
+    transition: transform .35s ease; max-width: calc(100% - 24px); box-shadow: 0 8px 24px rgba(0,0,0,.5);
+  }
+  .toast.show { transform: translateX(-50%) translateY(0); }
+  .err { color: var(--orange); font-size: 11px; margin-top: 6px; }
+  .footer { text-align: center; color: var(--dim); font-size: 10px; margin-top: 14px; line-height: 1.4; }
+</style>
+</head>
+<body>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <div class="header">
+    <div>
+      <div class="title">Auto Trade Bot</div>
+      <div class="sub">
+        <span class="live-dot" aria-hidden="true"></span>
+        <span style="color:var(--green);font-weight:700">Live</span>
+        <span id="ago">· starting…</span>
+      </div>
+    </div>
+    <div class="pills">
+      <span class="pill green">aggressive memecoin mode</span>
+      <span class="pill green" id="statusPill">Active</span>
+      <span class="pill" id="nextPill">Next 01:09 PKT</span>
+    </div>
+  </div>
+
+  <div class="card ticker-wrap" aria-label="Watchlist ticker">
+    <div class="ticker-track" id="ticker"></div>
+  </div>
+
+  <div class="card">
+    <div class="muted">Portfolio value</div>
+    <div class="bal" id="balance">$—</div>
+    <div class="row" style="margin-top:10px">
+      <span class="pill" id="pnlPill">—</span>
+      <span class="pill purple" id="multPill">—x</span>
+      <span class="pill" id="wlPill">0W / 0L</span>
+    </div>
+    <div class="muted" style="margin-top:10px" id="subStats">in $50.00 · 0 trades</div>
+    <div class="err" id="apiErr" hidden></div>
+  </div>
+
+  <div class="card">
+    <div class="row" style="justify-content:space-between;margin-bottom:8px">
+      <span style="font-weight:700;font-size:13px">Equity</span>
+      <span class="dim" id="chartMeta">session points: 0</span>
+    </div>
+    <div class="chart-box">
+      <svg id="chart" viewBox="0 0 360 160" role="img" aria-label="Live equity chart"></svg>
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="font-weight:700;font-size:13px;margin-bottom:10px">Live trade feed</div>
+    <div id="tradeFeed"></div>
+    <div id="walletTxs" style="margin-top:12px"></div>
+  </div>
+
+  <div class="card">
+    <div style="font-weight:700;font-size:13px;margin-bottom:8px">Holdings</div>
+    <div id="holdings" class="muted">Loading…</div>
+  </div>
+
+  <div class="card">
+    <div style="font-weight:700;font-size:13px;margin-bottom:12px">agents — working together</div>
+    <div id="agents"></div>
+  </div>
+
+  <div class="card">
+    <div style="font-weight:700;font-size:13px;margin-bottom:4px">Pipeline</div>
+    <div class="dim" style="margin-bottom:8px">5 agents → Auto Trade Bot core → Execute</div>
+    <svg id="pipeline" viewBox="0 0 360 250" width="100%" aria-label="Agent pipeline"></svg>
+  </div>
+
+  <details class="block">
+    <summary><span>Risk rules</span><span class="dim">Show</span></summary>
+    <div class="card" id="riskRules"></div>
+  </details>
+  <details class="block">
+    <summary><span>Full activity log</span><span class="dim" id="actCount">0 events</span></summary>
+    <div class="card" id="activity"></div>
+  </details>
+
+  <div class="footer">
+    Malik’s Auto Trade Bot · read-only live desk · no wallet connect<br/>
+    Wallet <span id="walletShort"></span> · data via public RPC + DexScreener
+  </div>
+
+<script>
+(() => {
+  "use strict";
+
+  /* ===== Config ===== */
+  const WALLET = "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9";
+  const START_USD = 50;
+  const START_SOL = 0.5745;
+  const POLL_MS = 4000;
+  const BOT_FEED_URL = ""; // optional hosted JSON later
+  const SOL_MINT = "So11111111111111111111111111111111111111112";
+  const RPC_CANDIDATES = [
+    "https://solana-rpc.publicnode.com",
+    "https://solana.publicnode.com",
+  ];
+  // Watchlist mints (SOL + top Solana memes). Prices/24h from DexScreener.
+  const WATCH_MINTS = [
+    { symbol: "SOL", mint: SOL_MINT },
+    { symbol: "BONK", mint: "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263" },
+    { symbol: "WIF", mint: "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm" },
+    { symbol: "POPCAT", mint: "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr" },
+    { symbol: "JUP", mint: "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN" },
+    { symbol: "BOME", mint: "ukHH6c7mMyiWCf1b9pnWe25TSpkDDt3H5pQZgZ74J82" },
+  ];
+  const TOKEN_PROGRAM = "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA";
+  const TOKEN_2022 = "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb";
+
+  /* ===== Embedded bot state from journal.md / activity.md (2026-11-10) ===== */
+  const EMBEDDED = {
+    status: "Active",
+    nextCheckPkt: "2026-11-10 01:09 PKT",
+    tradesCount: 0,
+    wins: 0,
+    losses: 0,
+    signalsScanned: 0,
+    mode: "aggressive memecoin mode",
+    riskRules: [
+      "Keep ≥ 0.03 SOL for fees at all times",
+      "Memecoins: max 80% of wallet, max 25% per coin, max 4 open positions, only >$500k liquidity",
+      "Non-memecoin positions: max 20% of wallet each",
+      "Perps: max 3x isolated (when Hyperliquid works)",
+      "Stop-loss: −25% memecoins; −7% majors and gold",
+      "Take half profit at +50% memecoins, then 20% trailing stop on the rest; majors/gold half at +10%",
+      "Halt new trades at −60% from peak ($20.00); ask Malik before continuing",
+    ],
+    trades: [], // honest empty — no fills yet
+    agents: [
+      { id: "SCOUT", color: "#22c55e", tone: "green", tag: "idle",
+        action: "Waiting for first momentum/volume scan · 0 coins scanned · next check 01:09 PKT" },
+      { id: "GUARD", color: "#3b82f6", tone: "blue", tag: "gated",
+        action: "Perps HTTP 403 · gold blocked · spot-only gate on · liquidity floor >$500k" },
+      { id: "ROUTER", color: "#f59e0b", tone: "orange", tag: "standby",
+        action: "Phantom session ready · 0 swap routes run · waiting first signal" },
+      { id: "TRADER", color: "#a855f7", tone: "purple", tag: "flat",
+        action: "0 buys · 0 sells · waiting for first signal" },
+      { id: "RISK", color: "#ef4444", tone: "red", tag: "armed",
+        action: "Aggressive rules live · −25% meme stop · halt at $20 (−60% peak) · 0.03 SOL fee lock" },
+    ],
+    activity: [
+      { timePkt: "2026-11-10 00:54 PKT", kind: "system", title: "Neon trading-desk UI redesign",
+        detail: "Phone-first black/neon desk. Bot-embedded data + this live HTML app." },
+      { timePkt: "2026-11-10 00:48 PKT", kind: "system", title: "Dashboard upgraded for phone",
+        detail: "Canvas Page is bot-updated; this HTML file polls chain live in-browser." },
+      { timePkt: "2026-11-10 00:46 PKT", kind: "risk", title: "Aggressive memecoin rules set",
+        detail: "80% memecoin cap, 25%/coin, max 4, >$500k liq, −25% stop, half at +50% then 20% trail." },
+      { timePkt: "2026-11-10 00:44 PKT", kind: "setup", title: "Starting deposit confirmed",
+        detail: "0.574515424 SOL (~$50) on agent wallet.",
+        tx: "https://solscan.io/tx/LhJHruGz8QiYf1gXeSkMBDxzWvhPESKmQRMkqGxpcT4PBxPms36bDah1szhQ6TQvNUNxmuRSuNYWZNF2KPrGutA" },
+      { timePkt: "2026-11-10 00:43 PKT", kind: "setup", title: "Deposit landed on-chain",
+        detail: "Inbound SOL finalized (slot 467439220).",
+        tx: "https://solscan.io/tx/LhJHruGz8QiYf1gXeSkMBDxzWvhPESKmQRMkqGxpcT4PBxPms36bDah1szhQ6TQvNUNxmuRSuNYWZNF2KPrGutA" },
+      { timePkt: "2026-11-10 00:40 PKT", kind: "setup", title: "Phantom agent wallet connected",
+        detail: "Perps HTTP 403 · gold blocked · spot Solana only." },
+      { timePkt: "2026-11-10 00:09 PKT", kind: "system", title: "Autonomous hourly loop armed",
+        detail: "24/7 hourly loop · first market check ~1:09 AM PKT." },
+    ],
+  };
+
+  /* ===== State ===== */
+  const state = {
+    lastOkAt: 0,
+    solLamports: null,
+    solPrice: null,
+    solChange24h: null,
+    spl: [], // {mint, symbol, amount, decimals, price, usd}
+    watch: [], // {symbol, change24h, holding, price}
+    equity: [], // {t, usd}
+    sigs: [],
+    knownSigs: new Set(),
+    rpcUrl: RPC_CANDIDATES[0],
+    err: "",
+    bot: structuredClone(EMBEDDED),
+  };
+
+  const $ = (id) => document.getElementById(id);
+
+  function fmtPct(n) {
+    if (n == null || Number.isNaN(n)) return "—";
+    const sign = n > 0 ? "+" : "";
+    return sign + n.toFixed(2) + "%";
+  }
+  function fmtMoney(n, signed) {
+    if (n == null || Number.isNaN(n)) return "—";
+    const abs = Math.abs(n).toFixed(2);
+    if (!signed) return "$" + abs;
+    return (n >= 0 ? "+$" : "−$") + abs;
+  }
+  function shortAddr(a) { return a.slice(0, 4) + "…" + a.slice(-4); }
+
+  async function rpc(method, params) {
+    let lastErr;
+    const urls = [state.rpcUrl, ...RPC_CANDIDATES.filter((u) => u !== state.rpcUrl)];
+    for (const url of urls) {
+      try {
+        const res = await fetch(url, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ jsonrpc: "2.0", id: 1, method, params }),
+        });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const j = await res.json();
+        if (j.error) throw new Error(j.error.message || "RPC error");
+        state.rpcUrl = url;
+        return j.result;
+      } catch (e) {
+        lastErr = e;
+      }
+    }
+    throw lastErr || new Error("RPC failed");
+  }
+
+  async function fetchDexPrices(mints) {
+    const url = "https://api.dexscreener.com/latest/dex/tokens/" + mints.join(",");
+    const res = await fetch(url);
+    if (!res.ok) throw new Error("DexScreener HTTP " + res.status);
+    const data = await res.json();
+    const best = {};
+    for (const p of data.pairs || []) {
+      const b = p.baseToken || {};
+      const addr = b.address;
+      if (!addr) continue;
+      const liq = (p.liquidity && p.liquidity.usd) || 0;
+      const cur = best[addr];
+      if (!cur || liq > cur.liq) {
+        best[addr] = {
+          symbol: b.symbol || "?",
+          price: parseFloat(p.priceUsd),
+          change24h: (p.priceChange && p.priceChange.h24 != null) ? Number(p.priceChange.h24) : null,
+          liq,
+        };
+      }
+    }
+    return best;
+  }
+
+  async function loadBotFeed() {
+    if (!BOT_FEED_URL) return;
+    try {
+      const res = await fetch(BOT_FEED_URL, { cache: "no-store" });
+      if (!res.ok) return;
+      const j = await res.json();
+      if (j.status) state.bot.status = j.status;
+      if (j.nextCheckPkt) state.bot.nextCheckPkt = j.nextCheckPkt;
+      if (Array.isArray(j.trades)) state.bot.trades = j.trades;
+      if (Array.isArray(j.agents)) state.bot.agents = j.agents;
+      if (Array.isArray(j.activity)) state.bot.activity = j.activity;
+      if (typeof j.tradesCount === "number") state.bot.tradesCount = j.tradesCount;
+      if (typeof j.wins === "number") state.bot.wins = j.wins;
+      if (typeof j.losses === "number") state.bot.losses = j.losses;
+      if (typeof j.signalsScanned === "number") state.bot.signalsScanned = j.signalsScanned;
+      if (Array.isArray(j.riskRules)) state.bot.riskRules = j.riskRules;
+    } catch (_) { /* keep embedded */ }
+  }
+
+  async function pollChain() {
+    const bal = await rpc("getBalance", [WALLET, { commitment: "confirmed" }]);
+    state.solLamports = bal.value;
+
+    // SPL token accounts — may be blocked on some public RPCs; fail soft
+    const spl = [];
+    for (const programId of [TOKEN_PROGRAM, TOKEN_2022]) {
+      try {
+        const r = await rpc("getTokenAccountsByOwner", [
+          WALLET,
+          { programId },
+          { encoding: "jsonParsed" },
+        ]);
+        for (const it of (r && r.value) || []) {
+          const info = (((it.account || {}).data || {}).parsed || {}).info || {};
+          const ta = info.tokenAmount || {};
+          const amt = Number(ta.uiAmount || 0);
+          if (!amt) continue;
+          spl.push({
+            mint: info.mint,
+            amount: amt,
+            decimals: ta.decimals,
+            symbol: null,
+          });
+        }
+      } catch (_) { /* ignore blocked method */ }
+    }
+    state.spl = spl;
+
+    let sigs = [];
+    try {
+      sigs = await rpc("getSignaturesForAddress", [WALLET, { limit: 8 }]) || [];
+    } catch (_) {}
+    const prev = state.knownSigs;
+    const firstLoad = prev.size === 0;
+    for (const s of sigs) {
+      if (!firstLoad && s.signature && !prev.has(s.signature)) {
+        showToast("New wallet tx · " + shortAddr(s.signature));
+      }
+      if (s.signature) prev.add(s.signature);
+    }
+    state.sigs = sigs;
+  }
+
+  async function pollPrices() {
+    const mints = [SOL_MINT, ...state.spl.map((s) => s.mint), ...WATCH_MINTS.map((w) => w.mint)];
+    const uniq = [...new Set(mints)];
+    // DexScreener accepts comma lists; chunk if needed
+    const chunk = uniq.slice(0, 20);
+    const best = await fetchDexPrices(chunk);
+    const sol = best[SOL_MINT];
+    if (sol && sol.price) {
+      state.solPrice = sol.price;
+      state.solChange24h = sol.change24h;
+    }
+    for (const t of state.spl) {
+      const p = best[t.mint];
+      if (p) {
+        t.symbol = p.symbol || t.symbol;
+        t.price = p.price;
+        t.usd = (t.amount || 0) * (p.price || 0);
+        t.change24h = p.change24h;
+      }
+    }
+    const held = new Set([SOL_MINT, ...state.spl.map((s) => s.mint)]);
+    state.watch = WATCH_MINTS.map((w) => {
+      const p = best[w.mint] || {};
+      return {
+        symbol: w.symbol,
+        change24h: p.change24h != null ? p.change24h : null,
+        price: p.price,
+        holding: held.has(w.mint),
+      };
+    });
+  }
+
+  function portfolioUsd() {
+    const sol = (state.solLamports || 0) / 1e9;
+    const solUsd = sol * (state.solPrice || 0);
+    const splUsd = state.spl.reduce((a, t) => a + (t.usd || 0), 0);
+    return solUsd + splUsd;
+  }
+
+  function pushEquity(usd) {
+    if (!usd || !isFinite(usd)) return;
+    const now = Date.now();
+    const last = state.equity[state.equity.length - 1];
+    if (last && now - last.t < 2000 && Math.abs(last.usd - usd) < 0.0001) return;
+    state.equity.push({ t: now, usd });
+    if (state.equity.length > 90) state.equity.shift();
+  }
+
+  function showToast(msg) {
+    const el = $("toast");
+    el.textContent = msg;
+    el.classList.add("show");
+    clearTimeout(showToast._t);
+    showToast._t = setTimeout(() => el.classList.remove("show"), 4200);
+  }
+
+  function renderTicker() {
+    const items = state.watch.length ? state.watch : WATCH_MINTS.map((w) => ({ symbol: w.symbol, change24h: null, holding: w.symbol === "SOL" }));
+    const doubled = items.concat(items);
+    $("ticker").innerHTML = doubled.map((w) => {
+      const up = (w.change24h || 0) >= 0;
+      const col = w.change24h == null ? "var(--muted)" : (up ? "var(--green)" : "var(--red)");
+      return `<div class="row" style="gap:8px;padding:0 4px">
+        <span style="font-weight:700;font-size:12px">${w.symbol}${w.holding ? " · held" : ""}</span>
+        <span style="color:${col};font-weight:700;font-size:12px">${fmtPct(w.change24h)}</span>
+      </div>`;
+    }).join("");
+  }
+
+  function renderBalance() {
+    const usd = portfolioUsd();
+    const pnl = usd - START_USD;
+    const pnlPct = (pnl / START_USD) * 100;
+    const mult = usd / START_USD;
+    const sol = (state.solLamports || 0) / 1e9;
+    $("balance").textContent = usd ? fmtMoney(usd, false) : "$—";
+    const pill = $("pnlPill");
+    pill.textContent = `${fmtMoney(pnl, true)} (${fmtPct(pnlPct)})`;
+    pill.className = "pill " + (pnl >= 0 ? "green" : "red");
+    $("multPill").textContent = (isFinite(mult) ? mult.toFixed(2) : "—") + "x";
+    $("wlPill").textContent = `${state.bot.wins}W / ${state.bot.losses}L`;
+    $("subStats").textContent = `in $${START_USD.toFixed(2)} · ${state.bot.tradesCount} trades · ${sol.toFixed(4)} SOL` +
+      (state.solPrice ? ` @ $${state.solPrice.toFixed(2)}` : "");
+    $("statusPill").textContent = state.bot.status;
+    $("statusPill").className = "pill " + (state.bot.status === "Active" ? "green" : "red");
+    $("nextPill").textContent = "Next " + String(state.bot.nextCheckPkt).replace("2026-11-10 ", "");
+  }
+
+  function renderChart() {
+    const svg = $("chart");
+    const pts = state.equity.slice();
+    const w = 360, h = 160, padX = 12, padY = 18;
+    $("chartMeta").textContent = "session points: " + pts.length;
+    if (pts.length === 0) {
+      svg.innerHTML = `<text x="180" y="80" text-anchor="middle" fill="#5a5a5a" font-size="12" font-family="Inter,sans-serif">Waiting for first live tick…</text>`;
+      return;
+    }
+    // seed baseline context: include $50 so dashed line is meaningful
+    const ys = pts.map((p) => p.usd);
+    let minY = Math.min(START_USD, ...ys) - 0.4;
+    let maxY = Math.max(START_USD, ...ys) + 0.4;
+    if (maxY - minY < 0.8) { minY -= 0.4; maxY += 0.4; }
+    const xAt = (i) => padX + (pts.length <= 1 ? (w - padX * 2) / 2 : (i / (pts.length - 1)) * (w - padX * 2));
+    const yAt = (v) => padY + (1 - (v - minY) / (maxY - minY)) * (h - padY * 2);
+    const line = pts.map((p, i) => `${i ? "L" : "M"} ${xAt(i).toFixed(1)} ${yAt(p.usd).toFixed(1)}`).join(" ");
+    const lastX = xAt(pts.length - 1), lastY = yAt(pts[pts.length - 1].usd);
+    const area = `${line} L ${lastX.toFixed(1)} ${(h - padY).toFixed(1)} L ${xAt(0).toFixed(1)} ${(h - padY).toFixed(1)} Z`;
+    const baseY = yAt(START_USD);
+    const up = pts[pts.length - 1].usd >= START_USD;
+    const stroke = up ? "#22c55e" : "#ef4444";
+    svg.innerHTML = `
+      <defs>
+        <linearGradient id="eqFill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="${stroke}" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="sweepGrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#fff" stop-opacity="0"/>
+          <stop offset="50%" stop-color="#fff" stop-opacity="0.18"/>
+          <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <line x1="${padX}" x2="${w - padX}" y1="${baseY}" y2="${baseY}" stroke="#5a5a5a" stroke-dasharray="4 4" stroke-width="1"/>
+      <text x="${w - padX}" y="${baseY - 4}" fill="#5a5a5a" font-size="9" text-anchor="end" font-family="Inter,sans-serif">$50 start</text>
+      <path d="${area}" fill="url(#eqFill)"/>
+      <path d="${line}" fill="none" stroke="${stroke}" stroke-width="2.2"/>
+      <circle cx="${lastX}" cy="${lastY}" r="4" fill="${stroke}"/>
+      <rect x="0" y="0" width="40" height="${h}" fill="url(#sweepGrad)">
+        <animateTransform attributeName="transform" type="translate" from="-40 0" to="360 0" dur="4.5s" repeatCount="indefinite"/>
+      </rect>`;
+  }
+
+  function renderTrades() {
+    const trades = state.bot.trades || [];
+    if (!trades.length) {
+      $("tradeFeed").innerHTML = `<div class="trade-empty">0 trades yet · waiting for first signal</div>`;
+    } else {
+      $("tradeFeed").innerHTML = trades.map((t) => {
+        const tone = t.side === "BUY" ? "green" : "red";
+        const pnlCol = (t.pnlUsd == null || t.pnlUsd >= 0) ? "var(--green)" : "var(--red)";
+        return `<div class="trade-row">
+          <span class="dim">${t.timePkt || ""}</span>
+          <span class="pill ${tone}">${t.side || "?"}</span>
+          <strong>$${t.ticker || ""}</strong>
+          <span style="color:${pnlCol};font-weight:700">${t.pnlLabel || "—"}</span>
+          <span class="pill">${t.via || "via Phantom"}</span>
+          ${t.href ? `<a class="sol" href="${t.href}" target="_blank" rel="noopener">Solscan</a>` : ""}
+        </div>`;
+      }).join("");
+    }
+    // wallet signatures
+    if (!state.sigs.length) {
+      $("walletTxs").innerHTML = "";
+      return;
+    }
+    $("walletTxs").innerHTML = `<div class="dim" style="margin-bottom:6px">Latest wallet transactions</div>` +
+      state.sigs.slice(0, 5).map((s) => {
+        const href = "https://solscan.io/tx/" + s.signature;
+        const when = s.blockTime ? new Date(s.blockTime * 1000).toLocaleString("en-PK", { timeZone: "Asia/Karachi" }) + " PKT" : "";
+        return `<div class="trade-row">
+          <span class="dim">${when}</span>
+          <span>${s.err ? "failed" : "confirmed"} · ${shortAddr(s.signature)}</span>
+          <a class="sol" href="${href}" target="_blank" rel="noopener">Solscan</a>
+        </div>`;
+      }).join("");
+  }
+
+  function renderHoldings() {
+    const sol = (state.solLamports || 0) / 1e9;
+    const solUsd = sol * (state.solPrice || 0);
+    const total = portfolioUsd() || 1;
+    let rows = [`<div class="row" style="justify-content:space-between;font-size:13px;margin-bottom:6px">
+      <span><strong>SOL</strong> <span class="muted">Solana</span></span>
+      <span>${sol.toFixed(6)} · ${fmtMoney(solUsd, false)} · ${((solUsd / total) * 100).toFixed(0)}%</span>
+    </div>`];
+    if (!state.spl.length) {
+      rows.push(`<div class="muted">No SPL tokens held</div>`);
+    } else {
+      for (const t of state.spl) {
+        rows.push(`<div class="row" style="justify-content:space-between;font-size:13px;margin-bottom:6px">
+          <span><strong>${t.symbol || shortAddr(t.mint)}</strong></span>
+          <span>${t.amount} · ${fmtMoney(t.usd || 0, false)}</span>
+        </div>`);
+      }
+    }
+    $("holdings").innerHTML = rows.join("");
+  }
+
+  function renderAgents() {
+    $("agents").innerHTML = state.bot.agents.map((a) => `
+      <div class="agent">
+        <div class="agent-dot" style="background:${a.color};box-shadow:0 0 10px ${a.color}"></div>
+        <div class="agent-main">
+          <div class="agent-top">
+            <span class="agent-name">${a.id}</span>
+            <span class="pill ${a.tone}">${a.tag}</span>
+            <span class="pill agent-tag">${a.tag}</span>
+          </div>
+          <div class="agent-action">${a.action}</div>
+        </div>
+      </div>`).join("");
+  }
+
+  function renderPipeline() {
+    const svg = $("pipeline");
+    const nodes = [
+      { label: "Scout", c: "#22c55e", y: 10 },
+      { label: "Guard", c: "#3b82f6", y: 58 },
+      { label: "Router", c: "#f59e0b", y: 106 },
+      { label: "Trader", c: "#a855f7", y: 154 },
+      { label: "Risk", c: "#ef4444", y: 202 },
+    ];
+    const coreX = 210, coreY = 118, execX = 320, execY = 118;
+    let html = `<defs>
+      <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 Z" fill="#2a2a2a"/>
+      </marker>
+    </defs>`;
+    nodes.forEach((n, i) => {
+      const yy = n.y;
+      const dx = coreX - 78, dy = coreY + 16 - (yy + 14);
+      html += `
+        <line x1="70" y1="${yy + 14}" x2="${coreX - 8}" y2="${coreY + 16}" stroke="#2a2a2a" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <circle cx="70" cy="${yy + 14}" r="3" fill="${n.c}">
+          <animateMotion dur="${(2.4 + i * 0.25).toFixed(2)}s" repeatCount="indefinite" path="M0,0 L${dx},${dy}"/>
+        </circle>
+        <rect x="8" y="${yy}" width="62" height="28" rx="8" fill="#0d0d0d" stroke="${n.c}" stroke-width="1.2"/>
+        <text x="39" y="${yy + 18}" text-anchor="middle" fill="#f5f5f5" font-size="10" font-family="Inter,sans-serif" font-weight="600">${n.label}</text>`;
+    });
+    html += `
+      <line x1="${coreX + 52}" y1="${coreY + 16}" x2="${execX - 8}" y2="${execY + 16}" stroke="#2a2a2a" stroke-width="1.5" marker-end="url(#arrow)"/>
+      <circle cx="${coreX + 52}" cy="${coreY + 16}" r="3" fill="#22c55e">
+        <animateMotion dur="2s" repeatCount="indefinite" path="M0,0 L${execX - coreX - 60},0"/>
+      </circle>
+      <rect x="${coreX - 8}" y="${coreY}" width="60" height="32" rx="10" fill="#0d0d0d" stroke="#22c55e" stroke-width="1.4"/>
+      <text x="${coreX + 22}" y="${coreY + 20}" text-anchor="middle" fill="#f5f5f5" font-size="9" font-family="Inter,sans-serif" font-weight="700">Core</text>
+      <rect x="${execX - 8}" y="${execY}" width="48" height="32" rx="10" fill="#0d0d0d" stroke="#a855f7" stroke-width="1.4"/>
+      <text x="${execX + 16}" y="${execY + 20}" text-anchor="middle" fill="#f5f5f5" font-size="9" font-family="Inter,sans-serif" font-weight="700">Exec</text>
+      <text x="180" y="244" text-anchor="middle" fill="#8a8a8a" font-size="11" font-family="Inter,sans-serif">${state.bot.signalsScanned} signals / coins scanned so far</text>`;
+    svg.innerHTML = html;
+  }
+
+  function renderStaticBot() {
+    $("riskRules").innerHTML = "<ul style='margin:0;padding-left:18px;color:#8a8a8a;font-size:12px;line-height:1.55'>" +
+      state.bot.riskRules.map((r) => `<li style="margin-bottom:6px">${r}</li>`).join("") + "</ul>";
+    $("actCount").textContent = state.bot.activity.length + " events";
+    $("activity").innerHTML = state.bot.activity.map((a, i) => `
+      <div style="padding-bottom:${i === state.bot.activity.length - 1 ? 0 : 10}px;margin-bottom:${i === state.bot.activity.length - 1 ? 0 : 10}px;border-bottom:${i === state.bot.activity.length - 1 ? "none" : "1px solid #1f1f1f"}">
+        <div class="row" style="margin-bottom:4px">
+          <span class="dim">${a.timePkt}</span>
+          <span class="pill">${a.kind}</span>
+          <strong style="font-size:13px">${a.title}</strong>
+        </div>
+        <div class="muted" style="line-height:1.4">${a.detail || ""}</div>
+        ${a.tx ? `<a class="sol" href="${a.tx}" target="_blank" rel="noopener">Solscan</a>` : ""}
+      </div>`).join("");
+    renderAgents();
+    renderPipeline();
+    renderTrades();
+  }
+
+  function renderAgo() {
+    if (!state.lastOkAt) { $("ago").textContent = "· connecting…"; return; }
+    const s = Math.max(0, Math.round((Date.now() - state.lastOkAt) / 1000));
+    $("ago").textContent = "· updated " + s + "s ago";
+  }
+
+  function renderAll() {
+    renderTicker();
+    renderBalance();
+    renderChart();
+    renderHoldings();
+    renderTrades();
+    renderAgents();
+    renderPipeline();
+    if (state.err) {
+      $("apiErr").hidden = false;
+      $("apiErr").textContent = "Live feed issue: " + state.err + " · retrying…";
+    } else {
+      $("apiErr").hidden = true;
+    }
+  }
+
+  async function tick() {
+    try {
+      await pollChain();
+      await pollPrices();
+      await loadBotFeed();
+      const usd = portfolioUsd();
+      pushEquity(usd);
+      state.lastOkAt = Date.now();
+      state.err = "";
+      renderAll();
+    } catch (e) {
+      state.err = (e && e.message) ? e.message : String(e);
+      renderAll();
+    }
+  }
+
+  // init
+  $("walletShort").textContent = shortAddr(WALLET);
+  renderStaticBot();
+  renderAll();
+  setInterval(renderAgo, 1000);
+  tick();
+  setInterval(tick, POLL_MS);
+
+  // details label toggle
+  document.querySelectorAll("details.block").forEach((d) => {
+    d.addEventListener("toggle", () => {
+      const sum = d.querySelector("summary span:last-child");
+      if (!sum || sum.id === "actCount") return;
+      sum.textContent = d.open ? "Hide" : "Show";
+    });
+  });
+})();
+</script>
+</body>
+</html>
