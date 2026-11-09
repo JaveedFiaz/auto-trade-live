@@ -1,8 +1,8 @@
 {
-  "updatedPkt": "2026-11-10 04:09 PKT",
+  "updatedPkt": "2026-11-10 04:11 PKT",
   "wallet": "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9",
   "status": "Active",
-  "nextCheckPkt": "2026-11-10 04:10 PKT (every 5 min)",
+  "nextCheckPkt": "2026-11-10 04:15 PKT (every 5 min)",
   "startUsd": 50.0,
   "startSol": 0.5745,
   "peakUsd": 50.0,
@@ -77,9 +77,9 @@
       "entry": 0.00442,
       "stop": 0.003536,
       "takeProfit": 0.006188,
-      "takeText": "Half at $0.006188 (+40%), then 20% trail from peak; flat-exit if within ±5% at 04:11 PKT",
+      "takeText": "Half at $0.006188 (+40%), then 20% trail from peak; 90-min flat check at 04:11 passed (-10.9%, not flat)",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-12.5%"
+      "pnlPctText": "-10.9%"
     },
     {
       "id": "P8",
@@ -94,7 +94,7 @@
       "takeProfit": 0.0004998,
       "takeText": "Half at $0.0004998 (+40%), then 20% trail from peak; flat-exit if within ±5% at 04:37 PKT",
       "status": "Open (Phantom VERIFIED)",
-      "pnlPctText": "-18.2%"
+      "pnlPctText": "-18.6%"
     },
     {
       "id": "P9",
@@ -109,7 +109,7 @@
       "takeProfit": 0.001365,
       "takeText": "Half at $0.001365 (+40%), then 20% trail from peak; flat-exit if within ±5% at 05:16 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "+8.0%"
+      "pnlPctText": "+5.7%"
     },
     {
       "id": "P10",
@@ -139,7 +139,7 @@
       "takeProfit": 0.00161,
       "takeText": "Half at $0.001610 (+40%), then 20% trail from peak; flat-exit if within ±5% at 05:36 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-1.8%"
+      "pnlPctText": "-2.2%"
     }
   ],
   "trades": [
@@ -481,6 +481,15 @@
     }
   ],
   "activity": [
+    {
+      "timePkt": "2026-11-10 04:11 PKT",
+      "title": "Check: holding 6, no trades",
+      "kind": "system",
+      "detail": "",
+      "coins": "",
+      "why": "",
+      "tx": ""
+    },
     {
       "timePkt": "2026-11-10 04:06 PKT",
       "title": "SELL DOPE (flat exit), BUY JEFF",
@@ -873,5 +882,5 @@
     "Halt new trades if wallet drops −60% from peak ($20.00); ask Malik how to continue."
   ],
   "solBalanceHint": 0.166124242,
-  "walletUsdHint": 42.62
+  "walletUsdHint": 42.54
 }
