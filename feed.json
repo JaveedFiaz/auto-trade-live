@@ -1,0 +1,247 @@
+{
+  "updatedPkt": "2026-11-10 01:46 PKT",
+  "wallet": "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9",
+  "status": "Active",
+  "nextCheckPkt": "2026-11-10 01:46 PKT (every 5 min)",
+  "startUsd": 50.0,
+  "startSol": 0.5745,
+  "peakUsd": 50.0,
+  "haltUsd": 20.0,
+  "wins": 0,
+  "losses": 0,
+  "tradesCount": 2,
+  "signalsScanned": 153,
+  "modeLabel": "aggressive memecoin mode",
+  "holdings": [
+    {
+      "symbol": "CBUCKS",
+      "mint": "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump",
+      "amount": 2212.441936,
+      "decimals": 6
+    }
+  ],
+  "positions": [
+    {
+      "id": "P1",
+      "openedPkt": "2026-11-10 01:34",
+      "asset": "CBUCKS",
+      "mint": "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump",
+      "side": "Long spot",
+      "sizeText": "2,212.441936 tokens left (~$9.88; 1,100 trimmed 01:38)",
+      "amount": 2212.441936,
+      "entry": 0.004442,
+      "stop": 0.003554,
+      "takeProfit": 0.006219,
+      "takeText": "Half at $0.006219 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:34 PKT",
+      "status": "Open (peak price so far $0.004465)",
+      "pnlPctText": "-3.7%"
+    }
+  ],
+  "trades": [
+    {
+      "id": "T2",
+      "timePkt": "2026-11-10 01:38",
+      "action": "SELL (partial)",
+      "side": "SELL",
+      "ticker": "CBUCKS",
+      "size": "1,100 → 0.05535 SOL (~$4.80)",
+      "price": "~$0.004363 net",
+      "href": "https://solscan.io/tx/2rCD36AgsxnZcSSs4mRrgxSDdD9CcTVW7rFVKdajB1dRaBjauytkR2FCYnay8DgYWSaGvbzGQLA35KyktZPHQRNA",
+      "notes": "Trim to new 20% per-coin cap; ~-$0.09 vs cost (fees); 0.9% impact; DFlow route",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
+    {
+      "id": "T1",
+      "timePkt": "2026-11-10 01:34",
+      "action": "BUY",
+      "side": "BUY",
+      "ticker": "CBUCKS",
+      "size": "0.17 SOL → 3,312.44",
+      "price": "$0.004442",
+      "href": "https://solscan.io/tx/ALyJf7MJx9nnBnFLepSVSsga7NhDdpgFKsCLHbm5LMdymCGJbnyiJxh2B8yqKh1ZTXvbaaR1FhkndW98jdcCT9i",
+      "notes": "Momentum: +15.8% 6h, +9.2% 1h, buys>sells; $225k liq; 2.5% impact; OKX route",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    }
+  ],
+  "activity": [
+    {
+      "timePkt": "2026-11-10 01:41 PKT",
+      "title": "5-min scan: holding CBUCKS, no new buy",
+      "kind": "skip",
+      "detail": "Phantom session OK; wallet 0.458296 SOL @ $86.62 + 2,212.44 CBUCKS @ $0.004279 = ~$49.17. CBUCKS −3.7% from $0.004442 entry, above the $0.003554 stop, below the +40% target; held. Rescanned 51 Solana pairs (DexScreener boosts/profiles + majors).",
+      "coins": "CBUCKS, HODLER, HELL, Macca, Fartcoin, PNUT, FWOG, DESSA, GATO, BONK, WIF, AgenC",
+      "why": "HODLER +11% 1h on only $116 volume; HELL +15.5% in 5m but −4.4% 1h (spike, not a trend); Macca +5.6% 1h below threshold; Fartcoin/PNUT/BONK/WIF flat, DESSA/AgenC down.",
+      "tx": ""
+    },
+    {
+      "timePkt": "2026-11-10 01:38 PKT",
+      "title": "SELL 1,100 CBUCKS (trim to 20% cap)",
+      "kind": "trade",
+      "detail": "Phantom session OK; wallet before 0.402943 SOL @ $86.71 + 3,312.44 CBUCKS @ $0.004465 = ~$49.73 (CBUCKS ~30%). Sold 1,100 CBUCKS for 0.05535 SOL (~$4.80, ~$0.004363 each after fees) via Phantom's DFlow route, 0.9% price impact, simulation clean, finalized on-chain. After: 0.458296 SOL + 2,212.44 CBUCKS (~$9.88, 20%) = ~$49.62. Rescanned 51 Solana pairs (DexScreener boosts/profiles + majors).",
+      "coins": "CBUCKS, HODLER, Fartcoin, PNUT, FWOG, DESSA, GATO, BONK, HELL, WIF, Macca, AgenC",
+      "why": "Malik cut the per-coin cap to 20% at 01:34, so the CBUCKS position (~30%) was trimmed. CBUCKS itself is +0.5% from entry, so neither stop nor take-profit was hit; still holding the rest (+21.5% 6h, buys > sells). No new entry: HODLER +16% 1h on just $113 of volume, Macca +5.9% 1h too weak, HELL −15.6% 1h, the rest flat or down.",
+      "tx": "https://solscan.io/tx/2rCD36AgsxnZcSSs4mRrgxSDdD9CcTVW7rFVKdajB1dRaBjauytkR2FCYnay8DgYWSaGvbzGQLA35KyktZPHQRNA"
+    },
+    {
+      "timePkt": "2026-11-10 01:34 PKT",
+      "title": "Caps lowered: 20% per coin, 80% memecoins total",
+      "kind": "risk",
+      "detail": "Malik capped each coin at 20% of the wallet and memecoins at 80% in total.",
+      "coins": "",
+      "why": "",
+      "tx": ""
+    },
+    {
+      "timePkt": "2026-11-10 01:34 PKT",
+      "title": "BUY CBUCKS (0.17 SOL, ~$14.71)",
+      "kind": "trade",
+      "detail": "Phantom session OK; wallet before trade 0.574515424 SOL @ $86.55 = $49.72. Scanned 51 Solana pairs (DexScreener top boosts, latest boosts, latest profiles, plus BONK/WIF/POPCAT/PNUT/FWOG/Fartcoin) using the new looser rules (≥$100k liquidity, ≥2h age). Bought 3,312.441936 CBUCKS for 0.17 SOL (~$0.004442 each incl. fees) via Phantom's OKX route, 2.5% price impact, simulation clean, mint and freeze authority both revoked. Finalized on-chain. Stop $0.003554 (−20%), half off at $0.006219 (+40%). After trade: 0.402943 SOL + CBUCKS = ~$49.21.",
+      "coins": "CBUCKS, HODLER, Fartcoin, PNUT, FWOG, DESSA, GATO, BONK, HELL, WIF, Macca, AgenC",
+      "why": "CBUCKS was the only qualifying momentum: +15.8% 6h, +9.2% 1h, +68.5% 24h, buys beat sells 83/43 (1h) and 489/327 (6h), $225k liquidity, steady ~$20k/h volume, 5m flat (no blow-off). HODLER's +20% 1h came on only $113 of volume; HELL −14% 1h; the rest flat or down; sub-2h launches (ORBIT, HWAN, ALICE, CAT) and sub-$100k coins excluded.",
+      "tx": "https://solscan.io/tx/ALyJf7MJx9nnBnFLepSVSsga7NhDdpgFKsCLHbm5LMdymCGJbnyiJxh2B8yqKh1ZTXvbaaR1FhkndW98jdcCT9i"
+    },
+    {
+      "timePkt": "2026-11-10 01:28 PKT",
+      "title": "5-min scan: no qualifying setup, skipped",
+      "kind": "skip",
+      "detail": "Phantom session OK; wallet 0.574515424 SOL @ $86.79 = $49.86 (no SPL tokens, no open positions). Rescanned the 24-coin watchlist plus DexScreener's current top-boosted Solana list (20 tokens).",
+      "coins": "Fartcoin, PNUT, FWOG, DESSA, HODLER, GATO, BONK, CBUCKS",
+      "why": "Fartcoin flat on the hour (+0.1%) with 1h volume below its average, PNUT and FWOG flat to down, DESSA −24% 24h. HODLER jumped +21% in 1h but is only 11h old and traded just ~$200 in the last hour, so it stays excluded. CBUCKS (+10% 1h) is still under $500k liquidity. No quotes run, no trade.",
+      "tx": ""
+    },
+    {
+      "timePkt": "2026-11-10 01:22 PKT",
+      "title": "5-min scan: no qualifying setup, skipped",
+      "kind": "skip",
+      "detail": "Phantom session OK; wallet 0.574515424 SOL @ $86.89 = $49.92 (no SPL tokens, no open positions, nothing to manage). Rescanned the 24-coin watchlist plus DexScreener's current top-boosted Solana list (20 tokens).",
+      "coins": "Fartcoin, PNUT, FWOG, DESSA, HODLER, GATO, BONK, CBUCKS, WIF, WASTED, jeff and micro-caps",
+      "why": "Same picture as 01:15: only Fartcoin (+3.5% 24h, 1h volume $22k vs ~$38k/h 24h average), PNUT (+0.7%), FWOG (−6%), DESSA (−23%) pass the >$500k liquidity and >24h age filters, and none shows clear rising momentum. HODLER is 11h old; CBUCKS (+72% 24h), WASTED and jeff are under $500k liquidity. No quotes run, no trade.",
+      "tx": ""
+    },
+    {
+      "timePkt": "2026-11-10 01:15 PKT",
+      "title": "Hourly scan: no qualifying setup, skipped",
+      "kind": "skip",
+      "detail": "Phantom session OK; wallet 0.574515424 SOL @ $86.89 = $49.92 (no SPL tokens, no open positions). Perps still HTTP 403 (gold perps unavailable). Scanned 24 Solana memecoins (DexScreener top-boosted list plus BONK, WIF, POPCAT, PNUT, FWOG, Fartcoin).",
+      "coins": "Fartcoin, PNUT, FWOG, DESSA, HODLER, GATO, BONK, CBUCKS, WIF, WASTED, jeff and 13 micro-caps",
+      "why": "Only 4 coins passed the >$500k liquidity and >24h age filters, and none had a clear setup: Fartcoin +3.4% 24h with fading hourly volume, PNUT flat, FWOG −6%, DESSA −25%. HODLER (+63% 6h) is only 11h old, so it was excluded. CBUCKS (+79% 24h) and the other movers have under $500k liquidity. No trade; no quotes run.",
+      "tx": ""
+    },
+    {
+      "timePkt": "2026-11-10 00:54 PKT",
+      "title": "Neon trading-desk UI redesign",
+      "kind": "system",
+      "detail": "Same Page restyled as phone-first black/neon AI trading desk. Data still bot-embedded (no browser fetch). Real balances only; 0 trades / 0 signals until first check.",
+      "coins": "",
+      "why": "Malik found the prior dashboard boring and asked for a look like the X trading-desk video.",
+      "tx": ""
+    },
+    {
+      "timePkt": "2026-11-10 00:48 PKT",
+      "title": "Dashboard upgraded for phone",
+      "kind": "system",
+      "detail": "Live Dashboard rebuilt as mobile-first bot-updated Page. Canvas cannot fetch on-chain from the browser; balances, prices, txs, and this feed refresh when the hourly routine (or a manual check) rewrites the Page.",
+      "coins": "",
+      "why": "Malik asked for an app to see everything the bot does live.",
+      "tx": ""
+    },
+    {
+      "timePkt": "2026-11-10 00:46 PKT",
+      "title": "Aggressive memecoin rules set",
+      "kind": "risk",
+      "detail": "Risk profile switched to aggressive memecoin mode.",
+      "coins": "",
+      "why": "Memecoins up to 80% of wallet, 25% per coin, max 4 positions, >$500k liquidity, −25% stop, half profit at +50% then 20% trailing stop, keep 0.03 SOL for fees, halt new trades at −60% from peak ($20.00).",
+      "tx": ""
+    },
+    {
+      "timePkt": "2026-11-10 00:44 PKT",
+      "title": "Starting deposit confirmed on trading wallet",
+      "kind": "setup",
+      "detail": "On-chain balance 0.574515424 SOL (~$50) confirmed on agent wallet `BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9`.",
+      "coins": "",
+      "why": "",
+      "tx": "https://solscan.io/tx/LhJHruGz8QiYf1gXeSkMBDxzWvhPESKmQRMkqGxpcT4PBxPms36bDah1szhQ6TQvNUNxmuRSuNYWZNF2KPrGutA"
+    },
+    {
+      "timePkt": "2026-11-10 00:43 PKT",
+      "title": "Deposit landed (on-chain)",
+      "kind": "setup",
+      "detail": "Inbound SOL transfer finalized (slot 467439220). Recorded as starting deposit ~12:44 AM PKT.",
+      "coins": "",
+      "why": "",
+      "tx": "https://solscan.io/tx/LhJHruGz8QiYf1gXeSkMBDxzWvhPESKmQRMkqGxpcT4PBxPms36bDah1szhQ6TQvNUNxmuRSuNYWZNF2KPrGutA"
+    },
+    {
+      "timePkt": "2026-11-10 00:40 PKT",
+      "title": "Phantom agent wallet connected",
+      "kind": "setup",
+      "detail": "Phantom session ready. Solana `BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9`, EVM `0xb8d0264b129fd6da205a8413e21c73dff7508a15`. Hyperliquid perps calls returned HTTP 403; gold perps unavailable.",
+      "coins": "",
+      "why": "Spot Solana trading only until perps unlock.",
+      "tx": ""
+    },
+    {
+      "timePkt": "2026-11-10 00:09 PKT",
+      "title": "Autonomous hourly loop armed",
+      "kind": "system",
+      "detail": "24/7 hourly trading loop scheduled. First market check targeted ~1:09 AM PKT. Until deposit, checks are no-ops.",
+      "coins": "",
+      "why": "Malik asked the bot to place trades even when he is unavailable (still within risk rules).",
+      "tx": ""
+    }
+  ],
+  "agents": [
+    {
+      "id": "SCOUT",
+      "color": "#22c55e",
+      "tone": "green",
+      "tag": "live",
+      "action": "Last scan coins: CBUCKS, HODLER, HELL, Macca, Fartcoin, PNUT, FWOG, DESSA, GATO, BONK, WIF, AgenC"
+    },
+    {
+      "id": "GUARD",
+      "color": "#3b82f6",
+      "tone": "blue",
+      "tag": "gated",
+      "action": "Perps HTTP 403 · gold blocked · spot-only · liq/age gates on"
+    },
+    {
+      "id": "ROUTER",
+      "color": "#f59e0b",
+      "tone": "orange",
+      "tag": "dflow",
+      "action": "Last route: Phantom DFlow · sim clean"
+    },
+    {
+      "id": "TRADER",
+      "color": "#a855f7",
+      "tone": "purple",
+      "tag": "active",
+      "action": "2026-11-10 01:38 PKT: SELL 1,100 CBUCKS (trim to 20% cap)"
+    },
+    {
+      "id": "RISK",
+      "color": "#ef4444",
+      "tone": "red",
+      "tag": "watching",
+      "action": "CBUCKS stop $0.003554 · take $0.006219 · Open (peak price so far $0.004465)"
+    }
+  ],
+  "riskRules": [
+    "Keep ≥ 0.03 SOL for fees at all times.",
+    "Memecoins: max 80% of wallet total; max 20% per coin; max 4 open positions; only tokens with ≥$100k liquidity, ≥2h old, not spam.",
+    "Perps: max 3x isolated leverage (when Hyperliquid access works).",
+    "Stop-loss: −20% memecoins; −10% majors and gold.",
+    "Take half profit at +40% memecoins (+15% majors/gold), then 20% trailing stop on the rest.",
+    "Exit any position flat (±5%) for 2 hours.",
+    "Quote first; never execute if simulation blocks/flags risk or price impact > 5%.",
+    "Halt new trades if wallet drops −60% from peak ($20.00); ask Malik how to continue."
+  ],
+  "solBalanceHint": 0.458295828,
+  "walletUsdHint": 49.17
+}

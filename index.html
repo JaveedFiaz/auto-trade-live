@@ -120,7 +120,7 @@
     <div class="pills">
       <span class="pill green">aggressive memecoin mode</span>
       <span class="pill green" id="statusPill">Active</span>
-      <span class="pill" id="nextPill">Next 01:09 PKT</span>
+      <span class="pill" id="nextPill">Next 01:46 PKT</span>
     </div>
   </div>
 
@@ -162,6 +162,11 @@
   </div>
 
   <div class="card">
+    <div style="font-weight:700;font-size:13px;margin-bottom:8px">Open positions</div>
+    <div id="positions" class="muted">None open</div>
+  </div>
+
+  <div class="card">
     <div style="font-weight:700;font-size:13px;margin-bottom:12px">agents — working together</div>
     <div id="agents"></div>
   </div>
@@ -195,7 +200,8 @@
   const START_USD = 50;
   const START_SOL = 0.5745;
   const POLL_MS = 4000;
-  const BOT_FEED_URL = ""; // optional hosted JSON later
+  const FEED_POLL_MS = 15000;
+  const BOT_FEED_URL = "feed.json"; // optional hosted JSON later
   const SOL_MINT = "So11111111111111111111111111111111111111112";
   const RPC_CANDIDATES = [
     "https://solana-rpc.publicnode.com",
@@ -209,6 +215,7 @@
     { symbol: "POPCAT", mint: "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr" },
     { symbol: "JUP", mint: "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN" },
     { symbol: "BOME", mint: "ukHH6c7mMyiWCf1b9pnWe25TSpkDDt3H5pQZgZ74J82" },
+    { symbol: "CBUCKS", mint: "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump" },
   ];
   const TOKEN_PROGRAM = "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA";
   const TOKEN_2022 = "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb";
@@ -216,7 +223,7 @@
   /* ===== Embedded bot state from journal.md / activity.md (2026-11-10) ===== */
   const EMBEDDED = {
     status: "Active",
-    nextCheckPkt: "2026-11-10 01:09 PKT",
+    nextCheckPkt: "2026-11-10 01:46 PKT (every 5 min)",
     tradesCount: 0,
     wins: 0,
     losses: 0,
@@ -278,6 +285,8 @@
     rpcUrl: RPC_CANDIDATES[0],
     err: "",
     bot: structuredClone(EMBEDDED),
+    feedHoldings: [], // from feed.json when RPC cannot list SPL
+    positions: [],
   };
 
   const $ = (id) => document.getElementById(id);
@@ -344,20 +353,49 @@
   async function loadBotFeed() {
     if (!BOT_FEED_URL) return;
     try {
-      const res = await fetch(BOT_FEED_URL, { cache: "no-store" });
-      if (!res.ok) return;
+      const url = BOT_FEED_URL + (BOT_FEED_URL.includes("?") ? "&" : "?") + "t=" + Date.now();
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) throw new Error("feed HTTP " + res.status);
       const j = await res.json();
       if (j.status) state.bot.status = j.status;
       if (j.nextCheckPkt) state.bot.nextCheckPkt = j.nextCheckPkt;
       if (Array.isArray(j.trades)) state.bot.trades = j.trades;
       if (Array.isArray(j.agents)) state.bot.agents = j.agents;
       if (Array.isArray(j.activity)) state.bot.activity = j.activity;
+      if (Array.isArray(j.riskRules)) state.bot.riskRules = j.riskRules;
       if (typeof j.tradesCount === "number") state.bot.tradesCount = j.tradesCount;
       if (typeof j.wins === "number") state.bot.wins = j.wins;
       if (typeof j.losses === "number") state.bot.losses = j.losses;
       if (typeof j.signalsScanned === "number") state.bot.signalsScanned = j.signalsScanned;
-      if (Array.isArray(j.riskRules)) state.bot.riskRules = j.riskRules;
-    } catch (_) { /* keep embedded */ }
+      if (j.modeLabel) state.bot.mode = j.modeLabel;
+      if (Array.isArray(j.holdings)) {
+        state.feedHoldings = j.holdings
+          .filter((h) => h && h.mint && h.mint !== "native" && Number(h.amount) > 0)
+          .map((h) => ({
+            mint: h.mint,
+            symbol: h.symbol || "TOKEN",
+            amount: Number(h.amount) || 0,
+            decimals: h.decimals,
+            price: null,
+            usd: null,
+            change24h: null,
+            source: "feed",
+          }));
+      }
+      if (Array.isArray(j.positions)) state.positions = j.positions;
+      // Merge feed holdings into state.spl when RPC returned none
+      if ((!state.spl || state.spl.length === 0) && state.feedHoldings.length) {
+        state.spl = state.feedHoldings.map((h) => ({ ...h }));
+      } else if (state.feedHoldings.length && state.spl.length) {
+        // union by mint
+        const by = new Map(state.spl.map((t) => [t.mint, t]));
+        for (const h of state.feedHoldings) {
+          if (!by.has(h.mint)) state.spl.push({ ...h });
+        }
+      }
+    } catch (e) {
+      console.warn("feed load failed", e);
+    }
   }
 
   async function pollChain() {
@@ -405,27 +443,36 @@
   }
 
   async function pollPrices() {
-    const mints = [SOL_MINT, ...state.spl.map((s) => s.mint), ...WATCH_MINTS.map((w) => w.mint)];
-    const uniq = [...new Set(mints)];
-    // DexScreener accepts comma lists; chunk if needed
-    const chunk = uniq.slice(0, 20);
+    const mints = [
+      SOL_MINT,
+      ...state.spl.map((s) => s.mint).filter(Boolean),
+      ...state.feedHoldings.map((s) => s.mint).filter(Boolean),
+      ...WATCH_MINTS.map((w) => w.mint),
+    ];
+    const uniq = [...new Set(mints.filter((m) => m && m !== "native"))];
+    const chunk = uniq.slice(0, 25);
     const best = await fetchDexPrices(chunk);
     const sol = best[SOL_MINT];
     if (sol && sol.price) {
       state.solPrice = sol.price;
       state.solChange24h = sol.change24h;
     }
-    for (const t of state.spl) {
+    const apply = (t) => {
       const p = best[t.mint];
-      if (p) {
-        t.symbol = p.symbol || t.symbol;
-        t.price = p.price;
-        t.usd = (t.amount || 0) * (p.price || 0);
-        t.change24h = p.change24h;
-      }
+      if (!p) return;
+      t.symbol = t.symbol || p.symbol || "TOKEN";
+      t.price = p.price;
+      t.usd = (Number(t.amount) || 0) * (p.price || 0);
+      t.change24h = p.change24h;
+    };
+    for (const t of state.spl) apply(t);
+    for (const t of state.feedHoldings) apply(t);
+    // If RPC empty, keep priced feed holdings as spl for portfolio
+    if (!state.spl.length && state.feedHoldings.length) {
+      state.spl = state.feedHoldings.map((h) => ({ ...h }));
     }
     const held = new Set([SOL_MINT, ...state.spl.map((s) => s.mint)]);
-    state.watch = WATCH_MINTS.map((w) => {
+    const watch = WATCH_MINTS.map((w) => {
       const p = best[w.mint] || {};
       return {
         symbol: w.symbol,
@@ -434,6 +481,18 @@
         holding: held.has(w.mint),
       };
     });
+    // prepend held non-watch tokens (e.g. CBUCKS)
+    for (const t of state.spl) {
+      if (!WATCH_MINTS.some((w) => w.mint === t.mint)) {
+        watch.unshift({
+          symbol: t.symbol || "TOKEN",
+          change24h: t.change24h,
+          price: t.price,
+          holding: true,
+        });
+      }
+    }
+    state.watch = watch;
   }
 
   function portfolioUsd() {
@@ -580,7 +639,7 @@
       <span>${sol.toFixed(6)} · ${fmtMoney(solUsd, false)} · ${((solUsd / total) * 100).toFixed(0)}%</span>
     </div>`];
     if (!state.spl.length) {
-      rows.push(`<div class="muted">No SPL tokens held</div>`);
+      rows.push(`<div class="muted">No SPL tokens held (RPC list blocked; waiting for feed.json)</div>`);
     } else {
       for (const t of state.spl) {
         rows.push(`<div class="row" style="justify-content:space-between;font-size:13px;margin-bottom:6px">
@@ -590,6 +649,39 @@
       }
     }
     $("holdings").innerHTML = rows.join("");
+  }
+
+  function renderPositions() {
+    const el = $("positions");
+    if (!el) return;
+    const ps = state.positions || [];
+    if (!ps.length) {
+      el.innerHTML = `<div class="muted">No open positions</div>`;
+      return;
+    }
+    el.innerHTML = ps.map((p) => {
+      const live = state.spl.find((t) => t.mint === p.mint || t.symbol === p.asset);
+      const cur = live && live.price != null ? live.price : null;
+      const entry = p.entry;
+      let pnlPct = null;
+      if (cur != null && entry) pnlPct = ((cur - entry) / entry) * 100;
+      const col = pnlPct == null ? "var(--muted)" : (pnlPct >= 0 ? "var(--green)" : "var(--red)");
+      return `<div style="padding:10px 0;border-bottom:1px solid var(--border)">
+        <div class="row" style="margin-bottom:4px">
+          <strong>${p.asset}</strong>
+          <span class="pill purple">${p.side || "Long"}</span>
+          <span class="pill">${p.status || "Open"}</span>
+        </div>
+        <div class="muted" style="line-height:1.45">
+          Size ${p.amount != null ? p.amount : p.sizeText || "—"}
+          · Entry ${entry != null ? "$" + entry : "—"}
+          · Now ${cur != null ? "$" + cur : "—"}
+          · <span style="color:${col};font-weight:700">${pnlPct == null ? (p.pnlPctText || "—") : fmtPct(pnlPct)}</span><br/>
+          Stop ${p.stop != null ? "$" + p.stop : "—"}
+          · Take ${p.takeProfit != null ? "$" + p.takeProfit : (p.takeText || "—")}
+        </div>
+      </div>`;
+    }).join("");
   }
 
   function renderAgents() {
@@ -690,16 +782,33 @@
   async function tick() {
     try {
       await pollChain();
-      await pollPrices();
       await loadBotFeed();
+      await pollPrices();
       const usd = portfolioUsd();
       pushEquity(usd);
       state.lastOkAt = Date.now();
       state.err = "";
+      renderStaticBot();
       renderAll();
     } catch (e) {
       state.err = (e && e.message) ? e.message : String(e);
       renderAll();
+    }
+  }
+
+  async function tickFeed() {
+    try {
+      await loadBotFeed();
+      // re-price after feed holdings arrive
+      if (state.solPrice != null || state.feedHoldings.length) {
+        try { await pollPrices(); } catch (_) {}
+      }
+      const usd = portfolioUsd();
+      if (usd) pushEquity(usd);
+      renderStaticBot();
+      renderAll();
+    } catch (e) {
+      console.warn(e);
     }
   }
 
@@ -710,6 +819,8 @@
   setInterval(renderAgo, 1000);
   tick();
   setInterval(tick, POLL_MS);
+  tickFeed();
+  setInterval(tickFeed, FEED_POLL_MS);
 
   // details label toggle
   document.querySelectorAll("details.block").forEach((d) => {
