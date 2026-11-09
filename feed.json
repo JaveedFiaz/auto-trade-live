@@ -1,8 +1,8 @@
 {
-  "updatedPkt": "2026-11-10 04:54 PKT",
+  "updatedPkt": "2026-11-10 04:59 PKT",
   "wallet": "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9",
   "status": "Active",
-  "nextCheckPkt": "2026-11-10 04:55 PKT (every 5 min)",
+  "nextCheckPkt": "2026-11-10 05:05 PKT (every 5 min)",
   "startUsd": 50.0,
   "startSol": 0.5745,
   "peakUsd": 50.0,
@@ -64,7 +64,7 @@
       "takeProfit": 0.006188,
       "takeText": "Half at $0.006188 (+40%), then 20% trail from peak; 90-min flat check at 04:11 passed (-10.9%, not flat)",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-13.0%"
+      "pnlPctText": "-12.9%"
     },
     {
       "id": "P9",
@@ -79,7 +79,7 @@
       "takeProfit": 0.001365,
       "takeText": "Half at $0.001365 (+40%), then 20% trail from peak; flat-exit if within ±5% at 05:16 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "+14.1%"
+      "pnlPctText": "+5.8%"
     },
     {
       "id": "P10",
@@ -94,7 +94,7 @@
       "takeProfit": 0.0006461,
       "takeText": "Half at $0.0006461 (+40%), then 20% trail from peak; flat-exit if within ±5% at 05:16 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "+12.1%"
+      "pnlPctText": "+13.2%"
     },
     {
       "id": "P11",
@@ -109,7 +109,7 @@
       "takeProfit": 0.00161,
       "takeText": "Half at $0.001610 (+40%), then 20% trail from peak; flat-exit if within ±5% at 05:36 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-1.6%"
+      "pnlPctText": "-1.5%"
     },
     {
       "id": "P12",
@@ -124,7 +124,7 @@
       "takeProfit": 0.002299,
       "takeText": "Half at $0.002299 (+40%), then 20% trail from peak; flat-exit if within ±5% at 06:22 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-3.9%"
+      "pnlPctText": "-5.6%"
     },
     {
       "id": "P13",
@@ -139,7 +139,7 @@
       "takeProfit": 0.00519,
       "takeText": "Half at $0.005190 (+40%), then 20% trail from peak; flat-exit if within ±5% at 06:22 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-4.3%"
+      "pnlPctText": "-4.2%"
     }
   ],
   "trades": [
@@ -538,6 +538,15 @@
   ],
   "activity": [
     {
+      "timePkt": "2026-11-10 04:59 PKT",
+      "title": "Check: holding 6, no trades",
+      "kind": "system",
+      "detail": "",
+      "coins": "",
+      "why": "",
+      "tx": ""
+    },
+    {
       "timePkt": "2026-11-10 04:53 PKT",
       "title": "BUY PUSSY and STANK (first buys with the RugCheck safety check)",
       "kind": "system",
@@ -887,15 +896,6 @@
       "coins": "Fartcoin, PNUT, FWOG, DESSA, HODLER, GATO, BONK, CBUCKS, WIF, WASTED, jeff and micro-caps",
       "why": "Same picture as 01:15: only Fartcoin (+3.5% 24h, 1h volume $22k vs ~$38k/h 24h average), PNUT (+0.7%), FWOG (−6%), DESSA (−23%) pass the >$500k liquidity and >24h age filters, and none shows clear rising momentum. HODLER is 11h old; CBUCKS (+72% 24h), WASTED and jeff are under $500k liquidity. No quotes run, no trade.",
       "tx": ""
-    },
-    {
-      "timePkt": "2026-11-10 01:15 PKT",
-      "title": "Hourly scan: no qualifying setup, skipped",
-      "kind": "skip",
-      "detail": "Phantom session OK; wallet 0.574515424 SOL @ $86.89 = $49.92 (no SPL tokens, no open positions). Perps still HTTP 403 (gold perps unavailable). Scanned 24 Solana memecoins (DexScreener top-boosted list plus BONK, WIF, POPCAT, PNUT, FWOG, Fartcoin).",
-      "coins": "Fartcoin, PNUT, FWOG, DESSA, HODLER, GATO, BONK, CBUCKS, WIF, WASTED, jeff and 13 micro-caps",
-      "why": "Only 4 coins passed the >$500k liquidity and >24h age filters, and none had a clear setup: Fartcoin +3.4% 24h with fading hourly volume, PNUT flat, FWOG −6%, DESSA −25%. HODLER (+63% 6h) is only 11h old, so it was excluded. CBUCKS (+79% 24h) and the other movers have under $500k liquidity. No trade; no quotes run.",
-      "tx": ""
     }
   ],
   "agents": [
@@ -947,5 +947,5 @@
     "Halt new trades if wallet drops −60% from peak ($20.00); ask Malik how to continue."
   ],
   "solBalanceHint": 0.149312694,
-  "walletUsdHint": 43.94
+  "walletUsdHint": 43.51
 }
