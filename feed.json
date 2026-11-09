@@ -1,5 +1,5 @@
 {
-  "updatedPkt": "2026-11-10 04:44 PKT",
+  "updatedPkt": "2026-11-10 04:47 PKT",
   "wallet": "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9",
   "status": "Active",
   "nextCheckPkt": "2026-11-10 04:40 PKT (every 5 min)",
@@ -52,7 +52,7 @@
       "takeProfit": 0.006188,
       "takeText": "Half at $0.006188 (+40%), then 20% trail from peak; 90-min flat check at 04:11 passed (-10.9%, not flat)",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-11.4%"
+      "pnlPctText": "-11.7%"
     },
     {
       "id": "P9",
@@ -67,7 +67,7 @@
       "takeProfit": 0.001365,
       "takeText": "Half at $0.001365 (+40%), then 20% trail from peak; flat-exit if within ±5% at 05:16 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "+6.0%"
+      "pnlPctText": "+11.5%"
     },
     {
       "id": "P10",
@@ -82,7 +82,7 @@
       "takeProfit": 0.0006461,
       "takeText": "Half at $0.0006461 (+40%), then 20% trail from peak; flat-exit if within ±5% at 05:16 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "+3.1%"
+      "pnlPctText": "+5.5%"
     },
     {
       "id": "P11",
@@ -97,7 +97,7 @@
       "takeProfit": 0.00161,
       "takeText": "Half at $0.001610 (+40%), then 20% trail from peak; flat-exit if within ±5% at 05:36 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-0.6%"
+      "pnlPctText": "-1.5%"
     }
   ],
   "trades": [
@@ -468,6 +468,15 @@
   ],
   "activity": [
     {
+      "timePkt": "2026-11-10 04:47 PKT",
+      "title": "Check: holding 4, no buys (spam check unavailable)",
+      "kind": "system",
+      "detail": "",
+      "coins": "",
+      "why": "",
+      "tx": ""
+    },
+    {
       "timePkt": "2026-11-10 04:44 PKT",
       "title": "Sold HELL (stop) and YOURSELF (flat exit); no new buys",
       "kind": "system",
@@ -817,15 +826,6 @@
       "coins": "",
       "why": "Malik found the prior dashboard boring and asked for a look like the X trading-desk video.",
       "tx": ""
-    },
-    {
-      "timePkt": "2026-11-10 00:48 PKT",
-      "title": "Dashboard upgraded for phone",
-      "kind": "system",
-      "detail": "Live Dashboard rebuilt as mobile-first bot-updated Page. Canvas cannot fetch on-chain from the browser; balances, prices, txs, and this feed refresh when the hourly routine (or a manual check) rewrites the Page.",
-      "coins": "",
-      "why": "Malik asked for an app to see everything the bot does live.",
-      "tx": ""
     }
   ],
   "agents": [
@@ -877,5 +877,5 @@
     "Halt new trades if wallet drops −60% from peak ($20.00); ask Malik how to continue."
   ],
   "solBalanceHint": 0.268224047,
-  "walletUsdHint": 43.59
+  "walletUsdHint": 43.95
 }
