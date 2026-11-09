@@ -1,34 +1,22 @@
 {
-  "updatedPkt": "2026-11-10 03:39 PKT",
+  "updatedPkt": "2026-11-10 03:49 PKT",
   "wallet": "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9",
   "status": "Active",
-  "nextCheckPkt": "2026-11-10 03:43 PKT (every 5 min)",
+  "nextCheckPkt": "2026-11-10 03:49 PKT (every 5 min)",
   "startUsd": 50.0,
   "startSol": 0.5745,
   "peakUsd": 50.0,
   "haltUsd": 20.0,
   "wins": 0,
-  "losses": 5,
-  "tradesCount": 18,
-  "signalsScanned": 595,
+  "losses": 7,
+  "tradesCount": 22,
+  "signalsScanned": 886,
   "modeLabel": "aggressive memecoin mode",
   "holdings": [
     {
       "symbol": "HELL",
       "mint": "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump",
       "amount": 1684.28715,
-      "decimals": 6
-    },
-    {
-      "symbol": "ZCAT",
-      "mint": "HcRLc9VDgjLeK154xDawfb1dmVJ98DoSqcwTHGqiDeJR",
-      "amount": 238.138478667,
-      "decimals": 6
-    },
-    {
-      "symbol": "PIRATE",
-      "mint": "2StNe98imN7M6K341a7a4xvc8eNTvLCde5EugAKfLoat",
-      "amount": 23962.67002,
       "decimals": 6
     },
     {
@@ -48,6 +36,18 @@
       "mint": "Etd4QU7PGuzh4ozkzzBBjMmySNkU21BZamB7qPR1xBLV",
       "amount": 14344.478082,
       "decimals": 6
+    },
+    {
+      "symbol": "WEALTH",
+      "mint": "8Mi9E1V2bdPeAaRkR5yxUsAvpzP6UBUEEUrYmgKNpump",
+      "amount": 5262.92959,
+      "decimals": 6
+    },
+    {
+      "symbol": "PEAK",
+      "mint": "APLPiTjBWzwfZ5U1TBeqLF9XJ7dV7XKGe7j4BZhkDray",
+      "amount": 11115.809044,
+      "decimals": 6
     }
   ],
   "positions": [
@@ -62,39 +62,9 @@
       "entry": 0.002953,
       "stop": 0.002362,
       "takeProfit": 0.004134,
-      "takeText": "Half at $0.004134 (+40%), then 20% trail from peak; 90-min flat check at 03:30 passed (down 12.8%, not flat)",
+      "takeText": "Half at $0.004134 (+40%), then 20% trail from peak; 90-min flat check at 03:30 passed (not flat)",
       "status": "Open",
-      "pnlPctText": "-12.4%"
-    },
-    {
-      "id": "P4",
-      "openedPkt": "2026-11-10 02:10",
-      "asset": "ZCAT",
-      "mint": "HcRLc9VDgjLeK154xDawfb1dmVJ98DoSqcwTHGqiDeJR",
-      "side": "Long spot",
-      "sizeText": "238.138478667 tokens (0.0578 SOL, ~$5.00)",
-      "amount": 238.138478667,
-      "entry": 0.021,
-      "stop": 0.0168,
-      "takeProfit": 0.0294,
-      "takeText": "Half at $0.02940 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:40 PKT",
-      "status": "Open",
-      "pnlPctText": "+2.0%"
-    },
-    {
-      "id": "P5",
-      "openedPkt": "2026-11-10 02:10",
-      "asset": "PIRATE",
-      "mint": "2StNe98imN7M6K341a7a4xvc8eNTvLCde5EugAKfLoat",
-      "side": "Long spot",
-      "sizeText": "23,962.670020 tokens (0.0578 SOL, ~$5.00)",
-      "amount": 23962.67002,
-      "entry": 0.0002087,
-      "stop": 0.000167,
-      "takeProfit": 0.0002922,
-      "takeText": "Half at $0.0002922 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:40 PKT",
-      "status": "Open",
-      "pnlPctText": "-7.6%"
+      "pnlPctText": "-17.2%"
     },
     {
       "id": "P6",
@@ -109,7 +79,7 @@
       "takeProfit": 0.001152,
       "takeText": "Half at $0.001152 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:59 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-0.8%"
+      "pnlPctText": "-0.3%"
     },
     {
       "id": "P7",
@@ -124,7 +94,7 @@
       "takeProfit": 0.006188,
       "takeText": "Half at $0.006188 (+40%), then 20% trail from peak; flat-exit if within ±5% at 04:11 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-11.0%"
+      "pnlPctText": "-13.8%"
     },
     {
       "id": "P8",
@@ -139,10 +109,96 @@
       "takeProfit": 0.0004998,
       "takeText": "Half at $0.0004998 (+40%), then 20% trail from peak; flat-exit if within ±5% at 04:37 PKT",
       "status": "Open (Phantom VERIFIED)",
-      "pnlPctText": "-1.8%"
+      "pnlPctText": "-13.9%"
+    },
+    {
+      "id": "P9",
+      "openedPkt": "2026-11-10 03:46",
+      "asset": "WEALTH",
+      "mint": "8Mi9E1V2bdPeAaRkR5yxUsAvpzP6UBUEEUrYmgKNpump",
+      "side": "Long spot",
+      "sizeText": "5,262.929590 tokens (0.059127 SOL incl. fees, ~$5.13)",
+      "amount": 5262.92959,
+      "entry": 0.000975,
+      "stop": 0.00078,
+      "takeProfit": 0.001365,
+      "takeText": "Half at $0.001365 (+40%), then 20% trail from peak; flat-exit if within ±5% at 05:16 PKT",
+      "status": "Open (Phantom NOT_VERIFIED, not spam)",
+      "pnlPctText": "-4.3%"
+    },
+    {
+      "id": "P10",
+      "openedPkt": "2026-11-10 03:46",
+      "asset": "PEAK",
+      "mint": "APLPiTjBWzwfZ5U1TBeqLF9XJ7dV7XKGe7j4BZhkDray",
+      "side": "Long spot",
+      "sizeText": "11,115.809044 tokens (0.059101 SOL incl. fees, ~$5.13)",
+      "amount": 11115.809044,
+      "entry": 0.0004615,
+      "stop": 0.0003692,
+      "takeProfit": 0.0006461,
+      "takeText": "Half at $0.0006461 (+40%), then 20% trail from peak; flat-exit if within ±5% at 05:16 PKT",
+      "status": "Open (Phantom NOT_VERIFIED, not spam)",
+      "pnlPctText": "-3.7%"
     }
   ],
   "trades": [
+    {
+      "id": "T22",
+      "timePkt": "2026-11-10 03:46",
+      "action": "BUY",
+      "side": "BUY",
+      "ticker": "PEAK",
+      "size": "0.059101 SOL (~$5.13 incl. fees) → 11,115.809044 PEAK",
+      "price": "~$0.0004615",
+      "href": "https://solscan.io/tx/29rU4HxvgMYNtJEr9oB1JKyBHZkxpGE8XqTsKvVFvJ66cz4qLxikj8d4gQXeM1wy5wZeLYobNJgvqWFe2wCX6QwD",
+      "notes": "Open: +24.5% 6h (−5.6% 1h, +1.5% 5m), buys 113 > sells 71, $66k liquidity, 334h old; Phantom simulation named it (Peak, with logo), no warnings; NOT_VERIFIED (not spam) after fill; 0.3% impact; DFlow route",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
+    {
+      "id": "T21",
+      "timePkt": "2026-11-10 03:46",
+      "action": "BUY",
+      "side": "BUY",
+      "ticker": "WEALTH",
+      "size": "0.059127 SOL (~$5.13 incl. fees) → 5,262.929590 WEALTH",
+      "price": "~$0.000975",
+      "href": "https://solscan.io/tx/3CBVbAFSknAqi2VgSPViMFA12UkN5DfqdWfgD5VEjMPw781VjomLsCsgpWWR9RZy7WZNUCToZEU5K7LQSSTiwDBL",
+      "notes": "Open: +31.5% 6h, +4.9% 1h, buys 130 > sells 105, $85k liquidity, 104h old; Phantom simulation named it (Wealth Coin, with logo), no warnings; NOT_VERIFIED (not spam) after fill; 1.0% impact; DFlow route",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
+    {
+      "id": "T20",
+      "timePkt": "2026-11-10 03:45",
+      "action": "SELL (close)",
+      "side": "SELL",
+      "ticker": "PIRATE",
+      "size": "23,962.670020 → 0.054180 SOL net (~$4.70)",
+      "price": "~$0.0002001",
+      "href": "https://solscan.io/tx/5JBKguBFouXCG3KgVVe4tu1AStXzjMkJD94BTFNY4vJX7ZbnbnW6epr4fHNobba89uWaFCeDFCT6GWso6eLkvyj5",
+      "notes": "LOSS ~-$0.30: 90-minute flat exit (-4.1% vs entry at 03:44); 1.0% impact; OKX route",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
+    {
+      "id": "T19",
+      "timePkt": "2026-11-10 03:45",
+      "action": "SELL (close)",
+      "side": "SELL",
+      "ticker": "ZCAT",
+      "size": "238.138479 → 0.056297 SOL net (~$4.89)",
+      "price": "~$0.02142",
+      "href": "https://solscan.io/tx/5FMRdE3D2rsYpP1u1VFj5R3xXaenBfF8BmbZJRpyaYpq5qPnKWY8HfiL3Dng3jBejCy5ac66LnQic5kiCa5u7Tky",
+      "notes": "LOSS ~-$0.11: 90-minute flat exit (+2.0% vs entry at 03:44); 3.4% impact; Jupiter route",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
     {
       "id": "T18",
       "timePkt": "2026-11-10 03:07",
@@ -397,6 +453,15 @@
     }
   ],
   "activity": [
+    {
+      "timePkt": "2026-11-10 03:47 PKT",
+      "title": "SELL ZCAT + PIRATE (flat exits), BUY WEALTH + PEAK",
+      "kind": "system",
+      "detail": "",
+      "coins": "",
+      "why": "",
+      "tx": ""
+    },
     {
       "timePkt": "2026-11-10 03:38 PKT",
       "title": "Check: holding 6, no trades",
@@ -752,6 +817,6 @@
     "Quote first; never execute if simulation blocks/flags risk or price impact > 5%.",
     "Halt new trades if wallet drops −60% from peak ($20.00); ask Malik how to continue."
   ],
-  "solBalanceHint": 0.177975555,
-  "walletUsdHint": 44.18
+  "solBalanceHint": 0.169899402,
+  "walletUsdHint": 42.63
 }
