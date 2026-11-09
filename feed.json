@@ -1,8 +1,8 @@
 {
-  "updatedPkt": "2026-11-10 03:51 PKT",
+  "updatedPkt": "2026-11-10 03:57 PKT",
   "wallet": "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9",
   "status": "Active",
-  "nextCheckPkt": "2026-11-10 03:55 PKT (every 5 min)",
+  "nextCheckPkt": "2026-11-10 04:02 PKT (every 5 min)",
   "startUsd": 50.0,
   "startSol": 0.5745,
   "peakUsd": 50.0,
@@ -64,7 +64,7 @@
       "takeProfit": 0.004134,
       "takeText": "Half at $0.004134 (+40%), then 20% trail from peak; 90-min flat check at 03:30 passed (not flat)",
       "status": "Open",
-      "pnlPctText": "-17.4%"
+      "pnlPctText": "-17.1%"
     },
     {
       "id": "P6",
@@ -79,7 +79,7 @@
       "takeProfit": 0.001152,
       "takeText": "Half at $0.001152 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:59 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-0.4%"
+      "pnlPctText": "-0.3%"
     },
     {
       "id": "P7",
@@ -94,7 +94,7 @@
       "takeProfit": 0.006188,
       "takeText": "Half at $0.006188 (+40%), then 20% trail from peak; flat-exit if within ±5% at 04:11 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-15.2%"
+      "pnlPctText": "-14.4%"
     },
     {
       "id": "P8",
@@ -109,7 +109,7 @@
       "takeProfit": 0.0004998,
       "takeText": "Half at $0.0004998 (+40%), then 20% trail from peak; flat-exit if within ±5% at 04:37 PKT",
       "status": "Open (Phantom VERIFIED)",
-      "pnlPctText": "-15.6%"
+      "pnlPctText": "-17.7%"
     },
     {
       "id": "P9",
@@ -124,7 +124,7 @@
       "takeProfit": 0.001365,
       "takeText": "Half at $0.001365 (+40%), then 20% trail from peak; flat-exit if within ±5% at 05:16 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-1.8%"
+      "pnlPctText": "-4.0%"
     },
     {
       "id": "P10",
@@ -139,7 +139,7 @@
       "takeProfit": 0.0006461,
       "takeText": "Half at $0.0006461 (+40%), then 20% trail from peak; flat-exit if within ±5% at 05:16 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-3.4%"
+      "pnlPctText": "-3.8%"
     }
   ],
   "trades": [
@@ -453,6 +453,15 @@
     }
   ],
   "activity": [
+    {
+      "timePkt": "2026-11-10 03:57 PKT",
+      "title": "Check: holding 6, no trades",
+      "kind": "system",
+      "detail": "",
+      "coins": "",
+      "why": "",
+      "tx": ""
+    },
     {
       "timePkt": "2026-11-10 03:51 PKT",
       "title": "Check: holding 6, no trades",
@@ -827,5 +836,5 @@
     "Halt new trades if wallet drops −60% from peak ($20.00); ask Malik how to continue."
   ],
   "solBalanceHint": 0.169899402,
-  "walletUsdHint": 42.6
+  "walletUsdHint": 42.42
 }
