@@ -1,8 +1,8 @@
 {
-  "updatedPkt": "2026-11-10 01:46 PKT",
+  "updatedPkt": "2026-11-10 01:49 PKT",
   "wallet": "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9",
   "status": "Active",
-  "nextCheckPkt": "2026-11-10 01:46 PKT (every 5 min)",
+  "nextCheckPkt": "2026-11-10 01:52 PKT (every 5 min)",
   "startUsd": 50.0,
   "startSol": 0.5745,
   "peakUsd": 50.0,
@@ -10,7 +10,7 @@
   "wins": 0,
   "losses": 0,
   "tradesCount": 2,
-  "signalsScanned": 153,
+  "signalsScanned": 204,
   "modeLabel": "aggressive memecoin mode",
   "holdings": [
     {
@@ -34,7 +34,7 @@
       "takeProfit": 0.006219,
       "takeText": "Half at $0.006219 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:34 PKT",
       "status": "Open (peak price so far $0.004465)",
-      "pnlPctText": "-3.7%"
+      "pnlPctText": "-2.0%"
     }
   ],
   "trades": [
@@ -68,6 +68,15 @@
     }
   ],
   "activity": [
+    {
+      "timePkt": "2026-11-10 01:47 PKT",
+      "title": "5-min scan: holding CBUCKS, no new buy",
+      "kind": "skip",
+      "detail": "Phantom session OK; wallet 0.458296 SOL @ $86.53 + 2,212.44 CBUCKS @ $0.004353 = ~$49.29. CBUCKS −2.0% from entry, above stop $0.003554, below +40% target; held. Rescanned 51 Solana pairs (DexScreener boosts/profiles + majors).",
+      "coins": "CBUCKS, HODLER, Macca, GATO, HELL, Fartcoin, PNUT, FWOG, DESSA, BONK, WIF, AgenC",
+      "why": "HODLER +8.9% 1h on just $69 volume; Macca +5% 1h below the momentum threshold; HELL faded to −0.5% 1h; Fartcoin/PNUT/BONK/WIF/GATO flat, DESSA/AgenC down.",
+      "tx": ""
+    },
     {
       "timePkt": "2026-11-10 01:41 PKT",
       "title": "5-min scan: holding CBUCKS, no new buy",
@@ -201,7 +210,7 @@
       "color": "#22c55e",
       "tone": "green",
       "tag": "live",
-      "action": "Last scan coins: CBUCKS, HODLER, HELL, Macca, Fartcoin, PNUT, FWOG, DESSA, GATO, BONK, WIF, AgenC"
+      "action": "Last scan coins: CBUCKS, HODLER, Macca, GATO, HELL, Fartcoin, PNUT, FWOG, DESSA, BONK, WIF, AgenC"
     },
     {
       "id": "GUARD",
@@ -243,5 +252,5 @@
     "Halt new trades if wallet drops −60% from peak ($20.00); ask Malik how to continue."
   ],
   "solBalanceHint": 0.458295828,
-  "walletUsdHint": 49.17
+  "walletUsdHint": 49.29
 }
