@@ -1,28 +1,22 @@
 {
-  "updatedPkt": "2026-11-10 02:13 PKT",
+  "updatedPkt": "2026-11-10 02:22 PKT",
   "wallet": "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9",
   "status": "Active",
-  "nextCheckPkt": "2026-11-10 02:15 PKT (every 5 min)",
+  "nextCheckPkt": "2026-11-10 02:25 PKT (every 5 min)",
   "startUsd": 50.0,
   "startSol": 0.5745,
   "peakUsd": 50.0,
   "haltUsd": 20.0,
   "wins": 0,
-  "losses": 2,
-  "tradesCount": 11,
-  "signalsScanned": 872,
+  "losses": 3,
+  "tradesCount": 12,
+  "signalsScanned": 159,
   "modeLabel": "aggressive memecoin mode",
   "holdings": [
     {
       "symbol": "CBUCKS",
       "mint": "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump",
       "amount": 1126.441936,
-      "decimals": 6
-    },
-    {
-      "symbol": "AMD",
-      "mint": "DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump",
-      "amount": 10372.803558,
       "decimals": 6
     },
     {
@@ -58,22 +52,7 @@
       "takeProfit": 0.006219,
       "takeText": "Half at $0.006219 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:04 PKT",
       "status": "Open (peak price so far $0.004465)",
-      "pnlPctText": "-4.1%"
-    },
-    {
-      "id": "P2",
-      "openedPkt": "2026-11-10 02:00",
-      "asset": "AMD",
-      "mint": "DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump",
-      "side": "Long spot",
-      "sizeText": "10,372.803558 tokens (0.0575 SOL, ~$4.97)",
-      "amount": 10372.803558,
-      "entry": 0.0004795,
-      "stop": 0.0003836,
-      "takeProfit": 0.0006713,
-      "takeText": "Half at $0.0006713 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:30 PKT",
-      "status": "Open",
-      "pnlPctText": "-16.3%"
+      "pnlPctText": "-1.7%"
     },
     {
       "id": "P3",
@@ -88,7 +67,7 @@
       "takeProfit": 0.004134,
       "takeText": "Half at $0.004134 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:30 PKT",
       "status": "Open",
-      "pnlPctText": "-9.8%"
+      "pnlPctText": "-10.1%"
     },
     {
       "id": "P4",
@@ -103,7 +82,7 @@
       "takeProfit": 0.0294,
       "takeText": "Half at $0.02940 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:40 PKT",
       "status": "Open",
-      "pnlPctText": "-2.0%"
+      "pnlPctText": "+3.5%"
     },
     {
       "id": "P5",
@@ -118,10 +97,24 @@
       "takeProfit": 0.0002922,
       "takeText": "Half at $0.0002922 (+40%), then 20% trail from peak; flat-exit if within ±5% at 03:40 PKT",
       "status": "Open",
-      "pnlPctText": "-1.8%"
+      "pnlPctText": "-4.2%"
     }
   ],
   "trades": [
+    {
+      "id": "T12",
+      "timePkt": "2026-11-10 02:20",
+      "action": "SELL (close)",
+      "side": "SELL",
+      "ticker": "AMD",
+      "size": "10,372.80 → 0.045934 SOL net (~$3.97)",
+      "price": "~$0.000383",
+      "href": "https://solscan.io/tx/4TUUqeePmMApauLxGA2KWKbzoYgxoRny8khZSw5qD2ium1sR8MEpjfyU2nhivWN8nqwKFXSDzuDJ48WiBvFFZoWR",
+      "notes": "LOSS ~-$1.00 (-20%): −20% stop hit (Phantom price $0.0003790 < stop $0.0003836); 1.3% impact; DFlow route",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
     {
       "id": "T11",
       "timePkt": "2026-11-10 02:11",
@@ -278,6 +271,15 @@
     }
   ],
   "activity": [
+    {
+      "timePkt": "2026-11-10 02:22 PKT",
+      "title": "SELL AMD (stop-loss), no new buys",
+      "kind": "trade",
+      "detail": "Phantom session OK; started at 0.264820 SOL + CBUCKS + AMD + HELL + ZCAT + PIRATE (~$46.04). Broad scan pulled 287 Solana tokens (GeckoTerminal trending 5m/1h/6h, new pools, top volume and tx-count pools, DexScreener boosts/profiles/search), 282 priced, 8 passed the entry rules. AMD fell to $0.0003790, below its −20% stop ($0.0003836), so all 10,372.80 AMD was sold for 0.045934 SOL (~$3.97, −$1.00 vs cost; 1.3% impact). Held CBUCKS −2%, HELL −10%, ZCAT +3%, PIRATE −4%. No new buys. After: 0.310755 SOL + CBUCKS + HELL + ZCAT + PIRATE = ~$46.17, 4 open positions.",
+      "coins": "ANT, ORBIT, jeff, BTC (pump), AMD, MAYA, neet, Pokemon, CIA, BigPussy",
+      "why": "Only passing coin not already held or flagged was ANT (+99% 1h, +78% 5m, $96k liquidity), but the mandatory pre-buy spam check failed: Phantom has no token data for it and its simulation lists it as \"Unknown\", so it was skipped. ORBIT skipped (Phantom flagged it possible spam earlier). jeff (−12% 1h) and the pump.fun BTC token (−22% 1h) are dumping on the hour. AMD not re-bought right after its stop. MAYA, neet, Pokemon, CIA, BigPussy and other +400–1100% launches are under 1 hour old or below $50k liquidity.",
+      "tx": "https://solscan.io/tx/4TUUqeePmMApauLxGA2KWKbzoYgxoRny8khZSw5qD2ium1sR8MEpjfyU2nhivWN8nqwKFXSDzuDJ48WiBvFFZoWR"
+    },
     {
       "timePkt": "2026-11-10 02:12 PKT",
       "title": "BUY ZCAT + PIRATE, HWAN in and out",
@@ -468,7 +470,7 @@
       "color": "#a855f7",
       "tone": "purple",
       "tag": "active",
-      "action": "2026-11-10 02:12 PKT: BUY ZCAT + PIRATE, HWAN in and out"
+      "action": "2026-11-10 02:22 PKT: SELL AMD (stop-loss), no new buys"
     },
     {
       "id": "RISK",
@@ -489,6 +491,6 @@
     "Quote first; never execute if simulation blocks/flags risk or price impact > 5%.",
     "Halt new trades if wallet drops −60% from peak ($20.00); ask Malik how to continue."
   ],
-  "solBalanceHint": 0.26482049,
-  "walletUsdHint": 46.18
+  "solBalanceHint": 0.310754534,
+  "walletUsdHint": 46.17
 }
