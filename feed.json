@@ -1,8 +1,8 @@
 {
-  "updatedPkt": "2026-11-10 06:36 PKT",
+  "updatedPkt": "2026-11-10 06:44 PKT",
   "wallet": "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9",
   "status": "Active",
-  "nextCheckPkt": "2026-11-10 06:41 PKT (every 5 min)",
+  "nextCheckPkt": "2026-11-10 06:48 PKT (every 5 min)",
   "startUsd": 50.0,
   "startSol": 0.5745,
   "peakUsd": 50.0,
@@ -64,7 +64,7 @@
       "takeProfit": 0.0006461,
       "takeText": "Half at $0.0006461 (+40%), then 20% trail from peak; flat-exit if within ±5% at 07:16 PKT (3.5h rule); breakeven stop once +20%",
       "status": "Open (Phantom NOT_VERIFIED, not spam)  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "-9.7%"
+      "pnlPctText": "-10.8%"
     },
     {
       "id": "P11",
@@ -79,7 +79,7 @@
       "takeProfit": 0.00161,
       "takeText": "Half at $0.001610 (+40%), then 20% trail from peak; flat-exit if within ±5% at 07:36 PKT (3.5h rule); breakeven stop once +20%",
       "status": "Open (Phantom NOT_VERIFIED, not spam)  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "-12.3%"
+      "pnlPctText": "-12.0%"
     },
     {
       "id": "P13",
@@ -94,7 +94,7 @@
       "takeProfit": 0.00519,
       "takeText": "Half at $0.005190 (+40%), then 20% trail from peak; flat-exit if within ±5% at 08:22 PKT (3.5h rule); breakeven stop once +20%",
       "status": "Open (Phantom NOT_VERIFIED, not spam)  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "-2.6%"
+      "pnlPctText": "+8.6%"
     },
     {
       "id": "P14",
@@ -109,7 +109,7 @@
       "takeProfit": 0.03067,
       "takeText": "Half at $0.03067 (+40%), then 20% trail from peak; flat-exit if within ±5% at 08:50 PKT (3.5h rule); breakeven stop once +20%",
       "status": "Open (Phantom VERIFIED)  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "-10.4%"
+      "pnlPctText": "-12.3%"
     },
     {
       "id": "P16",
@@ -124,7 +124,7 @@
       "takeProfit": 0.0005964,
       "takeText": "Half at $0.0005964 (+40%), then 20% trail from peak; flat-exit if within ±5% at 09:26 PKT (3.5h rule); breakeven stop once +20%",
       "status": "Open  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "-14.2%"
+      "pnlPctText": "-13.9%"
     },
     {
       "id": "P17",
@@ -139,7 +139,7 @@
       "takeProfit": 0.00166,
       "takeText": "Half at $0.001660 (+40%), then 20% trail from peak; flat-exit if within ±5% at 09:39 PKT (3.5h rule); breakeven stop once +20%",
       "status": "Open (Phantom NOT_VERIFIED, not spam)  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "+5.6%"
+      "pnlPctText": "+12.6%"
     }
   ],
   "trades": [
@@ -650,6 +650,15 @@
   ],
   "activity": [
     {
+      "timePkt": "2026-11-10 06:44 PKT",
+      "title": "Check: holding 6, no trades",
+      "kind": "system",
+      "detail": "",
+      "coins": "",
+      "why": "",
+      "tx": ""
+    },
+    {
       "timePkt": "2026-11-10 06:37 PKT",
       "title": "Check: holding 6, no trades",
       "kind": "system",
@@ -999,15 +1008,6 @@
       "coins": "",
       "why": "",
       "tx": ""
-    },
-    {
-      "timePkt": "2026-11-10 03:08 PKT",
-      "title": "SELL CBUCKS (flat exit), BUY YOURSELF",
-      "kind": "system",
-      "detail": "",
-      "coins": "",
-      "why": "",
-      "tx": ""
     }
   ],
   "agents": [
@@ -1059,5 +1059,5 @@
     "Halt new trades if wallet drops −60% from peak ($20.00); ask Malik how to continue."
   ],
   "solBalanceHint": 0.140246196,
-  "walletUsdHint": 40.41
+  "walletUsdHint": 41.2
 }
