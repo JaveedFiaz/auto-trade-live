@@ -1,8 +1,8 @@
 {
-  "updatedPkt": "2026-11-10 07:03 PKT",
+  "updatedPkt": "2026-11-10 07:06 PKT",
   "wallet": "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9",
   "status": "Active",
-  "nextCheckPkt": "2026-11-10 07:07 PKT (every 5 min)",
+  "nextCheckPkt": "2026-11-10 07:10 PKT (every 5 min)",
   "startUsd": 50.0,
   "startSol": 0.5745,
   "peakUsd": 50.0,
@@ -58,7 +58,7 @@
       "takeProfit": 0.0006461,
       "takeText": "Half at $0.0006461 (+40%), then 20% trail from peak; flat-exit if within ±5% at 07:16 PKT (3.5h rule); breakeven stop once +20%",
       "status": "Open (Phantom NOT_VERIFIED, not spam)  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "-5.8%"
+      "pnlPctText": "+7.3%"
     },
     {
       "id": "P11",
@@ -103,7 +103,7 @@
       "takeProfit": 0.03067,
       "takeText": "Half at $0.03067 (+40%), then 20% trail from peak; flat-exit if within ±5% at 08:50 PKT (3.5h rule); breakeven stop once +20%",
       "status": "Open (Phantom VERIFIED)  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "-11.8%"
+      "pnlPctText": "-12.6%"
     },
     {
       "id": "P17",
@@ -118,7 +118,7 @@
       "takeProfit": 0.00166,
       "takeText": "Half at $0.001660 (+40%), then 20% trail from peak; flat-exit if within ±5% at 09:39 PKT (3.5h rule); breakeven stop once +20%",
       "status": "Open (Phantom NOT_VERIFIED, not spam)  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "+2.5%"
+      "pnlPctText": "+5.4%"
     }
   ],
   "trades": [
@@ -643,6 +643,15 @@
   ],
   "activity": [
     {
+      "timePkt": "2026-11-10 07:05 PKT",
+      "title": "Check: holding 5, no trades",
+      "kind": "system",
+      "detail": "",
+      "coins": "",
+      "why": "",
+      "tx": ""
+    },
+    {
       "timePkt": "2026-11-10 07:02 PKT",
       "title": "Check: holding 5, no trades",
       "kind": "system",
@@ -992,15 +1001,6 @@
       "coins": "",
       "why": "",
       "tx": ""
-    },
-    {
-      "timePkt": "2026-11-10 03:33 PKT",
-      "title": "Check: holding 6, no trades",
-      "kind": "system",
-      "detail": "",
-      "coins": "",
-      "why": "",
-      "tx": ""
     }
   ],
   "agents": [
@@ -1052,5 +1052,5 @@
     "Halt new trades if wallet drops −60% from peak ($20.00); ask Malik how to continue."
   ],
   "solBalanceHint": 0.185309902,
-  "walletUsdHint": 40.35
+  "walletUsdHint": 41.13
 }
