@@ -1,8 +1,8 @@
 {
-  "updatedPkt": "2026-11-10 05:28 PKT",
+  "updatedPkt": "2026-11-10 05:35 PKT",
   "wallet": "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9",
   "status": "Active",
-  "nextCheckPkt": "2026-11-10 05:32 PKT (every 5 min)",
+  "nextCheckPkt": "2026-11-10 05:37 PKT (every 5 min)",
   "startUsd": 50.0,
   "startSol": 0.5745,
   "peakUsd": 50.0,
@@ -58,7 +58,7 @@
       "takeProfit": 0.0006461,
       "takeText": "Half at $0.0006461 (+40%), then 20% trail from peak; 90-min flat check at 05:17 passed (+9.4%, not flat)",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-2.8%"
+      "pnlPctText": "-1.5%"
     },
     {
       "id": "P11",
@@ -88,7 +88,7 @@
       "takeProfit": 0.002299,
       "takeText": "Half at $0.002299 (+40%), then 20% trail from peak; flat-exit if within ±5% at 06:22 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-4.8%"
+      "pnlPctText": "-8.1%"
     },
     {
       "id": "P13",
@@ -118,7 +118,7 @@
       "takeProfit": 0.03067,
       "takeText": "Half at $0.03067 (+40%), then 20% trail from peak; flat-exit if within ±5% at 06:50 PKT",
       "status": "Open (Phantom VERIFIED)",
-      "pnlPctText": "-7.7%"
+      "pnlPctText": "-6.0%"
     }
   ],
   "trades": [
@@ -559,6 +559,15 @@
   ],
   "activity": [
     {
+      "timePkt": "2026-11-10 05:33 PKT",
+      "title": "Check: holding 5, no trades",
+      "kind": "system",
+      "detail": "",
+      "coins": "",
+      "why": "",
+      "tx": ""
+    },
+    {
       "timePkt": "2026-11-10 05:29 PKT",
       "title": "Check: holding 5, no trades",
       "kind": "system",
@@ -908,15 +917,6 @@
       "coins": "CBUCKS, HELL, HODLER, GATO, DESSA, Fartcoin, PNUT, FWOG, BONK, WIF, Macca, AgenC",
       "why": "HELL +12.7% 1h / +14.4% 6h with buys ≈ sells, but under the +15% bar and 1h volume ($2.5k) below its 6h pace (~$3.7k/h); HODLER +34% 6h on only $84 of 1h volume; Fartcoin/PNUT/BONK/WIF/GATO flat, DESSA/Macca/AgenC down.",
       "tx": ""
-    },
-    {
-      "timePkt": "2026-11-10 01:47 PKT",
-      "title": "5-min scan: holding CBUCKS, no new buy",
-      "kind": "skip",
-      "detail": "Phantom session OK; wallet 0.458296 SOL @ $86.53 + 2,212.44 CBUCKS @ $0.004353 = ~$49.29. CBUCKS −2.0% from entry, above stop $0.003554, below +40% target; held. Rescanned 51 Solana pairs (DexScreener boosts/profiles + majors).",
-      "coins": "CBUCKS, HODLER, Macca, GATO, HELL, Fartcoin, PNUT, FWOG, DESSA, BONK, WIF, AgenC",
-      "why": "HODLER +8.9% 1h on just $69 volume; Macca +5% 1h below the momentum threshold; HELL faded to −0.5% 1h; Fartcoin/PNUT/BONK/WIF/GATO flat, DESSA/AgenC down.",
-      "tx": ""
     }
   ],
   "agents": [
@@ -968,5 +968,5 @@
     "Halt new trades if wallet drops −60% from peak ($20.00); ask Malik how to continue."
   ],
   "solBalanceHint": 0.199284554,
-  "walletUsdHint": 41.72
+  "walletUsdHint": 41.7
 }
