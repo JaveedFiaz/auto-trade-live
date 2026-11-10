@@ -26,6 +26,12 @@
       "decimals": 6
     },
     {
+      "symbol": "Pepetide",
+      "mint": "22JKmY9YZfnQfb3pGYb6hctL5Jyvv3zhL3nQ8oyNuoYp",
+      "amount": 11704.906751,
+      "decimals": 6
+    },
+    {
       "symbol": "STANK",
       "mint": "5wsjHxT5nW5jQuVupXUNnYszF3WoWCfGGk9LMcsCJzY8",
       "amount": 1388.138063,
