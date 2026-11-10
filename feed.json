@@ -1,8 +1,8 @@
 {
-  "updatedPkt": "2026-11-10 05:43 PKT",
+  "updatedPkt": "2026-11-10 05:48 PKT",
   "wallet": "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9",
   "status": "Active",
-  "nextCheckPkt": "2026-11-10 05:47 PKT (every 5 min)",
+  "nextCheckPkt": "2026-11-10 05:52 PKT (every 5 min)",
   "startUsd": 50.0,
   "startSol": 0.5745,
   "peakUsd": 50.0,
@@ -64,7 +64,7 @@
       "takeProfit": 0.0006461,
       "takeText": "Half at $0.0006461 (+40%), then 20% trail from peak; 90-min flat check at 05:17 passed (+9.4%, not flat)",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-0.0%"
+      "pnlPctText": "-2.1%"
     },
     {
       "id": "P11",
@@ -79,7 +79,7 @@
       "takeProfit": 0.00161,
       "takeText": "Half at $0.001610 (+40%), then 20% trail from peak; 90-min flat check at 05:37 passed (−12.8%, outside ±5%; kept, −20% stop still applies)",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-13.0%"
+      "pnlPctText": "-12.5%"
     },
     {
       "id": "P12",
@@ -94,7 +94,7 @@
       "takeProfit": 0.002299,
       "takeText": "Half at $0.002299 (+40%), then 20% trail from peak; flat-exit if within ±5% at 06:22 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-13.5%"
+      "pnlPctText": "-16.4%"
     },
     {
       "id": "P13",
@@ -109,7 +109,7 @@
       "takeProfit": 0.00519,
       "takeText": "Half at $0.005190 (+40%), then 20% trail from peak; flat-exit if within ±5% at 06:22 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "+1.5%"
+      "pnlPctText": "+0.4%"
     },
     {
       "id": "P14",
@@ -124,7 +124,7 @@
       "takeProfit": 0.03067,
       "takeText": "Half at $0.03067 (+40%), then 20% trail from peak; flat-exit if within ±5% at 06:50 PKT",
       "status": "Open (Phantom VERIFIED)",
-      "pnlPctText": "-5.9%"
+      "pnlPctText": "-6.5%"
     },
     {
       "id": "P15",
@@ -139,7 +139,7 @@
       "takeProfit": 0.0013237,
       "takeText": "Half at $0.0013237 (+40%), then 20% trail from peak; flat-exit if within ±5% at 07:07 PKT",
       "status": "Open",
-      "pnlPctText": "+8.3%"
+      "pnlPctText": "+0.4%"
     }
   ],
   "trades": [
@@ -594,6 +594,15 @@
   ],
   "activity": [
     {
+      "timePkt": "2026-11-10 05:48 PKT",
+      "title": "Check: holding 6, no trades",
+      "kind": "system",
+      "detail": "",
+      "coins": "",
+      "why": "",
+      "tx": ""
+    },
+    {
       "timePkt": "2026-11-10 05:43 PKT",
       "title": "Check: holding 6, no trades",
       "kind": "system",
@@ -943,15 +952,6 @@
       "coins": "ANT, ORBIT, jeff, BTC (pump), AMD, MAYA, neet, Pokemon, CIA, BigPussy",
       "why": "Only passing coin not already held or flagged was ANT (+99% 1h, +78% 5m, $96k liquidity), but the mandatory pre-buy spam check failed: Phantom has no token data for it and its simulation lists it as \"Unknown\", so it was skipped. ORBIT skipped (Phantom flagged it possible spam earlier). jeff (−12% 1h) and the pump.fun BTC token (−22% 1h) are dumping on the hour. AMD not re-bought right after its stop. MAYA, neet, Pokemon, CIA, BigPussy and other +400–1100% launches are under 1 hour old or below $50k liquidity.",
       "tx": "https://solscan.io/tx/4TUUqeePmMApauLxGA2KWKbzoYgxoRny8khZSw5qD2ium1sR8MEpjfyU2nhivWN8nqwKFXSDzuDJ48WiBvFFZoWR"
-    },
-    {
-      "timePkt": "2026-11-10 02:12 PKT",
-      "title": "BUY ZCAT + PIRATE, HWAN in and out",
-      "kind": "trade",
-      "detail": "Phantom session OK; started at 0.388303 SOL + CBUCKS + AMD + HELL (~$46.92). Broad scan pulled 338 Solana tokens (GeckoTerminal trending 5m/1h/6h, new pools, top volume and tx-count pools, DexScreener boosts/profiles/search), 333 priced, 8 passed the entry rules. Held all three open positions: CBUCKS −4%, HELL −10%, AMD −16% (stop $0.0003836 not hit). Bought HWAN, ZCAT and PIRATE for 0.0578 SOL (~$5.00) each; simulations clean, impact 1.2–2.2%, mint and freeze authority revoked. Phantom then tagged HWAN as possible spam, so it was sold in two halves (a full-size exit quoted 7.8% impact) for ~0.05475 SOL (−$0.40). After: 0.264820 SOL + CBUCKS + AMD + HELL + ZCAT + PIRATE = ~$46.18, 5 open positions.",
-      "coins": "HWAN, ZCAT, PIRATE, AMD, TAOLF, jeff, CBUCKS, BTC (pump), MAYA, KYTRO, Pokemon, Grok Bot",
-      "why": "ZCAT +16.5% 6h on $696k liquidity with buys > sells and Phantom-verified; PIRATE +28% 1h with buys > sells on $87k liquidity; HWAN +672% 1h but flagged possible spam after the fill, so exited. Skipped TAOLF (weaker, slot kept for next run), jeff and the pump.fun BTC token (falling on the hour), MAYA, KYTRO, Pokemon, Grok Bot and other +100–1900% launches (under 1 hour old or below $50k liquidity).",
-      "tx": "https://solscan.io/tx/3j96X64M4iryxNLpWvRzS2A223fq17vWk5pZ5ZxPXk1Nb9ehBMR6zUTw7pQLfs57YmfEUsmxXrwsa1uJT3LTSBk1"
     }
   ],
   "agents": [
@@ -1003,5 +1003,5 @@
     "Halt new trades if wallet drops −60% from peak ($20.00); ask Malik how to continue."
   ],
   "solBalanceHint": 0.139884713,
-  "walletUsdHint": 41.73
+  "walletUsdHint": 41.01
 }
