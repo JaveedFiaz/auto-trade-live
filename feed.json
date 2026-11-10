@@ -1,15 +1,15 @@
 {
-  "updatedPkt": "2026-11-10 06:52 PKT",
+  "updatedPkt": "2026-11-10 07:01 PKT",
   "wallet": "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9",
   "status": "Active",
-  "nextCheckPkt": "2026-11-10 06:57 PKT (every 5 min)",
+  "nextCheckPkt": "2026-11-10 07:04 PKT (every 5 min)",
   "startUsd": 50.0,
   "startSol": 0.5745,
   "peakUsd": 50.0,
   "haltUsd": 20.0,
   "wins": 2,
-  "losses": 12,
-  "tradesCount": 36,
+  "losses": 13,
+  "tradesCount": 37,
   "signalsScanned": 0,
   "modeLabel": "aggressive memecoin mode",
   "holdings": [
@@ -29,12 +29,6 @@
       "symbol": "OnlyCats",
       "mint": "BAftaSb1HVqBn5723w72WLcXU7YASSgmVxQxJJAJpump",
       "amount": 4219.364113,
-      "decimals": 6
-    },
-    {
-      "symbol": "Pepetide",
-      "mint": "22JKmY9YZfnQfb3pGYb6hctL5Jyvv3zhL3nQ8oyNuoYp",
-      "amount": 11704.906751,
       "decimals": 6
     },
     {
@@ -64,7 +58,7 @@
       "takeProfit": 0.0006461,
       "takeText": "Half at $0.0006461 (+40%), then 20% trail from peak; flat-exit if within ±5% at 07:16 PKT (3.5h rule); breakeven stop once +20%",
       "status": "Open (Phantom NOT_VERIFIED, not spam)  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "-7.9%"
+      "pnlPctText": "-5.2%"
     },
     {
       "id": "P11",
@@ -79,7 +73,7 @@
       "takeProfit": 0.00161,
       "takeText": "Half at $0.001610 (+40%), then 20% trail from peak; flat-exit if within ±5% at 07:36 PKT (3.5h rule); breakeven stop once +20%",
       "status": "Open (Phantom NOT_VERIFIED, not spam)  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "-12.1%"
+      "pnlPctText": "-11.9%"
     },
     {
       "id": "P13",
@@ -94,7 +88,7 @@
       "takeProfit": 0.00519,
       "takeText": "Half at $0.005190 (+40%), then 20% trail from peak; flat-exit if within ±5% at 08:22 PKT (3.5h rule); breakeven stop once +20%",
       "status": "Open (Phantom NOT_VERIFIED, not spam)  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "+4.5%"
+      "pnlPctText": "+5.3%"
     },
     {
       "id": "P14",
@@ -112,21 +106,6 @@
       "pnlPctText": "-12.3%"
     },
     {
-      "id": "P16",
-      "openedPkt": "2026-11-10 05:56",
-      "asset": "Pepetide",
-      "mint": "22JKmY9YZfnQfb3pGYb6hctL5Jyvv3zhL3nQ8oyNuoYp",
-      "side": "Long spot",
-      "sizeText": "11,704.906751 tokens (0.059386 SOL incl. fees and account rent, ~$5.12)",
-      "amount": 11704.906751,
-      "entry": 0.000426,
-      "stop": 0.0003408,
-      "takeProfit": 0.0005964,
-      "takeText": "Half at $0.0005964 (+40%), then 20% trail from peak; flat-exit if within ±5% at 09:26 PKT (3.5h rule); breakeven stop once +20%",
-      "status": "Open  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "-19.0%"
-    },
-    {
       "id": "P17",
       "openedPkt": "2026-11-10 06:09",
       "asset": "OnlyCats",
@@ -139,10 +118,24 @@
       "takeProfit": 0.00166,
       "takeText": "Half at $0.001660 (+40%), then 20% trail from peak; flat-exit if within ±5% at 09:39 PKT (3.5h rule); breakeven stop once +20%",
       "status": "Open (Phantom NOT_VERIFIED, not spam)  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "+14.5%"
+      "pnlPctText": "+9.0%"
     }
   ],
   "trades": [
+    {
+      "id": "T37",
+      "timePkt": "2026-11-10 06:59",
+      "action": "SELL (close)",
+      "side": "SELL",
+      "ticker": "Pepetide",
+      "size": "11,704.906751 → 0.045064 SOL net (~$3.88)",
+      "price": "~$0.000330",
+      "href": "https://solscan.io/tx/2Drmtit93HHSLsrZqZdpX1QbFzWjvrFW35nMg9L92pqV6mYS9MMptKedKHZmK5Go6rRZwKG3aWAkG2zLoXFLjQu7",
+      "notes": "LOSS ~-$1.24 (~−24% vs $5.12 cost): −20% stop broken at the 06:59 check; 0.93% impact; DFlow route; momentum lane (bought before 6:23 rules). No rebuy before 08:59 PKT",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
     {
       "id": "T36",
       "timePkt": "2026-11-10 06:09",
@@ -650,6 +643,15 @@
   ],
   "activity": [
     {
+      "timePkt": "2026-11-10 06:59 PKT",
+      "title": "SELL Pepetide (−20% stop)",
+      "kind": "system",
+      "detail": "",
+      "coins": "",
+      "why": "",
+      "tx": ""
+    },
+    {
       "timePkt": "2026-11-10 06:53 PKT",
       "title": "Check: holding 6, no trades",
       "kind": "system",
@@ -999,15 +1001,6 @@
       "coins": "",
       "why": "",
       "tx": ""
-    },
-    {
-      "timePkt": "2026-11-10 03:24 PKT",
-      "title": "Check: holding 6, no trades",
-      "kind": "system",
-      "detail": "",
-      "coins": "",
-      "why": "",
-      "tx": ""
     }
   ],
   "agents": [
@@ -1058,6 +1051,6 @@
     "Quote first; never execute if simulation blocks/flags risk or price impact > 5%.",
     "Halt new trades if wallet drops −60% from peak ($20.00); ask Malik how to continue."
   ],
-  "solBalanceHint": 0.140246196,
-  "walletUsdHint": 40.99
+  "solBalanceHint": 0.185309902,
+  "walletUsdHint": 40.72
 }
