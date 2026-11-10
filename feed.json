@@ -1,8 +1,8 @@
 {
-  "updatedPkt": "2026-11-10 04:59 PKT",
+  "updatedPkt": "2026-11-10 05:02 PKT",
   "wallet": "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9",
   "status": "Active",
-  "nextCheckPkt": "2026-11-10 05:05 PKT (every 5 min)",
+  "nextCheckPkt": "2026-11-10 05:10 PKT (every 5 min)",
   "startUsd": 50.0,
   "startSol": 0.5745,
   "peakUsd": 50.0,
@@ -64,7 +64,7 @@
       "takeProfit": 0.006188,
       "takeText": "Half at $0.006188 (+40%), then 20% trail from peak; 90-min flat check at 04:11 passed (-10.9%, not flat)",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-12.9%"
+      "pnlPctText": "-11.5%"
     },
     {
       "id": "P9",
@@ -79,7 +79,7 @@
       "takeProfit": 0.001365,
       "takeText": "Half at $0.001365 (+40%), then 20% trail from peak; flat-exit if within ±5% at 05:16 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "+5.8%"
+      "pnlPctText": "+4.1%"
     },
     {
       "id": "P10",
@@ -94,7 +94,7 @@
       "takeProfit": 0.0006461,
       "takeText": "Half at $0.0006461 (+40%), then 20% trail from peak; flat-exit if within ±5% at 05:16 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "+13.2%"
+      "pnlPctText": "+12.5%"
     },
     {
       "id": "P11",
@@ -109,7 +109,7 @@
       "takeProfit": 0.00161,
       "takeText": "Half at $0.001610 (+40%), then 20% trail from peak; flat-exit if within ±5% at 05:36 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-1.5%"
+      "pnlPctText": "-1.4%"
     },
     {
       "id": "P12",
@@ -124,7 +124,7 @@
       "takeProfit": 0.002299,
       "takeText": "Half at $0.002299 (+40%), then 20% trail from peak; flat-exit if within ±5% at 06:22 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-5.6%"
+      "pnlPctText": "-9.0%"
     },
     {
       "id": "P13",
@@ -139,7 +139,7 @@
       "takeProfit": 0.00519,
       "takeText": "Half at $0.005190 (+40%), then 20% trail from peak; flat-exit if within ±5% at 06:22 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-4.2%"
+      "pnlPctText": "-4.1%"
     }
   ],
   "trades": [
@@ -538,6 +538,15 @@
   ],
   "activity": [
     {
+      "timePkt": "2026-11-10 05:03 PKT",
+      "title": "Check: holding 6, no trades",
+      "kind": "system",
+      "detail": "",
+      "coins": "",
+      "why": "",
+      "tx": ""
+    },
+    {
       "timePkt": "2026-11-10 04:59 PKT",
       "title": "Check: holding 6, no trades",
       "kind": "system",
@@ -887,15 +896,6 @@
       "coins": "Fartcoin, PNUT, FWOG, DESSA, HODLER, GATO, BONK, CBUCKS",
       "why": "Fartcoin flat on the hour (+0.1%) with 1h volume below its average, PNUT and FWOG flat to down, DESSA −24% 24h. HODLER jumped +21% in 1h but is only 11h old and traded just ~$200 in the last hour, so it stays excluded. CBUCKS (+10% 1h) is still under $500k liquidity. No quotes run, no trade.",
       "tx": ""
-    },
-    {
-      "timePkt": "2026-11-10 01:22 PKT",
-      "title": "5-min scan: no qualifying setup, skipped",
-      "kind": "skip",
-      "detail": "Phantom session OK; wallet 0.574515424 SOL @ $86.89 = $49.92 (no SPL tokens, no open positions, nothing to manage). Rescanned the 24-coin watchlist plus DexScreener's current top-boosted Solana list (20 tokens).",
-      "coins": "Fartcoin, PNUT, FWOG, DESSA, HODLER, GATO, BONK, CBUCKS, WIF, WASTED, jeff and micro-caps",
-      "why": "Same picture as 01:15: only Fartcoin (+3.5% 24h, 1h volume $22k vs ~$38k/h 24h average), PNUT (+0.7%), FWOG (−6%), DESSA (−23%) pass the >$500k liquidity and >24h age filters, and none shows clear rising momentum. HODLER is 11h old; CBUCKS (+72% 24h), WASTED and jeff are under $500k liquidity. No quotes run, no trade.",
-      "tx": ""
     }
   ],
   "agents": [
@@ -947,5 +947,5 @@
     "Halt new trades if wallet drops −60% from peak ($20.00); ask Malik how to continue."
   ],
   "solBalanceHint": 0.149312694,
-  "walletUsdHint": 43.51
+  "walletUsdHint": 43.29
 }
