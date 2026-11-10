@@ -1,15 +1,15 @@
 {
-  "updatedPkt": "2026-11-10 13:33 PKT",
+  "updatedPkt": "2026-11-10 13:41 PKT",
   "wallet": "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9",
   "status": "Active",
-  "nextCheckPkt": "2026-11-10 13:38 PKT",
+  "nextCheckPkt": "2026-11-10 13:44 PKT",
   "startUsd": 50.0,
   "startSol": 0.5745,
   "peakUsd": 50.0,
   "haltUsd": 20.0,
   "wins": 2,
-  "losses": 15,
-  "tradesCount": 42,
+  "losses": 16,
+  "tradesCount": 43,
   "signalsScanned": 0,
   "modeLabel": "aggressive memecoin mode",
   "holdings": [
@@ -23,12 +23,6 @@
       "symbol": "PEAK",
       "mint": "APLPiTjBWzwfZ5U1TBeqLF9XJ7dV7XKGe7j4BZhkDray",
       "amount": 11115.809044,
-      "decimals": 6
-    },
-    {
-      "symbol": "OnlyCats",
-      "mint": "BAftaSb1HVqBn5723w72WLcXU7YASSgmVxQxJJAJpump",
-      "amount": 4219.364113,
       "decimals": 6
     },
     {
@@ -64,7 +58,7 @@
       "takeProfit": 0.0006461,
       "takeText": "Half at $0.0006461 (+40%), then 20% trail from peak; 3.5h flat-exit check passed 07:20 PKT (−7.1%, outside ±5%, kept); breakeven stop once +20%",
       "status": "Open (Phantom NOT_VERIFIED, not spam)  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "+16.1%"
+      "pnlPctText": "+17.7%"
     },
     {
       "id": "P11",
@@ -79,7 +73,7 @@
       "takeProfit": 0.00161,
       "takeText": "Half at $0.001610 (+40%), then 20% trail from peak; 3.5h flat-exit check passed 07:37 PKT (−13.0%, outside ±5%, kept); breakeven stop once +20%",
       "status": "Open (Phantom NOT_VERIFIED, not spam)  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "-14.6%"
+      "pnlPctText": "-14.7%"
     },
     {
       "id": "P13",
@@ -94,22 +88,7 @@
       "takeProfit": 0.00519,
       "takeText": "Half at $0.005190 (+40%), then 20% trail from peak; 3.5h flat-exit check passed 08:23 PKT (−9.5%, outside ±5%, kept); breakeven stop once +20%",
       "status": "Open (Phantom NOT_VERIFIED, not spam)  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "-3.5%"
-    },
-    {
-      "id": "P17",
-      "openedPkt": "2026-11-10 06:09",
-      "asset": "OnlyCats",
-      "mint": "BAftaSb1HVqBn5723w72WLcXU7YASSgmVxQxJJAJpump",
-      "side": "Long spot",
-      "sizeText": "4,219.364113 tokens (0.059400 SOL incl. fees and account rent, ~$5.14)",
-      "amount": 4219.364113,
-      "entry": 0.001186,
-      "stop": 0.001186,
-      "takeProfit": 0.00166,
-      "takeText": "Half at $0.001660 (+40%), then 20% trail from peak; 3.5h flat-exit check passed 09:40 PKT (+24.8%, outside ±5%, kept); breakeven stop once +20%",
-      "status": "Open (Phantom NOT_VERIFIED, not spam)  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "+15.4%"
+      "pnlPctText": "-1.4%"
     },
     {
       "id": "P18",
@@ -124,7 +103,7 @@
       "takeProfit": 0.0014486,
       "takeText": "Half at $0.0014486 (+40%), then 20% trail from peak; 3.5h flat-exit check passed 11:01 PKT (-11.0%, outside ±5%, kept); breakeven stop once +20%",
       "status": "Open (Phantom NOT_VERIFIED, not spam)  (pullback lane)",
-      "pnlPctText": "-18.9%"
+      "pnlPctText": "-16.1%"
     },
     {
       "id": "P20",
@@ -139,10 +118,24 @@
       "takeProfit": 0.0011858,
       "takeText": "Half at $0.0011858 (+40%), then 20% trail from peak; 3.5h flat-exit check due ~16:33 PKT; breakeven stop once +20%",
       "status": "Open (Phantom NOT_VERIFIED, not spam)  (pullback lane)",
-      "pnlPctText": "-2.9%"
+      "pnlPctText": "-1.5%"
     }
   ],
   "trades": [
+    {
+      "id": "T43",
+      "timePkt": "2026-11-10 13:40",
+      "action": "SELL (close)",
+      "side": "SELL",
+      "ticker": "OnlyCats",
+      "size": "4,219.364113 → 0.013262 SOL net (~$1.14)",
+      "price": "~$0.000270",
+      "href": "https://solscan.io/tx/x2g3jEjsNA9rvVHJkNeEfgz4HyNTLwhy61BHbWGziuit3vAVeHADUspMyLUCmHTq9ZLSPG1nfSH28j4axokgBpu",
+      "notes": "LOSS ~-$3.95 (~−78% vs 0.0594 SOL cost): coin crashed ~81% within 5 minutes (DexScreener m5 −81%, likely a big holder dump) and broke its breakeven stop $0.001186 (Phantom $0.000276); 1.1% impact; OKX/PumpSwap route; momentum lane (pre-6:23 rules). No rebuy before 15:40 PKT",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
     {
       "id": "T42",
       "timePkt": "2026-11-10 13:03",
@@ -734,6 +727,15 @@
   ],
   "activity": [
     {
+      "timePkt": "2026-11-10 13:40 PKT",
+      "title": "Sold OnlyCats (crashed through its stop)",
+      "kind": "system",
+      "detail": "",
+      "coins": "",
+      "why": "",
+      "tx": ""
+    },
+    {
       "timePkt": "2026-11-10 13:33 PKT",
       "title": "Check: holding 6, no trades",
       "kind": "system",
@@ -1083,15 +1085,6 @@
       "coins": "",
       "why": "",
       "tx": ""
-    },
-    {
-      "timePkt": "2026-11-10 10:02 PKT",
-      "title": "Check: holding 6, no trades",
-      "kind": "system",
-      "detail": "",
-      "coins": "",
-      "why": "",
-      "tx": ""
     }
   ],
   "agents": [
@@ -1142,6 +1135,6 @@
     "Quote first; never execute if simulation blocks/flags risk or price impact > 5%.",
     "Halt new trades if wallet drops −60% from peak ($20.00); ask Malik how to continue."
   ],
-  "solBalanceHint": 0.102460192,
-  "walletUsdHint": 38.8
+  "solBalanceHint": 0.115722515,
+  "walletUsdHint": 34.57
 }
