@@ -1,8 +1,8 @@
 {
-  "updatedPkt": "2026-11-10 05:58 PKT",
+  "updatedPkt": "2026-11-10 06:03 PKT",
   "wallet": "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9",
   "status": "Active",
-  "nextCheckPkt": "2026-11-10 06:02 PKT (every 5 min)",
+  "nextCheckPkt": "2026-11-10 06:07 PKT (every 5 min)",
   "startUsd": 50.0,
   "startSol": 0.5745,
   "peakUsd": 50.0,
@@ -58,7 +58,7 @@
       "takeProfit": 0.0006461,
       "takeText": "Half at $0.0006461 (+40%), then 20% trail from peak; 90-min flat check at 05:17 passed (+9.4%, not flat)",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-1.1%"
+      "pnlPctText": "-4.0%"
     },
     {
       "id": "P11",
@@ -73,7 +73,7 @@
       "takeProfit": 0.00161,
       "takeText": "Half at $0.001610 (+40%), then 20% trail from peak; 90-min flat check at 05:37 passed (−12.8%, outside ±5%; kept, −20% stop still applies)",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-13.1%"
+      "pnlPctText": "-12.5%"
     },
     {
       "id": "P13",
@@ -88,7 +88,7 @@
       "takeProfit": 0.00519,
       "takeText": "Half at $0.005190 (+40%), then 20% trail from peak; flat-exit if within ±5% at 06:22 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-0.7%"
+      "pnlPctText": "-4.2%"
     },
     {
       "id": "P14",
@@ -103,7 +103,7 @@
       "takeProfit": 0.03067,
       "takeText": "Half at $0.03067 (+40%), then 20% trail from peak; flat-exit if within ±5% at 06:50 PKT",
       "status": "Open (Phantom VERIFIED)",
-      "pnlPctText": "-6.8%"
+      "pnlPctText": "-7.2%"
     },
     {
       "id": "P16",
@@ -118,7 +118,7 @@
       "takeProfit": 0.0005964,
       "takeText": "Half at $0.0005964 (+40%), then 20% trail from peak; flat-exit if within ±5% at 07:26 PKT",
       "status": "Open",
-      "pnlPctText": "-2.5%"
+      "pnlPctText": "-7.4%"
     }
   ],
   "trades": [
@@ -615,6 +615,15 @@
   ],
   "activity": [
     {
+      "timePkt": "2026-11-10 06:03 PKT",
+      "title": "Check: holding 5, no trades",
+      "kind": "system",
+      "detail": "",
+      "coins": "",
+      "why": "",
+      "tx": ""
+    },
+    {
       "timePkt": "2026-11-10 05:57 PKT",
       "title": "SELL BORLY (spam flag, win), SELL PUSSY (stop), BUY Pepetide",
       "kind": "system",
@@ -964,15 +973,6 @@
       "coins": "(optional) tickers considered",
       "why": "(optional) buy / sell / skip reason",
       "tx": "(optional)"
-    },
-    {
-      "timePkt": "2026-11-10 02:32 PKT",
-      "title": "BUY DOPE, BUTTHOLE in and out",
-      "kind": "trade",
-      "detail": "Phantom session OK; started at 0.310755 SOL + CBUCKS + HELL + ZCAT + PIRATE (~$46.21). Broad scan pulled 303 Solana tokens (GeckoTerminal trending 5m/1h/6h, new pools, top volume and tx-count pools, DexScreener boosts/profiles/search), 299 priced, 12 passed the entry rules. No stops or targets hit: CBUCKS −5%, HELL −10%, ZCAT +9%, PIRATE −4%. Pre-buy spam check ran on a live Phantom swap preview for each buy (Phantom's price lookup returns nothing for tokens the wallet doesn't hold). Bought DOPE and BUTTHOLE for 0.0579 SOL (~$5.00) each; previews had no warnings, impact 0.7% and 3.6%. Phantom then tagged BUTTHOLE as possible spam, so all of it was sold for 0.053414 SOL (−$0.66 including account rent). After: 0.243434 SOL + CBUCKS + HELL + ZCAT + PIRATE + DOPE = ~$45.45, 5 open positions.",
-      "coins": "MAYA, ORBIT, BUTTHOLE, ANT, AMD, ZCAT, DOPE, BTC (pump), HODLER, jeff, WEALTH, neet, KYTRO, HWAN",
-      "why": "DOPE +12.8% 1h / +26% 6h with buys 348 > sells 206 on $113k liquidity and Phantom knows the token. BUTTHOLE +131% 1h on $65k liquidity, 47h old, but flagged possible spam after the fill, so exited (its preview had no logo, now treated as a skip signal). Skipped MAYA (1.1h old launch, −16% in 5m), ORBIT (flagged spam earlier), ANT (no Phantom data last run), AMD (stopped out 10 minutes ago), BTC pump, HODLER, jeff, WEALTH (down on the hour), and neet, KYTRO, HWAN and other launches under 1 hour old or below $50k liquidity.",
-      "tx": "https://solscan.io/tx/3fC3NUUx5oP6D5Q9R3Zo9ahP1sHUrhjoRXRPJhvK5XBtJDGnKGBMdi48ikHdiy4ckrDhyzPy2Ja3WUV3f3mfqeDz"
     }
   ],
   "agents": [
@@ -1024,5 +1024,5 @@
     "Halt new trades if wallet drops −60% from peak ($20.00); ask Malik how to continue."
   ],
   "solBalanceHint": 0.199646037,
-  "walletUsdHint": 41.51
+  "walletUsdHint": 41.01
 }
