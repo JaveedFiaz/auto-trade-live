@@ -1,8 +1,8 @@
 {
-  "updatedPkt": "2026-11-10 05:07 PKT",
+  "updatedPkt": "2026-11-10 05:12 PKT",
   "wallet": "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9",
   "status": "Active",
-  "nextCheckPkt": "2026-11-10 05:11 PKT (every 5 min)",
+  "nextCheckPkt": "2026-11-10 05:16 PKT (every 5 min)",
   "startUsd": 50.0,
   "startSol": 0.5745,
   "peakUsd": 50.0,
@@ -64,7 +64,7 @@
       "takeProfit": 0.006188,
       "takeText": "Half at $0.006188 (+40%), then 20% trail from peak; 90-min flat check at 04:11 passed (-10.9%, not flat)",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-13.8%"
+      "pnlPctText": "-15.2%"
     },
     {
       "id": "P9",
@@ -79,7 +79,7 @@
       "takeProfit": 0.001365,
       "takeText": "Half at $0.001365 (+40%), then 20% trail from peak; flat-exit if within ±5% at 05:16 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "+3.0%"
+      "pnlPctText": "+3.3%"
     },
     {
       "id": "P10",
@@ -94,7 +94,7 @@
       "takeProfit": 0.0006461,
       "takeText": "Half at $0.0006461 (+40%), then 20% trail from peak; flat-exit if within ±5% at 05:16 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "+11.6%"
+      "pnlPctText": "+9.4%"
     },
     {
       "id": "P11",
@@ -109,7 +109,7 @@
       "takeProfit": 0.00161,
       "takeText": "Half at $0.001610 (+40%), then 20% trail from peak; flat-exit if within ±5% at 05:36 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-1.5%"
+      "pnlPctText": "-1.6%"
     },
     {
       "id": "P12",
@@ -124,7 +124,7 @@
       "takeProfit": 0.002299,
       "takeText": "Half at $0.002299 (+40%), then 20% trail from peak; flat-exit if within ±5% at 06:22 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-6.4%"
+      "pnlPctText": "-1.7%"
     },
     {
       "id": "P13",
@@ -538,6 +538,15 @@
   ],
   "activity": [
     {
+      "timePkt": "2026-11-10 05:12 PKT",
+      "title": "Check: holding 6, no trades",
+      "kind": "system",
+      "detail": "",
+      "coins": "",
+      "why": "",
+      "tx": ""
+    },
+    {
       "timePkt": "2026-11-10 05:07 PKT",
       "title": "Check: holding 6, no trades",
       "kind": "system",
@@ -887,15 +896,6 @@
       "coins": "",
       "why": "",
       "tx": ""
-    },
-    {
-      "timePkt": "2026-11-10 01:34 PKT",
-      "title": "BUY CBUCKS (0.17 SOL, ~$14.71)",
-      "kind": "trade",
-      "detail": "Phantom session OK; wallet before trade 0.574515424 SOL @ $86.55 = $49.72. Scanned 51 Solana pairs (DexScreener top boosts, latest boosts, latest profiles, plus BONK/WIF/POPCAT/PNUT/FWOG/Fartcoin) using the new looser rules (≥$100k liquidity, ≥2h age). Bought 3,312.441936 CBUCKS for 0.17 SOL (~$0.004442 each incl. fees) via Phantom's OKX route, 2.5% price impact, simulation clean, mint and freeze authority both revoked. Finalized on-chain. Stop $0.003554 (−20%), half off at $0.006219 (+40%). After trade: 0.402943 SOL + CBUCKS = ~$49.21.",
-      "coins": "CBUCKS, HODLER, Fartcoin, PNUT, FWOG, DESSA, GATO, BONK, HELL, WIF, Macca, AgenC",
-      "why": "CBUCKS was the only qualifying momentum: +15.8% 6h, +9.2% 1h, +68.5% 24h, buys beat sells 83/43 (1h) and 489/327 (6h), $225k liquidity, steady ~$20k/h volume, 5m flat (no blow-off). HODLER's +20% 1h came on only $113 of volume; HELL −14% 1h; the rest flat or down; sub-2h launches (ORBIT, HWAN, ALICE, CAT) and sub-$100k coins excluded.",
-      "tx": "https://solscan.io/tx/ALyJf7MJx9nnBnFLepSVSsga7NhDdpgFKsCLHbm5LMdymCGJbnyiJxh2B8yqKh1ZTXvbaaR1FhkndW98jdcCT9i"
     }
   ],
   "agents": [
@@ -947,5 +947,5 @@
     "Halt new trades if wallet drops −60% from peak ($20.00); ask Malik how to continue."
   ],
   "solBalanceHint": 0.149312694,
-  "walletUsdHint": 43.15
+  "walletUsdHint": 43.21
 }
