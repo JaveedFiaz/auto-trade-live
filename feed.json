@@ -1,15 +1,15 @@
 {
-  "updatedPkt": "2026-11-10 05:48 PKT",
+  "updatedPkt": "2026-11-10 05:58 PKT",
   "wallet": "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9",
   "status": "Active",
-  "nextCheckPkt": "2026-11-10 05:52 PKT (every 5 min)",
+  "nextCheckPkt": "2026-11-10 06:02 PKT (every 5 min)",
   "startUsd": 50.0,
   "startSol": 0.5745,
   "peakUsd": 50.0,
   "haltUsd": 20.0,
-  "wins": 1,
-  "losses": 11,
-  "tradesCount": 32,
+  "wins": 2,
+  "losses": 12,
+  "tradesCount": 35,
   "signalsScanned": 0,
   "modeLabel": "aggressive memecoin mode",
   "holdings": [
@@ -26,12 +26,6 @@
       "decimals": 6
     },
     {
-      "symbol": "PUSSY",
-      "mint": "FZxHLUGiGchY5uvvoeqh1EKiXTrGdN67WUBhUc1fLoat",
-      "amount": 3133.364481,
-      "decimals": 6
-    },
-    {
       "symbol": "STANK",
       "mint": "5wsjHxT5nW5jQuVupXUNnYszF3WoWCfGGk9LMcsCJzY8",
       "amount": 1388.138063,
@@ -41,12 +35,6 @@
       "symbol": "ZCAT",
       "mint": "HcRLc9VDgjLeK154xDawfb1dmVJ98DoSqcwTHGqiDeJR",
       "amount": 237.014466,
-      "decimals": 6
-    },
-    {
-      "symbol": "BORLY",
-      "mint": "F22QdNn7VYrtTgYDHEYcqQKVtDH8msh2xs6tnGxepump",
-      "amount": 5423.759762,
       "decimals": 6
     }
   ],
@@ -64,7 +52,7 @@
       "takeProfit": 0.0006461,
       "takeText": "Half at $0.0006461 (+40%), then 20% trail from peak; 90-min flat check at 05:17 passed (+9.4%, not flat)",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-2.1%"
+      "pnlPctText": "-1.1%"
     },
     {
       "id": "P11",
@@ -79,22 +67,7 @@
       "takeProfit": 0.00161,
       "takeText": "Half at $0.001610 (+40%), then 20% trail from peak; 90-min flat check at 05:37 passed (−12.8%, outside ±5%; kept, −20% stop still applies)",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-12.5%"
-    },
-    {
-      "id": "P12",
-      "openedPkt": "2026-11-10 04:52",
-      "asset": "PUSSY",
-      "mint": "FZxHLUGiGchY5uvvoeqh1EKiXTrGdN67WUBhUc1fLoat",
-      "side": "Long spot",
-      "sizeText": "3,133.364481 tokens (0.059456 SOL incl. fees, ~$5.15)",
-      "amount": 3133.364481,
-      "entry": 0.001642,
-      "stop": 0.001314,
-      "takeProfit": 0.002299,
-      "takeText": "Half at $0.002299 (+40%), then 20% trail from peak; flat-exit if within ±5% at 06:22 PKT",
-      "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-16.4%"
+      "pnlPctText": "-13.1%"
     },
     {
       "id": "P13",
@@ -109,7 +82,7 @@
       "takeProfit": 0.00519,
       "takeText": "Half at $0.005190 (+40%), then 20% trail from peak; flat-exit if within ±5% at 06:22 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "+0.4%"
+      "pnlPctText": "-0.7%"
     },
     {
       "id": "P14",
@@ -124,25 +97,67 @@
       "takeProfit": 0.03067,
       "takeText": "Half at $0.03067 (+40%), then 20% trail from peak; flat-exit if within ±5% at 06:50 PKT",
       "status": "Open (Phantom VERIFIED)",
-      "pnlPctText": "-6.5%"
+      "pnlPctText": "-6.8%"
     },
     {
-      "id": "P15",
-      "openedPkt": "2026-11-10 05:37",
-      "asset": "BORLY",
-      "mint": "F22QdNn7VYrtTgYDHEYcqQKVtDH8msh2xs6tnGxepump",
+      "id": "P16",
+      "openedPkt": "2026-11-10 05:56",
+      "asset": "Pepetide",
+      "mint": "22JKmY9YZfnQfb3pGYb6hctL5Jyvv3zhL3nQ8oyNuoYp",
       "side": "Long spot",
-      "sizeText": "5,423.759762 tokens (0.059400 SOL incl. fees and account rent, ~$5.13)",
-      "amount": 5423.759762,
-      "entry": 0.0009455,
-      "stop": 0.0007564,
-      "takeProfit": 0.0013237,
-      "takeText": "Half at $0.0013237 (+40%), then 20% trail from peak; flat-exit if within ±5% at 07:07 PKT",
+      "sizeText": "11,704.906751 tokens (0.059386 SOL incl. fees and account rent, ~$5.12)",
+      "amount": 11704.906751,
+      "entry": 0.000426,
+      "stop": 0.0003408,
+      "takeProfit": 0.0005964,
+      "takeText": "Half at $0.0005964 (+40%), then 20% trail from peak; flat-exit if within ±5% at 07:26 PKT",
       "status": "Open",
-      "pnlPctText": "+0.4%"
+      "pnlPctText": "-2.5%"
     }
   ],
   "trades": [
+    {
+      "id": "T35",
+      "timePkt": "2026-11-10 05:56",
+      "action": "BUY",
+      "side": "BUY",
+      "ticker": "Pepetide",
+      "size": "0.0578 SOL swap (~$4.99) + fees → 11,704.906751 Pepetide",
+      "price": "~$0.0004260",
+      "href": "https://solscan.io/tx/51WiyDMs3DfXBZqLPYUjD5uM3AB6uridEcCYY25WjZYFyvF3ESHU45je839dP7F3AWNSUmuUDwcsct73T2qc7Rrg",
+      "notes": "Open: +15.7% 1h, 217 buys vs 178 sells, $23k 1h volume, $155k liquidity, 16.5h old; RugCheck score 1, mint/freeze off, LP 78% locked; DexScreener image + 2 socials; Phantom quote no warnings, 1.6% impact; OKX route",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
+    {
+      "id": "T34",
+      "timePkt": "2026-11-10 05:55",
+      "action": "SELL (close)",
+      "side": "SELL",
+      "ticker": "PUSSY",
+      "size": "3,133.364481 → ~0.045862 SOL quoted (~$3.96)",
+      "price": "~$0.001263",
+      "href": "https://solscan.io/tx/3NHeXWFQUHDjqTgmp839g1UJCnXmb9XAHnmHmRdKxds8jEQ3CVh2uYU4KerxvnvbT9dnktHkhaTqs1paC9y8Vea6",
+      "notes": "LOSS ~-$1.17: −20% stop hit (−21.9% at the 05:55 check); 0.3% impact; Meteora DLMM via OKX",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
+    {
+      "id": "T33",
+      "timePkt": "2026-11-10 05:55",
+      "action": "SELL (close)",
+      "side": "SELL",
+      "ticker": "BORLY",
+      "size": "5,423.759762 → ~0.073445 SOL quoted (~$6.34)",
+      "price": "~$0.001168",
+      "href": "https://solscan.io/tx/2ciXn6Up56i1HwqePUwYP1dUdHsXQpPr6NJpRm5mBLFyg1jcyYMBaKvxcczJ7sJBV6yqby74jA7FP5wpMakUmyZw",
+      "notes": "WIN ~+$1.21 (~+23.6% vs cost): Phantom flagged BORLY POSSIBLE_SPAM, so exited per the no-spam rule; 0% impact; PumpSwap via OKX",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
     {
       "id": "T32",
       "timePkt": "2026-11-10 05:37",
@@ -594,6 +609,15 @@
   ],
   "activity": [
     {
+      "timePkt": "2026-11-10 05:57 PKT",
+      "title": "SELL BORLY (spam flag, win), SELL PUSSY (stop), BUY Pepetide",
+      "kind": "system",
+      "detail": "",
+      "coins": "",
+      "why": "",
+      "tx": ""
+    },
+    {
       "timePkt": "2026-11-10 05:48 PKT",
       "title": "Check: holding 6, no trades",
       "kind": "system",
@@ -943,15 +967,6 @@
       "coins": "MAYA, ORBIT, BUTTHOLE, ANT, AMD, ZCAT, DOPE, BTC (pump), HODLER, jeff, WEALTH, neet, KYTRO, HWAN",
       "why": "DOPE +12.8% 1h / +26% 6h with buys 348 > sells 206 on $113k liquidity and Phantom knows the token. BUTTHOLE +131% 1h on $65k liquidity, 47h old, but flagged possible spam after the fill, so exited (its preview had no logo, now treated as a skip signal). Skipped MAYA (1.1h old launch, −16% in 5m), ORBIT (flagged spam earlier), ANT (no Phantom data last run), AMD (stopped out 10 minutes ago), BTC pump, HODLER, jeff, WEALTH (down on the hour), and neet, KYTRO, HWAN and other launches under 1 hour old or below $50k liquidity.",
       "tx": "https://solscan.io/tx/3fC3NUUx5oP6D5Q9R3Zo9ahP1sHUrhjoRXRPJhvK5XBtJDGnKGBMdi48ikHdiy4ckrDhyzPy2Ja3WUV3f3mfqeDz"
-    },
-    {
-      "timePkt": "2026-11-10 02:22 PKT",
-      "title": "SELL AMD (stop-loss), no new buys",
-      "kind": "trade",
-      "detail": "Phantom session OK; started at 0.264820 SOL + CBUCKS + AMD + HELL + ZCAT + PIRATE (~$46.04). Broad scan pulled 287 Solana tokens (GeckoTerminal trending 5m/1h/6h, new pools, top volume and tx-count pools, DexScreener boosts/profiles/search), 282 priced, 8 passed the entry rules. AMD fell to $0.0003790, below its −20% stop ($0.0003836), so all 10,372.80 AMD was sold for 0.045934 SOL (~$3.97, −$1.00 vs cost; 1.3% impact). Held CBUCKS −2%, HELL −10%, ZCAT +3%, PIRATE −4%. No new buys. After: 0.310755 SOL + CBUCKS + HELL + ZCAT + PIRATE = ~$46.17, 4 open positions.",
-      "coins": "ANT, ORBIT, jeff, BTC (pump), AMD, MAYA, neet, Pokemon, CIA, BigPussy",
-      "why": "Only passing coin not already held or flagged was ANT (+99% 1h, +78% 5m, $96k liquidity), but the mandatory pre-buy spam check failed: Phantom has no token data for it and its simulation lists it as \"Unknown\", so it was skipped. ORBIT skipped (Phantom flagged it possible spam earlier). jeff (−12% 1h) and the pump.fun BTC token (−22% 1h) are dumping on the hour. AMD not re-bought right after its stop. MAYA, neet, Pokemon, CIA, BigPussy and other +400–1100% launches are under 1 hour old or below $50k liquidity.",
-      "tx": "https://solscan.io/tx/4TUUqeePmMApauLxGA2KWKbzoYgxoRny8khZSw5qD2ium1sR8MEpjfyU2nhivWN8nqwKFXSDzuDJ48WiBvFFZoWR"
     }
   ],
   "agents": [
@@ -1002,6 +1017,6 @@
     "Quote first; never execute if simulation blocks/flags risk or price impact > 5%.",
     "Halt new trades if wallet drops −60% from peak ($20.00); ask Malik how to continue."
   ],
-  "solBalanceHint": 0.139884713,
-  "walletUsdHint": 41.01
+  "solBalanceHint": 0.199646037,
+  "walletUsdHint": 41.51
 }
