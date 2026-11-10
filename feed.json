@@ -1,127 +1,90 @@
 {
-  "updatedPkt": "2026-11-10 13:44 PKT",
+  "updatedPkt": "2026-11-10 13:57 PKT",
   "wallet": "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9",
-  "status": "Active",
-  "nextCheckPkt": "2026-11-10 13:49 PKT",
+  "status": "Halted (stopped by Malik to move funds to Exness)",
+  "nextCheckPkt": "paused — Phantom trading stopped to move funds to Exness",
   "startUsd": 50.0,
   "startSol": 0.5745,
   "peakUsd": 50.0,
   "haltUsd": 20.0,
-  "wins": 2,
-  "losses": 16,
-  "tradesCount": 43,
+  "wins": 3,
+  "losses": 19,
+  "tradesCount": 48,
   "signalsScanned": 0,
   "modeLabel": "aggressive memecoin mode",
-  "holdings": [
-    {
-      "symbol": "JEFF",
-      "mint": "HAsTKXYvv65zM7J6Cu5o5PcZsiKMQYo5oz4WPjgqwP6k",
-      "amount": 4401.733419,
-      "decimals": 6
-    },
-    {
-      "symbol": "PEAK",
-      "mint": "APLPiTjBWzwfZ5U1TBeqLF9XJ7dV7XKGe7j4BZhkDray",
-      "amount": 11115.809044,
-      "decimals": 6
-    },
-    {
-      "symbol": "STANK",
-      "mint": "5wsjHxT5nW5jQuVupXUNnYszF3WoWCfGGk9LMcsCJzY8",
-      "amount": 1388.138063,
-      "decimals": 6
-    },
-    {
-      "symbol": "WEALTH",
-      "mint": "8Mi9E1V2bdPeAaRkR5yxUsAvpzP6UBUEEUrYmgKNpump",
-      "amount": 4820.80829,
-      "decimals": 6
-    },
-    {
-      "symbol": "BIG",
-      "mint": "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump",
-      "amount": 6047.207581,
-      "decimals": 6
-    }
-  ],
-  "positions": [
-    {
-      "id": "P10",
-      "openedPkt": "2026-11-10 03:46",
-      "asset": "PEAK",
-      "mint": "APLPiTjBWzwfZ5U1TBeqLF9XJ7dV7XKGe7j4BZhkDray",
-      "side": "Long spot",
-      "sizeText": "11,115.809044 tokens (0.059101 SOL incl. fees, ~$5.13)",
-      "amount": 11115.809044,
-      "entry": 0.0004615,
-      "stop": 0.0004615,
-      "takeProfit": 0.0006461,
-      "takeText": "Half at $0.0006461 (+40%), then 20% trail from peak; 3.5h flat-exit check passed 07:20 PKT (−7.1%, outside ±5%, kept); breakeven stop once +20%",
-      "status": "Open (Phantom NOT_VERIFIED, not spam)  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "+17.7%"
-    },
-    {
-      "id": "P11",
-      "openedPkt": "2026-11-10 04:06",
-      "asset": "JEFF",
-      "mint": "HAsTKXYvv65zM7J6Cu5o5PcZsiKMQYo5oz4WPjgqwP6k",
-      "side": "Long spot",
-      "sizeText": "4,401.733419 tokens (0.060083 SOL incl. fees, ~$5.20)",
-      "amount": 4401.733419,
-      "entry": 0.00115,
-      "stop": 0.00092,
-      "takeProfit": 0.00161,
-      "takeText": "Half at $0.001610 (+40%), then 20% trail from peak; 3.5h flat-exit check passed 07:37 PKT (−13.0%, outside ±5%, kept); breakeven stop once +20%",
-      "status": "Open (Phantom NOT_VERIFIED, not spam)  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "-14.3%"
-    },
-    {
-      "id": "P13",
-      "openedPkt": "2026-11-10 04:52",
-      "asset": "STANK",
-      "mint": "5wsjHxT5nW5jQuVupXUNnYszF3WoWCfGGk9LMcsCJzY8",
-      "side": "Long spot",
-      "sizeText": "1,388.138063 tokens (0.059456 SOL incl. fees, ~$5.15)",
-      "amount": 1388.138063,
-      "entry": 0.003707,
-      "stop": 0.002966,
-      "takeProfit": 0.00519,
-      "takeText": "Half at $0.005190 (+40%), then 20% trail from peak; 3.5h flat-exit check passed 08:23 PKT (−9.5%, outside ±5%, kept); breakeven stop once +20%",
-      "status": "Open (Phantom NOT_VERIFIED, not spam)  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "-1.5%"
-    },
-    {
-      "id": "P18",
-      "openedPkt": "2026-11-10 07:31",
-      "asset": "WEALTH",
-      "mint": "8Mi9E1V2bdPeAaRkR5yxUsAvpzP6UBUEEUrYmgKNpump",
-      "side": "Long spot",
-      "sizeText": "4,820.808290 tokens (0.058088 SOL incl. fees, ~$4.99)",
-      "amount": 4820.80829,
-      "entry": 0.0010347,
-      "stop": 0.0008278,
-      "takeProfit": 0.0014486,
-      "takeText": "Half at $0.0014486 (+40%), then 20% trail from peak; 3.5h flat-exit check passed 11:01 PKT (-11.0%, outside ±5%, kept); breakeven stop once +20%",
-      "status": "Open (Phantom NOT_VERIFIED, not spam)  (pullback lane)",
-      "pnlPctText": "-16.3%"
-    },
-    {
-      "id": "P20",
-      "openedPkt": "2026-11-10 13:03",
-      "asset": "BIG",
-      "mint": "34DXEU2ttEtBSb1TqGJm7izgvYTTkqKcCoiNWdPDpump",
-      "side": "Long spot",
-      "sizeText": "6,047.207581 tokens (0.059600 SOL incl. fees, ~$5.12)",
-      "amount": 6047.207581,
-      "entry": 0.000847,
-      "stop": 0.0006776,
-      "takeProfit": 0.0011858,
-      "takeText": "Half at $0.0011858 (+40%), then 20% trail from peak; 3.5h flat-exit check due ~16:33 PKT; breakeven stop once +20%",
-      "status": "Open (Phantom NOT_VERIFIED, not spam)  (pullback lane)",
-      "pnlPctText": "-3.9%"
-    }
-  ],
+  "holdings": [],
+  "positions": [],
   "trades": [
+    {
+      "id": "T48",
+      "timePkt": "2026-11-10 13:49",
+      "action": "SELL (close)",
+      "side": "SELL",
+      "ticker": "WEALTH",
+      "size": "4,820.808290 → 0.048571 SOL net (~$4.16)",
+      "price": "~$0.000863",
+      "href": "https://solscan.io/tx/55QR4u1UEbUyfUcki9UEqxo7gYZfRzozWPrVZgRWtNAhG74HnLcviHi2tgDpgZiSiZhdcUdwscLvfkM1ihN8GTP3",
+      "notes": "LOSS ~-$0.83 (~−16.4% vs 0.058088 SOL cost): Malik-ordered close to move funds to Exness. 0.9% impact; PumpSwap via OKX.",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
+    {
+      "id": "T47",
+      "timePkt": "2026-11-10 13:49",
+      "action": "SELL (close)",
+      "side": "SELL",
+      "ticker": "JEFF",
+      "size": "4,401.733419 → 0.049851 SOL net (~$4.27)",
+      "price": "~$0.000970",
+      "href": "https://solscan.io/tx/4V6hEbCkExgtV5Tbt3GxE6scprbJZZmtyBz3Ueoy94Y4o523qWeGXP4ZNEFTP7BfhmvTvQsHsyk8HxjZqCLoSC5q",
+      "notes": "LOSS ~-$0.93 (~−17.0% vs 0.060083 SOL cost): Malik-ordered close to move funds to Exness. 1.7% impact; Raydium CP via Jupiter.",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
+    {
+      "id": "T46",
+      "timePkt": "2026-11-10 13:48",
+      "action": "SELL (close)",
+      "side": "SELL",
+      "ticker": "BIG",
+      "size": "6,047.207581 → 0.056283 SOL net (~$4.82)",
+      "price": "~$0.000797",
+      "href": "https://solscan.io/tx/4gU1nNXRtq3UdoNzhZGGnHKWYnTd3E2rGwrbi5JJGKCRWZPKD74nW5PGQQrSR3Sm8RWdAgAqncLratQJfq3dr6UL",
+      "notes": "LOSS ~-$0.30 (~−5.6% vs 0.059600 SOL cost): Malik-ordered close to move funds to Exness. 0% impact; PumpSwap + Meteora DLMM + GoonFiV2 via OKX.",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
+    {
+      "id": "T45",
+      "timePkt": "2026-11-10 13:48",
+      "action": "SELL (close)",
+      "side": "SELL",
+      "ticker": "STANK",
+      "size": "1,388.138063 → 0.055737 SOL net (~$4.77)",
+      "price": "~$0.003439",
+      "href": "https://solscan.io/tx/2buSN3NCd8RjSnepqCdnzXaMr72wa2LvT9GijVZr69LSUDKCfKbCptwnjV1BztjVshQnqxu5XYCGQNDsTqwSQJHP",
+      "notes": "LOSS ~-$0.38 (~−6.3% vs 0.059456 SOL cost): Malik-ordered close to move funds to Exness. 3.0% impact; Meteora DLMM via DFlow.",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
+    {
+      "id": "T44",
+      "timePkt": "2026-11-10 13:48",
+      "action": "SELL (close)",
+      "side": "SELL",
+      "ticker": "PEAK",
+      "size": "11,115.809044 → 0.071266 SOL net (~$6.10)",
+      "price": "~$0.0005492",
+      "href": "https://solscan.io/tx/42mfxtsm6SwLA7knpoGfqBdQ2mVqmstUg85TC5vLgMC5bXCrRgZ6ufEyCF6odWkSo3i11SximnXTsgaCByKgDpXP",
+      "notes": "WIN ~+$0.97 (~+20.6% vs 0.059101 SOL cost): Malik ordered all Phantom positions closed to move funds to Exness. 0% impact; Raydium CPMM via OKX. No SOL was transferred out of the wallet.",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
     {
       "id": "T43",
       "timePkt": "2026-11-10 13:40",
@@ -727,6 +690,24 @@
   ],
   "activity": [
     {
+      "timePkt": "2026-11-10 13:50 PKT",
+      "title": "Phantom trading stopped; all 5 coins sold to SOL",
+      "kind": "system",
+      "detail": "",
+      "coins": "",
+      "why": "",
+      "tx": ""
+    },
+    {
+      "timePkt": "2026-11-10 13:50 PKT",
+      "title": "Trading halted by Malik to move funds to Exness",
+      "kind": "system",
+      "detail": "",
+      "coins": "",
+      "why": "",
+      "tx": ""
+    },
+    {
       "timePkt": "2026-11-10 13:44 PKT",
       "title": "Check: holding 5, no trades",
       "kind": "system",
@@ -1067,24 +1048,6 @@
       "coins": "",
       "why": "",
       "tx": ""
-    },
-    {
-      "timePkt": "2026-11-10 10:19 PKT",
-      "title": "Check: holding 6, no trades",
-      "kind": "system",
-      "detail": "",
-      "coins": "",
-      "why": "",
-      "tx": ""
-    },
-    {
-      "timePkt": "2026-11-10 10:12 PKT",
-      "title": "Check: holding 6, no trades",
-      "kind": "system",
-      "detail": "",
-      "coins": "",
-      "why": "",
-      "tx": ""
     }
   ],
   "agents": [
@@ -1120,8 +1083,8 @@
       "id": "RISK",
       "color": "#ef4444",
       "tone": "red",
-      "tag": "watching",
-      "action": "PEAK stop $0.0004615 · take $0.0006461 · Open (Phantom NOT_VERIFIED, not spam)  (pre-6:23 rules, momentum lane)"
+      "tag": "armed",
+      "action": "Malik capped each coin at 20% of the wallet and memecoins at 80% in total."
     }
   ],
   "riskRules": [
@@ -1135,6 +1098,6 @@
     "Quote first; never execute if simulation blocks/flags risk or price impact > 5%.",
     "Halt new trades if wallet drops −60% from peak ($20.00); ask Malik how to continue."
   ],
-  "solBalanceHint": 0.115722515,
-  "walletUsdHint": 34.45
+  "solBalanceHint": 0.397430409,
+  "walletUsdHint": 34.04
 }
