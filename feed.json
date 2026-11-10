@@ -1,15 +1,15 @@
 {
-  "updatedPkt": "2026-11-10 05:12 PKT",
+  "updatedPkt": "2026-11-10 05:20 PKT",
   "wallet": "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9",
   "status": "Active",
-  "nextCheckPkt": "2026-11-10 05:16 PKT (every 5 min)",
+  "nextCheckPkt": "2026-11-10 05:26 PKT (every 5 min)",
   "startUsd": 50.0,
   "startSol": 0.5745,
   "peakUsd": 50.0,
   "haltUsd": 20.0,
-  "wins": 0,
+  "wins": 1,
   "losses": 10,
-  "tradesCount": 28,
+  "tradesCount": 30,
   "signalsScanned": 0,
   "modeLabel": "aggressive memecoin mode",
   "holdings": [
@@ -23,12 +23,6 @@
       "symbol": "HODL",
       "mint": "Hh3oTaqDCKKfdBgsQEvxp9sUwyNf8x9qmKqEMLBWpump",
       "amount": 1185.947365,
-      "decimals": 6
-    },
-    {
-      "symbol": "WEALTH",
-      "mint": "8Mi9E1V2bdPeAaRkR5yxUsAvpzP6UBUEEUrYmgKNpump",
-      "amount": 5262.92959,
       "decimals": 6
     },
     {
@@ -48,6 +42,12 @@
       "mint": "5wsjHxT5nW5jQuVupXUNnYszF3WoWCfGGk9LMcsCJzY8",
       "amount": 1388.138063,
       "decimals": 6
+    },
+    {
+      "symbol": "ZCAT",
+      "mint": "HcRLc9VDgjLeK154xDawfb1dmVJ98DoSqcwTHGqiDeJR",
+      "amount": 237.014466,
+      "decimals": 6
     }
   ],
   "positions": [
@@ -64,22 +64,7 @@
       "takeProfit": 0.006188,
       "takeText": "Half at $0.006188 (+40%), then 20% trail from peak; 90-min flat check at 04:11 passed (-10.9%, not flat)",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-15.2%"
-    },
-    {
-      "id": "P9",
-      "openedPkt": "2026-11-10 03:46",
-      "asset": "WEALTH",
-      "mint": "8Mi9E1V2bdPeAaRkR5yxUsAvpzP6UBUEEUrYmgKNpump",
-      "side": "Long spot",
-      "sizeText": "5,262.929590 tokens (0.059127 SOL incl. fees, ~$5.13)",
-      "amount": 5262.92959,
-      "entry": 0.000975,
-      "stop": 0.00078,
-      "takeProfit": 0.001365,
-      "takeText": "Half at $0.001365 (+40%), then 20% trail from peak; flat-exit if within ±5% at 05:16 PKT",
-      "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "+3.3%"
+      "pnlPctText": "-18.2%"
     },
     {
       "id": "P10",
@@ -92,9 +77,9 @@
       "entry": 0.0004615,
       "stop": 0.0003692,
       "takeProfit": 0.0006461,
-      "takeText": "Half at $0.0006461 (+40%), then 20% trail from peak; flat-exit if within ±5% at 05:16 PKT",
+      "takeText": "Half at $0.0006461 (+40%), then 20% trail from peak; 90-min flat check at 05:17 passed (+9.4%, not flat)",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "+9.4%"
+      "pnlPctText": "+2.0%"
     },
     {
       "id": "P11",
@@ -109,7 +94,7 @@
       "takeProfit": 0.00161,
       "takeText": "Half at $0.001610 (+40%), then 20% trail from peak; flat-exit if within ±5% at 05:36 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-1.6%"
+      "pnlPctText": "-1.7%"
     },
     {
       "id": "P12",
@@ -124,7 +109,7 @@
       "takeProfit": 0.002299,
       "takeText": "Half at $0.002299 (+40%), then 20% trail from peak; flat-exit if within ±5% at 06:22 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-1.7%"
+      "pnlPctText": "+4.5%"
     },
     {
       "id": "P13",
@@ -139,10 +124,53 @@
       "takeProfit": 0.00519,
       "takeText": "Half at $0.005190 (+40%), then 20% trail from peak; flat-exit if within ±5% at 06:22 PKT",
       "status": "Open (Phantom NOT_VERIFIED, not spam)",
-      "pnlPctText": "-5.2%"
+      "pnlPctText": "-6.2%"
+    },
+    {
+      "id": "P14",
+      "openedPkt": "2026-11-10 05:20",
+      "asset": "ZCAT",
+      "mint": "HcRLc9VDgjLeK154xDawfb1dmVJ98DoSqcwTHGqiDeJR",
+      "side": "Long spot",
+      "sizeText": "237.014466 tokens (~0.0600 SOL incl. fees and account rent, est. from balance change, ~$5.19)",
+      "amount": 237.014466,
+      "entry": 0.02191,
+      "stop": 0.01753,
+      "takeProfit": 0.03067,
+      "takeText": "Half at $0.03067 (+40%), then 20% trail from peak; flat-exit if within ±5% at 06:50 PKT",
+      "status": "Open (Phantom VERIFIED)",
+      "pnlPctText": "-7.9%"
     }
   ],
   "trades": [
+    {
+      "id": "T30",
+      "timePkt": "2026-11-10 05:20",
+      "action": "BUY",
+      "side": "BUY",
+      "ticker": "ZCAT",
+      "size": "0.0578 SOL swap (~$5.00) + fees → 237.014466 ZCAT",
+      "price": "~$0.02110 swap price",
+      "href": "https://solscan.io/tx/61dx29oCpTR9dgeF5aEZF66fssHM6jMbUh6y5YcCY7iPg7pdSjM5zbxrtkZdSwRZqiLQFNSYotwnt1KwB2Jtk8rm",
+      "notes": "Open: +26.7% 6h, +3.1% 1h, buys 34 > sells 18, $693k liquidity, 1,705h old; RugCheck score 1 with no risks; DexScreener image; Phantom preview named it with logo, no warnings, receive ~$4.78; OKX route; VERIFIED after fill. Safety skip: FAIR (RugCheck danger: 100% LP unlocked, score 52). Skipped HODLER (−18% 1h) and WEALTH (just exited)",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
+    {
+      "id": "T29",
+      "timePkt": "2026-11-10 05:18",
+      "action": "SELL (close)",
+      "side": "SELL",
+      "ticker": "WEALTH",
+      "size": "5,262.929590 → ~0.061464 SOL quoted (~$5.32)",
+      "price": "~$0.001024",
+      "href": "https://solscan.io/tx/4QsuSZbyo42M74kqgm1DuRKPhiowgV9QB3Wsoz9ijsVsF8DjXY19YwSta8bw7xJy1Mi5cCrh256mN1jpnY4bZ3a7",
+      "notes": "WIN ~+$0.19: 90-minute flat exit (+5.0% at the 05:17 check, inside ±5% band at quote time); 0.4% impact; DFlow route",
+      "pnlLabel": "—",
+      "pnlUsd": null,
+      "via": "via Phantom"
+    },
     {
       "id": "T28",
       "timePkt": "2026-11-10 04:52",
@@ -538,6 +566,15 @@
   ],
   "activity": [
     {
+      "timePkt": "2026-11-10 05:22 PKT",
+      "title": "SELL WEALTH (flat exit, small win), BUY ZCAT",
+      "kind": "system",
+      "detail": "",
+      "coins": "",
+      "why": "",
+      "tx": ""
+    },
+    {
       "timePkt": "2026-11-10 05:12 PKT",
       "title": "Check: holding 6, no trades",
       "kind": "system",
@@ -887,15 +924,6 @@
       "coins": "CBUCKS, HODLER, Fartcoin, PNUT, FWOG, DESSA, GATO, BONK, HELL, WIF, Macca, AgenC",
       "why": "Malik cut the per-coin cap to 20% at 01:34, so the CBUCKS position (~30%) was trimmed. CBUCKS itself is +0.5% from entry, so neither stop nor take-profit was hit; still holding the rest (+21.5% 6h, buys > sells). No new entry: HODLER +16% 1h on just $113 of volume, Macca +5.9% 1h too weak, HELL −15.6% 1h, the rest flat or down.",
       "tx": "https://solscan.io/tx/2rCD36AgsxnZcSSs4mRrgxSDdD9CcTVW7rFVKdajB1dRaBjauytkR2FCYnay8DgYWSaGvbzGQLA35KyktZPHQRNA"
-    },
-    {
-      "timePkt": "2026-11-10 01:34 PKT",
-      "title": "Caps lowered: 20% per coin, 80% memecoins total",
-      "kind": "risk",
-      "detail": "Malik capped each coin at 20% of the wallet and memecoins at 80% in total.",
-      "coins": "",
-      "why": "",
-      "tx": ""
     }
   ],
   "agents": [
@@ -946,6 +974,6 @@
     "Quote first; never execute if simulation blocks/flags risk or price impact > 5%.",
     "Halt new trades if wallet drops −60% from peak ($20.00); ask Malik how to continue."
   ],
-  "solBalanceHint": 0.149312694,
-  "walletUsdHint": 43.21
+  "solBalanceHint": 0.152766667,
+  "walletUsdHint": 42.69
 }
