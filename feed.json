@@ -1,8 +1,8 @@
 {
-  "updatedPkt": "2026-11-10 07:21 PKT",
+  "updatedPkt": "2026-11-10 07:28 PKT",
   "wallet": "BofXiAsnZh6Ff7QxCu8n81Hfq9sTsoYCbyJzkb9SNvT9",
   "status": "Active",
-  "nextCheckPkt": "2026-11-10 07:25 PKT (every 5 min)",
+  "nextCheckPkt": "2026-11-10 07:30 PKT (every 5 min)",
   "startUsd": 50.0,
   "startSol": 0.5745,
   "peakUsd": 50.0,
@@ -58,7 +58,7 @@
       "takeProfit": 0.0006461,
       "takeText": "Half at $0.0006461 (+40%), then 20% trail from peak; 3.5h flat-exit check passed 07:20 PKT (−7.1%, outside ±5%, kept); breakeven stop once +20%",
       "status": "Open (Phantom NOT_VERIFIED, not spam)  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "-7.1%"
+      "pnlPctText": "-7.7%"
     },
     {
       "id": "P11",
@@ -73,7 +73,7 @@
       "takeProfit": 0.00161,
       "takeText": "Half at $0.001610 (+40%), then 20% trail from peak; flat-exit if within ±5% at 07:36 PKT (3.5h rule); breakeven stop once +20%",
       "status": "Open (Phantom NOT_VERIFIED, not spam)  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "-13.1%"
+      "pnlPctText": "-12.5%"
     },
     {
       "id": "P13",
@@ -88,7 +88,7 @@
       "takeProfit": 0.00519,
       "takeText": "Half at $0.005190 (+40%), then 20% trail from peak; flat-exit if within ±5% at 08:22 PKT (3.5h rule); breakeven stop once +20%",
       "status": "Open (Phantom NOT_VERIFIED, not spam)  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "+0.8%"
+      "pnlPctText": "+1.9%"
     },
     {
       "id": "P14",
@@ -103,7 +103,7 @@
       "takeProfit": 0.03067,
       "takeText": "Half at $0.03067 (+40%), then 20% trail from peak; flat-exit if within ±5% at 08:50 PKT (3.5h rule); breakeven stop once +20%",
       "status": "Open (Phantom VERIFIED)  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "-16.2%"
+      "pnlPctText": "-16.1%"
     },
     {
       "id": "P17",
@@ -118,7 +118,7 @@
       "takeProfit": 0.00166,
       "takeText": "Half at $0.001660 (+40%), then 20% trail from peak; flat-exit if within ±5% at 09:39 PKT (3.5h rule); breakeven stop once +20%",
       "status": "Open (Phantom NOT_VERIFIED, not spam)  (pre-6:23 rules, momentum lane)",
-      "pnlPctText": "+1.5%"
+      "pnlPctText": "+8.0%"
     }
   ],
   "trades": [
@@ -643,6 +643,15 @@
   ],
   "activity": [
     {
+      "timePkt": "2026-11-10 07:27 PKT",
+      "title": "Check: holding 5, no trades",
+      "kind": "system",
+      "detail": "",
+      "coins": "",
+      "why": "",
+      "tx": ""
+    },
+    {
       "timePkt": "2026-11-10 07:20 PKT",
       "title": "Check: holding 5, no trades",
       "kind": "system",
@@ -992,15 +1001,6 @@
       "coins": "",
       "why": "",
       "tx": ""
-    },
-    {
-      "timePkt": "2026-11-10 03:51 PKT",
-      "title": "Check: holding 6, no trades",
-      "kind": "system",
-      "detail": "",
-      "coins": "",
-      "why": "",
-      "tx": ""
     }
   ],
   "agents": [
@@ -1052,5 +1052,5 @@
     "Halt new trades if wallet drops −60% from peak ($20.00); ask Malik how to continue."
   ],
   "solBalanceHint": 0.185309902,
-  "walletUsdHint": 39.69
+  "walletUsdHint": 40.09
 }
